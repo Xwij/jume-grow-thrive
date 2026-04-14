@@ -1,0 +1,54 @@
+import { motion } from "framer-motion";
+
+const HeroSection = () => {
+  return (
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden" style={{ background: "var(--hero-gradient)" }}>
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-secondary blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-primary-foreground blur-3xl" />
+      </div>
+      <div className="relative z-10 text-center section-padding container-narrow">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-sm sm:text-base font-body tracking-[0.2em] uppercase text-primary-foreground/70 mb-6"
+        >
+          OTEPIC Kenya
+        </motion.p>
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.15 }}
+          className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold text-primary-foreground leading-tight mb-6"
+        >
+          Welcome to <br />
+          <span className="italic">Jume College</span>
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="text-lg sm:text-xl lg:text-2xl font-body font-light text-primary-foreground/85 max-w-3xl mx-auto mb-10"
+        >
+          Growing Knowledge, Nature, and Community
+        </motion.p>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.45 }}
+          className="flex flex-col sm:flex-row gap-4 justify-center"
+        >
+          <a href="#programs" className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-secondary text-secondary-foreground font-body font-semibold text-base hover:opacity-90 transition-opacity">
+            Explore Programs
+          </a>
+          <a href="#join" className="inline-flex items-center justify-center px-8 py-4 rounded-lg border-2 border-primary-foreground/30 text-primary-foreground font-body font-semibold text-base hover:bg-primary-foreground/10 transition-colors">
+            Join Us
+          </a>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
