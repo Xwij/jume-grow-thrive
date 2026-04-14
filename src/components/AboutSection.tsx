@@ -52,10 +52,12 @@ const AboutSection = () => {
           transition={{ duration: 0.6 }}
           className="grid md:grid-cols-2 gap-10 items-center"
         >
-          <div>
-            <div className="aspect-[4/3] bg-muted rounded-xl flex items-center justify-center border border-border">
-              <span className="text-muted-foreground font-body text-sm">Image Placeholder</span>
-            </div>
+          <div className="grid grid-cols-2 gap-3">
+            {["Campus & Grounds", "Training in Action", "Community Garden", "Students & Staff"].map((label) => (
+              <div key={label} className="aspect-square bg-muted rounded-xl flex items-center justify-center border border-border">
+                <span className="text-muted-foreground font-body text-xs text-center px-2">{label}</span>
+              </div>
+            ))}
           </div>
           <div>
             <h3 className="text-2xl sm:text-3xl font-display font-bold text-foreground mb-4">More Than a Training Center</h3>
