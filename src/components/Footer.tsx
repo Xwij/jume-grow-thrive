@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="bg-foreground text-background/70 section-padding">
       <div className="container-narrow">
-        <div className="grid md:grid-cols-3 gap-10 mb-12">
-          <div>
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-10 mb-12">
+          <div className="sm:col-span-2 md:col-span-1">
             <h3 className="font-display font-bold text-xl text-background mb-3">
               Jume College
             </h3>
@@ -12,18 +14,30 @@ const Footer = () => {
             </p>
           </div>
           <div>
-            <h4 className="font-body font-semibold text-background text-sm mb-3 uppercase tracking-wider">Quick Links</h4>
+            <h4 className="font-body font-semibold text-background text-sm mb-3 uppercase tracking-wider">Pages</h4>
             <div className="space-y-2">
-              <a href="#programs" className="block font-body text-sm hover:text-background transition-colors">Training Programs</a>
-              <a href="#join" className="block font-body text-sm hover:text-background transition-colors">Join Us</a>
-              <a href="mailto:info@otepic.org" className="block font-body text-sm hover:text-background transition-colors">Contact</a>
+              <Link to="/" className="block font-body text-sm hover:text-background transition-colors">Home</Link>
+              <Link to="/about" className="block font-body text-sm hover:text-background transition-colors">Jume College</Link>
+              <Link to="/projects" className="block font-body text-sm hover:text-background transition-colors">Projects</Link>
+              <Link to="/services" className="block font-body text-sm hover:text-background transition-colors">Services</Link>
+            </div>
+          </div>
+          <div>
+            <h4 className="font-body font-semibold text-background text-sm mb-3 uppercase tracking-wider">Programs</h4>
+            <div className="space-y-2">
+              <a href="/#programs" className="block font-body text-sm hover:text-background transition-colors">Permaculture</a>
+              <a href="/#programs" className="block font-body text-sm hover:text-background transition-colors">Biointensive Farming</a>
+              <a href="/#programs" className="block font-body text-sm hover:text-background transition-colors">Water Harvesting</a>
+              <a href="/#programs" className="block font-body text-sm hover:text-background transition-colors">Agroforestry</a>
             </div>
           </div>
           <div>
             <h4 className="font-body font-semibold text-background text-sm mb-3 uppercase tracking-wider">Connect</h4>
-            <p className="font-body text-sm leading-relaxed">
-              Support our programs, volunteer, or partner with us to expand opportunities across Kenya and beyond.
-            </p>
+            <div className="space-y-2">
+              <a href="mailto:info@otepic.org" className="block font-body text-sm hover:text-background transition-colors">info@otepic.org</a>
+              <Link to="/contact" className="block font-body text-sm hover:text-background transition-colors">Contact Us</Link>
+              <p className="font-body text-sm">Kitale, Kenya</p>
+            </div>
           </div>
         </div>
         <div className="border-t border-background/10 pt-6 text-center">
