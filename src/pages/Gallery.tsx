@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -52,6 +53,8 @@ const videos = [
 ];
 
 const Gallery = () => {
+  const [selected, setSelected] = useState<{ src: string; label: string } | null>(null);
+
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -87,7 +90,10 @@ const Gallery = () => {
                 transition={{ duration: 0.4, delay: i * 0.03 }}
                 className={`relative overflow-hidden rounded-2xl group cursor-pointer ${img.span}`}
               >
-                <div className={`w-full ${img.span.includes("row-span-2") ? "h-full min-h-[300px] md:min-h-[420px]" : "aspect-square"}`}>
+                <div
+                  className={`w-full ${img.span.includes("row-span-2") ? "h-full min-h-[300px] md:min-h-[420px]" : "aspect-square"}`}
+                  onClick={() => setSelected(img)}
+                >
                   <img
                     src={img.src}
                     alt={img.label}
@@ -138,6 +144,43 @@ const Gallery = () => {
           </div>
         </div>
       </section>
+
+      {/* Fullscreen Lightbox */}
+      <AnimatePresence>
+        {selected && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 cursor-pointer"
+            onClick={() => setSelected(null)}
+          >
+            <motion.img
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              src={selected.src}
+              alt={selected.label}
+              className="max-w-full max-h-[90vh] object-contain rounded-xl"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="absolute bottom-8 text-white font-body text-lg font-semibold drop-shadow-lg"
+            >
+              {selected.label}
+            </motion.p>
+            <button
+              onClick={() => setSelected(null)}
+              className="absolute top-6 right-6 text-white/80 hover:text-white text-3xl font-bold transition-colors"
+            >
+              ✕
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <Footer />
     </div>
