@@ -12,6 +12,7 @@ const Navbar = () => {
     { label: "Programs", to: isHome ? "#programs" : "/#programs", isAnchor: isHome },
     { label: "Projects", to: "/projects" },
     { label: "Services", to: "/services" },
+    { label: "Gallery", to: "/gallery" },
   ];
 
   return (

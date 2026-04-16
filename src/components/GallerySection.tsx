@@ -1,26 +1,19 @@
 import { motion } from "framer-motion";
-import farmerHarvestImg from "@/assets/farmer-harvest.jpg";
-import treePlantingImg from "@/assets/tree-planting.jpg";
-import bananaHarvestImg from "@/assets/banana-harvest.jpg";
-import passionFarmingImg from "@/assets/passion-farming.jpg";
-import passionFruitImg from "@/assets/passion-fruit.jpg";
-import mushroomFarmerImg from "@/assets/mushroom-farmer.jpg";
-import mushroomCloseupImg from "@/assets/mushroom-closeup.jpg";
+import { Link } from "react-router-dom";
+import kidsHarvestImg from "@/assets/kids-harvest.jpg";
+import soilPrepImg from "@/assets/soil-preparation.jpg";
+import mushroomBucketImg from "@/assets/mushroom-bucket.jpg";
+import kidsPlayingImg from "@/assets/kids-playing.jpg";
 import fieldTrainingImg from "@/assets/field-training.jpg";
-import fieldTraining2Img from "@/assets/field-training-2.jpg";
-import outdoorClassImg from "@/assets/outdoor-class.jpg";
+import passionFruitImg from "@/assets/passion-fruit.jpg";
 
-const gallery = [
+const preview = [
   { src: fieldTrainingImg, label: "Community Field Training", span: "md:col-span-2 md:row-span-2" },
-  { src: mushroomFarmerImg, label: "Mushroom Production", span: "" },
-  { src: passionFruitImg, label: "Passion Fruit Harvest", span: "" },
-  { src: farmerHarvestImg, label: "Proud Farmer", span: "" },
-  { src: bananaHarvestImg, label: "Banana Harvest", span: "" },
-  { src: mushroomCloseupImg, label: "Oyster Mushrooms", span: "" },
-  { src: treePlantingImg, label: "Tree Planting", span: "" },
-  { src: passionFarmingImg, label: "Agroforestry in Action", span: "" },
-  { src: outdoorClassImg, label: "Outdoor Learning Session", span: "md:col-span-2" },
-  { src: fieldTraining2Img, label: "Hands-On Training", span: "" },
+  { src: mushroomBucketImg, label: "Mushroom Growing", span: "" },
+  { src: passionFruitImg, label: "Passion Fruit", span: "" },
+  { src: kidsHarvestImg, label: "Kids with Fresh Harvest", span: "md:col-span-2" },
+  { src: soilPrepImg, label: "Soil Preparation", span: "" },
+  { src: kidsPlayingImg, label: "Kids at Play", span: "" },
 ];
 
 const GallerySection = () => {
@@ -44,7 +37,7 @@ const GallerySection = () => {
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-          {gallery.map((img, i) => (
+          {preview.map((img, i) => (
             <motion.div
               key={img.label}
               initial={{ opacity: 0, scale: 0.95 }}
@@ -68,6 +61,21 @@ const GallerySection = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="text-center mt-10"
+        >
+          <Link
+            to="/gallery"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-body font-semibold text-base hover:opacity-90 transition-opacity"
+          >
+            View Full Gallery & Videos →
+          </Link>
+        </motion.div>
       </div>
     </section>
   );
