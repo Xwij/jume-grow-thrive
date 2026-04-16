@@ -3,10 +3,10 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import campusImg from "@/assets/campus.jpg";
 import meetingImg from "@/assets/community-meeting.jpg";
-import trainingImg from "@/assets/training-field.jpg";
-import kidsImg from "@/assets/community-kids.jpg";
-import gardenImg from "@/assets/community-garden.jpg";
-import workersImg from "@/assets/workers.jpg";
+import soilPrepImg from "@/assets/soil-preparation.jpg";
+import kidsHarvestImg from "@/assets/kids-harvest.jpg";
+import kidsPlayingImg from "@/assets/kids-playing.jpg";
+import mushroomBucketImg from "@/assets/mushroom-bucket.jpg";
 
 const timeline = [
   { year: "2008", title: "OTEPIC Founded", desc: "Organic Technology Extension and Promotion of Initiative Centre (OTEPIC) was established in Kitale, Trans-Nzoia County, Kenya." },
@@ -22,11 +22,10 @@ const About = () => {
     <div className="min-h-screen">
       <Navbar />
 
-      {/* Hero with campus image */}
       <section className="relative pt-28 pb-20 section-padding overflow-hidden">
         <div className="absolute inset-0">
           <img src={campusImg} alt="Jume College Campus" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-b from-foreground/75 via-foreground/60 to-foreground/80" />
+          <div className="absolute inset-0 hero-gradient-animated" />
         </div>
         <div className="container-narrow relative z-10">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-center max-w-3xl mx-auto">
@@ -39,7 +38,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission */}
       <section className="section-padding bg-background">
         <div className="container-narrow">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -54,20 +52,18 @@ const About = () => {
               </p>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <img src={meetingImg} alt="Community meeting at Jume College" className="rounded-2xl w-full h-80 object-cover" style={{ boxShadow: "var(--card-shadow)" }} loading="lazy" />
+              <img src={meetingImg} alt="Community meeting" className="rounded-2xl w-full h-80 object-cover" style={{ boxShadow: "var(--card-shadow)" }} loading="lazy" />
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Timeline */}
       <section className="section-padding" style={{ background: "var(--section-gradient)" }}>
         <div className="container-narrow">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-14">
             <p className="text-sm font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-3">Our Journey</p>
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground">History & Milestones</h2>
           </motion.div>
-
           <div className="relative">
             <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 md:-translate-x-px" />
             <div className="space-y-10">
@@ -101,14 +97,13 @@ const About = () => {
         </div>
       </section>
 
-      {/* Photo Gallery Strip */}
       <section className="section-padding bg-background">
         <div className="container-narrow">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-10">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-foreground">Life at Jume College</h2>
           </motion.div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[trainingImg, kidsImg, gardenImg, workersImg].map((img, i) => (
+            {[soilPrepImg, kidsHarvestImg, kidsPlayingImg, mushroomBucketImg].map((img, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, scale: 0.95 }}
