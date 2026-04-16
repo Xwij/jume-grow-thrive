@@ -4,13 +4,11 @@ import campusImg from "@/assets/campus.jpg";
 const HeroSection = () => {
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-      {/* Background image */}
       <div className="absolute inset-0">
         <img src={campusImg} alt="Jume College Campus" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/50 to-foreground/80" />
+        <div className="absolute inset-0 hero-gradient-animated" />
       </div>
 
-      {/* Decorative blobs */}
       <div className="absolute inset-0 opacity-15">
         <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-secondary blur-3xl" />
         <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-primary blur-3xl" />
