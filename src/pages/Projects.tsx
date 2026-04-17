@@ -72,6 +72,45 @@ const Projects = () => {
         </div>
       </section>
 
+      {/* Featured Video */}
+      <section className="bg-background pt-12 sm:pt-16">
+        <div className="container-narrow">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative rounded-3xl overflow-hidden border border-border"
+            style={{ boxShadow: "0 25px 60px -12px hsl(var(--foreground) / 0.25)" }}
+          >
+            <video
+              controls
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              className="w-full aspect-video object-cover bg-foreground"
+            >
+              <source src="/videos/video-1.mp4" type="video/mp4" />
+            </video>
+            <div className="absolute top-4 left-4 flex items-center gap-2 px-3 py-1.5 rounded-full bg-background/90 backdrop-blur-sm">
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              <span className="font-body text-xs font-semibold text-foreground uppercase tracking-wider">Featured</span>
+            </div>
+          </motion.div>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-center font-body text-muted-foreground text-sm mt-4 italic"
+          >
+            A glimpse of our work in the field — sustainable agriculture in action.
+          </motion.p>
+        </div>
+      </section>
+
       {/* Projects Grid */}
       <section className="section-padding bg-background">
         <div className="container-narrow">
