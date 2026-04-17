@@ -46,11 +46,11 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.45 }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
-          <a href="#programs" className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-secondary text-secondary-foreground font-body font-semibold text-base hover:opacity-90 transition-opacity">
-            Explore Programs
+          <a href="/impact" className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-secondary text-secondary-foreground font-body font-semibold text-base hover:opacity-90 transition-opacity shadow-lg">
+            See Our Live Impact →
           </a>
-          <a href="#join" className="inline-flex items-center justify-center px-8 py-4 rounded-lg border-2 border-background/30 text-background font-body font-semibold text-base hover:bg-background/10 transition-colors">
-            Join Us
+          <a href="#programs" className="inline-flex items-center justify-center px-8 py-4 rounded-lg border-2 border-background/30 text-background font-body font-semibold text-base hover:bg-background/10 transition-colors">
+            Explore Programs
           </a>
         </motion.div>
       </div>
