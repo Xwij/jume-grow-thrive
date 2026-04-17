@@ -23,16 +23,16 @@ import communityGardenImg from "@/assets/community-garden.jpg";
 import communityKidsImg from "@/assets/community-kids.jpg";
 
 const gallery = [
-  { src: fieldTrainingImg, label: "Community Field Training", span: "md:col-span-2 md:row-span-2" },
-  { src: mushroomBucketImg, label: "Mushroom Bucket Growing", span: "" },
+  { src: kidsHarvestImg, label: "Kids with Fresh Harvest", span: "md:col-span-2 md:row-span-2", isNew: true },
+  { src: mushroomBucketImg, label: "Mushroom Bucket Growing", span: "", isNew: true },
+  { src: kidsPlayingImg, label: "Kids at Play", span: "", isNew: true },
+  { src: soilPrepImg, label: "Soil Preparation", span: "md:col-span-2", isNew: true },
+  { src: fieldTrainingImg, label: "Community Field Training", span: "" },
   { src: passionFruitImg, label: "Passion Fruit Harvest", span: "" },
-  { src: kidsHarvestImg, label: "Kids with Fresh Harvest", span: "md:col-span-2" },
-  { src: farmerHarvestImg, label: "Proud Farmer", span: "" },
+  { src: farmerHarvestImg, label: "Proud Farmer", span: "md:col-span-2 md:row-span-2" },
   { src: bananaHarvestImg, label: "Banana Harvest", span: "" },
-  { src: soilPrepImg, label: "Soil Preparation", span: "md:col-span-2 md:row-span-2" },
   { src: mushroomCloseupImg, label: "Oyster Mushrooms", span: "" },
-  { src: treePlantingImg, label: "Tree Planting", span: "" },
-  { src: kidsPlayingImg, label: "Kids at Play", span: "md:col-span-2" },
+  { src: treePlantingImg, label: "Tree Planting", span: "md:col-span-2" },
   { src: passionFarmingImg, label: "Agroforestry in Action", span: "" },
   { src: mushroomFarmerImg, label: "Mushroom Production", span: "" },
   { src: campusImg, label: "Jume College Campus", span: "md:col-span-2" },

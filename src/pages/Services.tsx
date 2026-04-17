@@ -11,42 +11,64 @@ const services = [
     title: "Permaculture Consultancy",
     desc: "Expert farm and landscape design using permaculture principles. We help you create productive, self-sustaining systems tailored to your land and climate.",
     features: ["Site analysis & design", "Implementation support", "Follow-up mentoring"],
-    details: "Our permaculture consultancy service provides a comprehensive approach to land management. We begin with a thorough site analysis — evaluating soil health, water flow, sun exposure, existing vegetation, and microclimates. From there, we develop a detailed design plan based on permaculture zones and sectors, integrating food forests, swales, keyline design, and companion planting. We walk with you through implementation, offering hands-on guidance and periodic reviews to ensure your system matures into a thriving, low-maintenance ecosystem. Whether you have a small homestead or a large community farm, our designs are tailored to maximize yield while regenerating the landscape.",
+    details:
+      "Our permaculture consultancy service provides a comprehensive, regenerative approach to land management. We begin with a thorough site analysis — evaluating soil health, water flow, sun exposure, existing vegetation, microclimates, and the social context of the land. From there, we develop a detailed design plan rooted in permaculture zones and sectors, integrating food forests, swales, keyline design, companion planting, and natural pest management. We walk with you through implementation, offering hands-on guidance, sourcing of indigenous and adapted species, and periodic reviews to ensure your system matures into a thriving, low-maintenance ecosystem. Whether you have a small homestead, a school compound, or a large community farm, our designs are tailored to maximise yield while regenerating the landscape and building long-term resilience to drought and climate change.",
   },
   {
     icon: "📚",
     title: "Training & Workshops",
     desc: "Hands-on training programs in sustainable agriculture, water harvesting, agroforestry, and mushroom cultivation for individuals, groups, and organizations.",
     features: ["Short courses (1–5 days)", "Certificate programs", "Custom group training"],
-    details: "Jume College offers immersive, practical training that goes beyond the classroom. Our workshops cover sustainable agriculture, water harvesting (rainwater tanks, swales, retention ponds), agroforestry systems, organic composting, mushroom cultivation, and seed saving. Courses range from 1-day introductions to 2-week certificate programs. We also design custom training packages for NGOs, farmer cooperatives, schools, and government agencies. All training includes field demonstrations on our working campus, take-home reference materials, and post-training support. Our graduates leave equipped with skills they can immediately apply on their own farms and in their communities.",
+    details:
+      "Jume College offers immersive, practical training that goes far beyond the classroom. Our workshops cover sustainable agriculture, biointensive food production, rainwater harvesting (tanks, swales and retention ponds), agroforestry systems, organic composting, vermiculture, mushroom cultivation, solar drying of indigenous vegetables, seed saving and value addition. Courses range from one-day introductions to multi-week certificate programs. We also design custom training packages for NGOs, farmer cooperatives, schools, faith-based groups and government agencies. Every training session includes field demonstrations on our working campus, take-home reference materials, and post-training mentorship so participants can implement what they have learned. Our graduates leave equipped with skills they can immediately apply on their own farms, in their schools, and across their communities.",
   },
   {
     icon: "🌍",
     title: "Community Development",
     desc: "We partner with communities to design and implement projects that improve food security, water access, and livelihoods through ecological approaches.",
     features: ["Needs assessment", "Project planning", "Capacity building"],
-    details: "Our community development approach is participatory and holistic. We start by listening — conducting needs assessments and mapping local resources, challenges, and aspirations. Together with community members, we co-design projects that address food security, clean water access, income generation, and environmental restoration. Past projects include community food forests, school gardens, women's farming cooperatives, rainwater harvesting systems, and youth enterprise programs. We emphasize capacity building so communities can sustain and scale their initiatives independently. Our goal is lasting, community-owned transformation.",
+    details:
+      "Our community development approach is participatory, holistic and rooted in the lived realities of the people we serve. We start by listening — conducting needs assessments, mapping local resources, challenges and aspirations, and honouring traditional knowledge. Together with community members we co-design projects that address food security, clean water access, income generation, environmental restoration, and peace-building. Past initiatives include community food forests, school gardens, women's farming cooperatives, rainwater harvesting systems, youth enterprise programs, and conflict-transformation through shared agricultural work. We emphasise capacity building and local ownership so that communities can sustain, replicate and scale their initiatives long after we step back. Our goal is lasting, community-owned transformation.",
   },
   {
     icon: "🤝",
     title: "Volunteer & Internship Programs",
     desc: "International and local volunteers can join our campus to learn, contribute, and experience regenerative agriculture first-hand.",
     features: ["Work-stay programs", "Research placements", "Cultural exchange"],
-    details: "Our volunteer and internship programs welcome people from around the world to live and learn at Jume College. Participants engage in daily farm activities — planting, harvesting, composting, mushroom production, and tree nursery work — while gaining deep understanding of permaculture and sustainable living. Programs range from 2 weeks to 6 months. We also host research placements for university students studying agriculture, ecology, or development. Volunteers enjoy cultural exchange, community meals, and the chance to make a tangible impact. Accommodation and meals are provided on campus. It's an experience that transforms perspectives and builds lifelong connections.",
+    details:
+      "Our volunteer and internship programs welcome people from across Kenya and around the world to live, work and learn at Jume College. Participants engage in daily farm activities — planting, harvesting, composting, mushroom production, tree-nursery work, water-system maintenance and community outreach — while gaining a deep understanding of permaculture and sustainable living. Programs range from two weeks to six months. We also host research placements for university students studying agriculture, ecology, public health and development. Volunteers enjoy cultural exchange, shared community meals, language learning, and the chance to make a tangible, hands-on impact. Accommodation and meals are provided on campus. It is an experience that transforms perspectives and builds lifelong friendships and partnerships.",
   },
   {
     icon: "🌳",
     title: "Tree Nursery & Seedlings",
     desc: "We produce and distribute quality tree seedlings for agroforestry, reforestation, and food forest establishment.",
     features: ["Indigenous species", "Fruit tree varieties", "Bulk orders available"],
-    details: "Our on-campus tree nursery produces thousands of seedlings annually, including indigenous trees (Markhamia, Croton, Prunus africana), fruit trees (avocado, mango, passion fruit, guava, citrus), nitrogen-fixing species (Calliandra, Sesbania, Leucaena), and timber species. We supply seedlings to individual farmers, schools, community groups, and reforestation programs. Each seedling comes with planting and care guidance. Bulk orders are available at discounted rates for large-scale projects. Our nursery also serves as a training ground where students learn propagation techniques, grafting, and nursery management — skills they carry into their own enterprises.",
+    details:
+      "Our on-campus tree nursery produces tens of thousands of seedlings annually, including indigenous trees (Markhamia, Croton, Prunus africana, Warburgia), fruit trees (avocado, mango, passion fruit, guava, citrus, pawpaw), nitrogen-fixing species (Calliandra, Sesbania, Leucaena, Grevillea), medicinal plants and timber species. We supply seedlings to individual farmers, schools, faith communities, county governments and reforestation programs. Each seedling comes with planting and aftercare guidance to maximise survival rates. Bulk orders are available at discounted rates for large-scale tree-planting and watershed-restoration projects. The nursery also serves as a living training ground where students and volunteers learn propagation, grafting, hardening-off and nursery management — skills they carry into their own enterprises and home gardens.",
   },
   {
     icon: "🍄",
     title: "Mushroom Production Support",
     desc: "From substrate preparation to marketing, we help entrepreneurs and groups set up profitable mushroom enterprises.",
     features: ["Spawn supply", "Technical training", "Enterprise mentoring"],
-    details: "Mushroom farming is one of the most accessible and profitable agri-enterprises, and we provide end-to-end support to get you started. Our services include spawn (seed) production and supply, substrate preparation training (using locally available materials like sugarcane bagasse, sawdust, and straw), inoculation techniques, incubation and fruiting room setup, harvesting and post-harvest handling, and market linkage. We offer both group training and individual mentoring, helping entrepreneurs develop business plans and connect with buyers. Our oyster mushroom production unit on campus serves as a live demonstration, and trainees get hands-on practice from day one.",
+    details:
+      "Mushroom farming is one of the most accessible and profitable agri-enterprises for youth, women and smallholders, and we provide end-to-end support to get you started. Our services include spawn (seed) production and supply, substrate preparation training using locally available materials such as sugarcane bagasse, sawdust and cereal straw, sterilisation and inoculation techniques, incubation and fruiting room setup, harvesting, post-harvest handling, value addition (drying, packaging) and market linkage. We offer both group training and one-to-one mentoring, helping entrepreneurs develop business plans, set up low-cost growing units, and connect with reliable buyers. Our oyster mushroom production unit on campus serves as a live demonstration, and trainees get hands-on practice from day one.",
+  },
+  {
+    icon: "💧",
+    title: "Water Harvesting & 3Rs Systems",
+    desc: "Designing and installing rainwater harvesting, greywater reuse and 'Reduce, Reuse, Recycle' systems for homes, schools and farms.",
+    features: ["Rainwater tanks & ponds", "Greywater reuse", "Borehole planning"],
+    details:
+      "Water is life — and in our drylands, every drop counts. We design and install rainwater harvesting systems (gutters, tanks, underground reservoirs and retention ponds), greywater-reuse systems for kitchens and bathing areas, and integrated landscape features such as swales and check-dams that slow, sink and spread water across the land. We support schools, children's homes (such as Tabasamu), farmer groups and households to plan boreholes, sand-dams and solar-pumped systems. Our work follows OTEPIC's 3Rs philosophy — Reduce, Reuse, Recycle — turning waste water and runoff into productive resources. Training and ongoing maintenance support are included with every installation.",
+  },
+  {
+    icon: "☀️",
+    title: "Solar Drying & Value Addition",
+    desc: "Solar dryers and processing units that turn surplus harvests into shelf-stable, high-value products.",
+    features: ["Indigenous vegetable drying", "Seed preservation", "Packaging & branding"],
+    details:
+      "Post-harvest losses rob farmers of income and communities of nutrition. Our solar drying program equips farmer groups with simple, affordable solar dryers that preserve indigenous vegetables (managu, terere, sagaa), fruits, herbs, mushrooms and seeds without the use of fossil fuels. We train participants in hygienic processing, packaging, branding and basic food-business management so that surplus harvests become a year-round source of income and household nutrition. The program is closely linked with our enterprise and market-access work, helping growers move from farm gate to consumer shelf with confidence.",
   },
 ];
 
