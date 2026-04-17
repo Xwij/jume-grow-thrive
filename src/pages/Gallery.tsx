@@ -101,11 +101,37 @@ const Gallery = () => {
                     loading="lazy"
                   />
                 </div>
+                {img.isNew && (
+                  <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-secondary text-secondary-foreground text-[10px] sm:text-xs font-bold font-body uppercase tracking-wider shadow-lg">
+                    New
+                  </span>
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <span className="absolute bottom-3 left-3 right-3 text-background font-body text-xs sm:text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg">
                   {img.label}
                 </span>
               </motion.div>
+            ))}
+          </div>
+
+          {/* Explore more buttons */}
+          <div className="mt-12 grid sm:grid-cols-3 gap-4">
+            {[
+              { to: "/projects", label: "Our Projects", note: "See what we're building in the field" },
+              { to: "/tabasamu", label: "Tabasamu Home", note: "Stories from the children's home" },
+              { to: "/services", label: "Our Services", note: "Training, consultancy & more" },
+            ].map((b) => (
+              <a
+                key={b.to}
+                href={b.to}
+                className="group block p-5 rounded-2xl bg-card border border-border hover:border-primary/40 transition-all"
+                style={{ boxShadow: "var(--card-shadow)" }}
+              >
+                <p className="font-display font-bold text-foreground text-base mb-1 group-hover:text-primary transition-colors">
+                  {b.label} →
+                </p>
+                <p className="font-body text-muted-foreground text-xs leading-relaxed">{b.note}</p>
+              </a>
             ))}
           </div>
         </div>

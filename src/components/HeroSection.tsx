@@ -44,10 +44,13 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.45 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap"
         >
           <a href="/impact" className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-secondary text-secondary-foreground font-body font-semibold text-base hover:opacity-90 transition-opacity shadow-lg">
             See Our Live Impact →
+          </a>
+          <a href="/tabasamu" className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-primary text-primary-foreground font-body font-semibold text-base hover:opacity-90 transition-opacity shadow-lg">
+            Tabasamu Children's Home 🌱
           </a>
           <a href="#programs" className="inline-flex items-center justify-center px-8 py-4 rounded-lg border-2 border-background/30 text-background font-body font-semibold text-base hover:bg-background/10 transition-colors">
             Explore Programs
