@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from "@/assets/jume-logo.png";
 
 const Footer = () => {
   return (
@@ -6,9 +7,9 @@ const Footer = () => {
       <div className="container-narrow">
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-10 mb-12">
           <div className="sm:col-span-2 md:col-span-1">
-            <h3 className="font-display font-bold text-xl text-background mb-3">
-              Jume College
-            </h3>
+            <div className="bg-background rounded-xl p-3 inline-block mb-4">
+              <img src={logo} alt="The Jume College – OTEPIC Kenya" className="h-12 w-auto object-contain" />
+            </div>
             <p className="font-body text-sm leading-relaxed">
               Where knowledge grows and communities thrive. A project of OTEPIC Kenya.
             </p>
