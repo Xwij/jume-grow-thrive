@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import logo from "@/assets/jume-logo.png";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -19,8 +20,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
       <div className="container-narrow flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
-        <Link to="/" className="font-display font-bold text-xl text-foreground">
-          Jume <span className="text-primary">College</span>
+        <Link to="/" className="flex items-center gap-2" aria-label="The Jume College — OTEPIC Kenya">
+          <img src={logo} alt="The Jume College – OTEPIC Kenya" className="h-10 sm:h-11 w-auto object-contain" />
         </Link>
 
         <div className="hidden md:flex items-center gap-1">
