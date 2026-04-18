@@ -1,19 +1,21 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import campusImg from "@/assets/campus.jpg";
-import farmerHarvestImg from "@/assets/farmer-harvest.jpg";
-import treePlantingImg from "@/assets/tree-planting.jpg";
-import waterProjectImg from "@/assets/water-project.jpg";
-import outdoorClassImg from "@/assets/outdoor-class.jpg";
-import communityGardenImg from "@/assets/community-garden.jpg";
+import waterPondImg from "@/assets/water-pond.jpg";
+import treePruningImg from "@/assets/tree-pruning.jpg";
+import bananaGroveImg from "@/assets/banana-grove.jpg";
+import seedlingsNurseryImg from "@/assets/seedlings-nursery.jpg";
+import treePlantingFieldImg from "@/assets/tree-planting-field.jpg";
+import womenTillingImg from "@/assets/women-tilling.jpg";
 
 const heroImages = [
   campusImg,
-  farmerHarvestImg,
-  treePlantingImg,
-  waterProjectImg,
-  outdoorClassImg,
-  communityGardenImg,
+  waterPondImg,
+  treePruningImg,
+  bananaGroveImg,
+  seedlingsNurseryImg,
+  treePlantingFieldImg,
+  womenTillingImg,
 ];
 
 const HeroSection = () => {
@@ -22,7 +24,7 @@ const HeroSection = () => {
   useEffect(() => {
     const id = setInterval(() => {
       setIndex((i) => (i + 1) % heroImages.length);
-    }, 5000);
+    }, 3100);
     return () => clearInterval(id);
   }, []);
 
@@ -37,7 +39,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, scale: 1.08 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 1 }}
-            transition={{ opacity: { duration: 2.2, ease: "easeInOut" }, scale: { duration: 7, ease: "easeOut" } }}
+            transition={{ opacity: { duration: 3.1, ease: "easeInOut" }, scale: { duration: 7, ease: "easeOut" } }}
             className="absolute inset-0 w-full h-full object-cover"
           />
         </AnimatePresence>

@@ -21,12 +21,33 @@ import campusImg from "@/assets/campus.jpg";
 import trainingFieldImg from "@/assets/training-field.jpg";
 import communityGardenImg from "@/assets/community-garden.jpg";
 import communityKidsImg from "@/assets/community-kids.jpg";
+// New uploads
+import waterPondImg from "@/assets/water-pond.jpg";
+import treePruningImg from "@/assets/tree-pruning.jpg";
+import agroforestryTeamImg from "@/assets/agroforestry-team.jpg";
+import bananaGroveImg from "@/assets/banana-grove.jpg";
+import seedlingsNurseryImg from "@/assets/seedlings-nursery.jpg";
+import mulchingTreeImg from "@/assets/mulching-tree.jpg";
+import treePlantingFieldImg from "@/assets/tree-planting-field.jpg";
+import womenTillingImg from "@/assets/women-tilling.jpg";
+import diggingWaterPanImg from "@/assets/digging-water-pan.jpg";
 
 const gallery = [
-  { src: kidsHarvestImg, label: "Kids with Fresh Harvest", span: "md:col-span-2 md:row-span-2", isNew: true },
-  { src: mushroomBucketImg, label: "Mushroom Bucket Growing", span: "", isNew: true },
-  { src: kidsPlayingImg, label: "Kids at Play", span: "", isNew: true },
-  { src: soilPrepImg, label: "Soil Preparation", span: "md:col-span-2", isNew: true },
+  // Latest uploads first
+  { src: waterPondImg, label: "Water Harvesting Pond", span: "md:col-span-2 md:row-span-2", isNew: true },
+  { src: seedlingsNurseryImg, label: "Tree Seedlings Nursery", span: "", isNew: true },
+  { src: treePruningImg, label: "Pruning Workshop", span: "", isNew: true },
+  { src: bananaGroveImg, label: "Banana Grove", span: "md:col-span-2", isNew: true },
+  { src: agroforestryTeamImg, label: "Agroforestry Training", span: "", isNew: true },
+  { src: womenTillingImg, label: "Women Preparing Land", span: "", isNew: true },
+  { src: diggingWaterPanImg, label: "Digging Water Pan", span: "md:col-span-2", isNew: true },
+  { src: treePlantingFieldImg, label: "Planting Day", span: "", isNew: true },
+  { src: mulchingTreeImg, label: "Mulching Young Trees", span: "", isNew: true },
+  // Existing collection
+  { src: kidsHarvestImg, label: "Kids with Fresh Harvest", span: "md:col-span-2" },
+  { src: mushroomBucketImg, label: "Mushroom Bucket Growing", span: "" },
+  { src: kidsPlayingImg, label: "Kids at Play", span: "" },
+  { src: soilPrepImg, label: "Soil Preparation", span: "md:col-span-2" },
   { src: fieldTrainingImg, label: "Community Field Training", span: "" },
   { src: passionFruitImg, label: "Passion Fruit Harvest", span: "" },
   { src: farmerHarvestImg, label: "Proud Farmer", span: "md:col-span-2 md:row-span-2" },
@@ -50,6 +71,7 @@ const videos = [
   { src: "/videos/video-4.mp4", label: "Water Harvesting" },
   { src: "/videos/video-5.mp4", label: "Tree Planting" },
   { src: "/videos/video-6.mp4", label: "Farm Activities" },
+  { src: "/videos/video-7.mp4", label: "Latest from the Field" },
 ];
 
 const Gallery = () => {
@@ -87,7 +109,7 @@ const Gallery = () => {
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.03 }}
+                transition={{ duration: 3.1, delay: i * 0.03, ease: "easeOut" }}
                 className={`relative overflow-hidden rounded-2xl group cursor-pointer ${img.span}`}
               >
                 <div
