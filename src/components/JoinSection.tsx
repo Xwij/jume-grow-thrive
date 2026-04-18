@@ -29,7 +29,7 @@ const JoinSection = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:info@otepic.org" className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-secondary text-secondary-foreground font-body font-semibold text-base hover:opacity-90 transition-opacity">
+            <a href="mailto:otepic07@yahoo.com" className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-secondary text-secondary-foreground font-body font-semibold text-base hover:opacity-90 transition-opacity">
               Get in Touch
             </a>
             <a href="#programs" className="inline-flex items-center justify-center px-8 py-4 rounded-lg border-2 border-primary-foreground/30 text-primary-foreground font-body font-semibold text-base hover:bg-primary-foreground/10 transition-colors">

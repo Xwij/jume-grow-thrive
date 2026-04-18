@@ -34,9 +34,10 @@ const Footer = () => {
           <div>
             <h4 className="font-body font-semibold text-background text-sm mb-3 uppercase tracking-wider">Connect</h4>
             <div className="space-y-2">
-              <a href="mailto:info@otepic.org" className="block font-body text-sm hover:text-background transition-colors">info@otepic.org</a>
+              <a href="tel:+254725429179" className="block font-body text-sm hover:text-background transition-colors">+254 725 429 179</a>
+              <a href="mailto:otepic07@yahoo.com" className="block font-body text-sm hover:text-background transition-colors">otepic07@yahoo.com</a>
               <Link to="/contact" className="block font-body text-sm hover:text-background transition-colors">Contact Us</Link>
-              <p className="font-body text-sm">Kitale, Kenya</p>
+              <p className="font-body text-sm">Bidii Farm, Trans Nzoia, Kenya</p>
             </div>
           </div>
         </div>
