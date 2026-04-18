@@ -1,15 +1,50 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 import campusImg from "@/assets/campus.jpg";
+import farmerHarvestImg from "@/assets/farmer-harvest.jpg";
+import treePlantingImg from "@/assets/tree-planting.jpg";
+import waterProjectImg from "@/assets/water-project.jpg";
+import outdoorClassImg from "@/assets/outdoor-class.jpg";
+import communityGardenImg from "@/assets/community-garden.jpg";
+
+const heroImages = [
+  campusImg,
+  farmerHarvestImg,
+  treePlantingImg,
+  waterProjectImg,
+  outdoorClassImg,
+  communityGardenImg,
+];
 
 const HeroSection = () => {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setIndex((i) => (i + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
-        <img src={campusImg} alt="Jume College Campus" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 hero-gradient-animated" />
+        <AnimatePresence mode="sync">
+          <motion.img
+            key={index}
+            src={heroImages[index]}
+            alt="Jume College"
+            initial={{ opacity: 0, scale: 1.08 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 1 }}
+            transition={{ opacity: { duration: 2.2, ease: "easeInOut" }, scale: { duration: 7, ease: "easeOut" } }}
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </AnimatePresence>
+        <div className="absolute inset-0 bg-gradient-to-br from-foreground/70 via-primary/40 to-foreground/70" />
       </div>
 
-      <div className="absolute inset-0 opacity-15">
+      <div className="absolute inset-0 opacity-15 pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-secondary blur-3xl" />
         <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-primary blur-3xl" />
       </div>
@@ -56,6 +91,20 @@ const HeroSection = () => {
             Explore Programs
           </a>
         </motion.div>
+
+        {/* Slide indicators */}
+        <div className="flex justify-center gap-2 mt-12">
+          {heroImages.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setIndex(i)}
+              aria-label={`Slide ${i + 1}`}
+              className={`h-1.5 rounded-full transition-all ${
+                i === index ? "w-8 bg-secondary" : "w-1.5 bg-background/40 hover:bg-background/60"
+              }`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
