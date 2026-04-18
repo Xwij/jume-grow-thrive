@@ -42,28 +42,45 @@ const ContactPage = () => {
                   <span className="text-2xl">📍</span>
                   <div>
                     <h3 className="font-body font-semibold text-foreground text-sm">Location</h3>
-                    <p className="font-body text-muted-foreground text-sm">Kitale, Trans-Nzoia County, Kenya</p>
+                    <p className="font-body text-muted-foreground text-sm">Bidii Farm, Trans Nzoia County, Kenya</p>
+                    <p className="font-body text-muted-foreground text-xs mt-1">Plus Code: 32C7+72M Kitale</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <span className="text-2xl">📞</span>
+                  <div>
+                    <h3 className="font-body font-semibold text-foreground text-sm">Phone</h3>
+                    <a href="tel:+254725429179" className="font-body text-primary text-sm hover:underline">+254 725 429 179</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <span className="text-2xl">✉️</span>
                   <div>
                     <h3 className="font-body font-semibold text-foreground text-sm">Email</h3>
-                    <a href="mailto:info@otepic.org" className="font-body text-primary text-sm hover:underline">info@otepic.org</a>
+                    <a href="mailto:otepic07@yahoo.com" className="font-body text-primary text-sm hover:underline">otepic07@yahoo.com</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">🌐</span>
+                  <span className="text-2xl">💬</span>
                   <div>
-                    <h3 className="font-body font-semibold text-foreground text-sm">Website</h3>
-                    <p className="font-body text-muted-foreground text-sm">www.otepic.org</p>
+                    <h3 className="font-body font-semibold text-foreground text-sm">WhatsApp</h3>
+                    <a href="https://wa.me/254725429179" target="_blank" rel="noopener noreferrer" className="font-body text-primary text-sm hover:underline">Chat with us</a>
                   </div>
                 </div>
               </div>
 
               <div className="mt-10">
-                <div className="aspect-[4/3] bg-muted rounded-xl flex items-center justify-center border border-border">
-                  <span className="text-muted-foreground font-body text-sm">Map Placeholder</span>
+                <div className="aspect-[4/3] rounded-xl overflow-hidden border border-border" style={{ boxShadow: "var(--card-shadow)" }}>
+                  <iframe
+                    title="Bidii Farm location map"
+                    src="https://www.google.com/maps?q=32C7%2B72M%20Bidii%20Farm%2C%20Kitale&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    allowFullScreen
+                  />
                 </div>
               </div>
             </motion.div>
