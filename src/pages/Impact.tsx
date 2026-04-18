@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import CountUp from "@/components/CountUp";
 
 import waterProjectImg from "@/assets/water-project.jpg";
 import farmerHarvestImg from "@/assets/farmer-harvest.jpg";
@@ -16,13 +17,13 @@ import soilPrepImg from "@/assets/soil-preparation.jpg";
 import communityGardenImg from "@/assets/community-garden.jpg";
 import workersImg from "@/assets/workers.jpg";
 
-const stats = [
-  { label: "Farmers Trained", value: "1,200+" },
-  { label: "Litres of Water Saved", value: "85,000" },
-  { label: "Trees Planted", value: "3,400" },
-  { label: "Youth & Women Engaged", value: "650+" },
-  { label: "Kg of Food Produced", value: "12,000" },
-  { label: "Community Projects", value: "27" },
+const stats: { label: string; end: number; suffix?: string }[] = [
+  { label: "Farmers Trained", end: 1850, suffix: "+" },
+  { label: "Litres of Water Saved", end: 95000, suffix: "+" },
+  { label: "Trees Planted", end: 4400, suffix: "+" },
+  { label: "Youth & Women Engaged", end: 700, suffix: "+" },
+  { label: "Kg of Food Produced", end: 12000, suffix: "+" },
+  { label: "Community Projects", end: 27 },
 ];
 
 const stories = [
@@ -112,7 +113,7 @@ const Impact = () => {
               className="rounded-2xl p-6 md:p-8 bg-card border border-border text-center"
               style={{ boxShadow: "var(--card-shadow)" }}
             >
-              <div className="text-3xl md:text-5xl font-display font-bold text-primary mb-2">{s.value}</div>
+              <CountUp end={s.end} suffix={s.suffix} className="block text-3xl md:text-5xl font-display font-bold text-primary mb-2" />
               <div className="font-body text-xs md:text-sm text-muted-foreground uppercase tracking-wider">{s.label}</div>
             </motion.div>
           ))}
