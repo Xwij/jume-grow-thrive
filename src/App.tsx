@@ -6,7 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Index from "./pages/Index.tsx";
 import Contact from "./pages/Contact.tsx";
-import Projects from "./pages/Projects.tsx";
+
 import Services from "./pages/Services.tsx";
 import About from "./pages/About.tsx";
 import Gallery from "./pages/Gallery.tsx";
@@ -26,7 +26,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/projects" element={<Projects />} />
+          
           <Route path="/services" element={<Services />} />
           <Route path="/about" element={<About />} />
           <Route path="/gallery" element={<Gallery />} />
