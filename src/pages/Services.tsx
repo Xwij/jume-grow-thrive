@@ -120,22 +120,37 @@ const Services = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="bg-card rounded-2xl p-8 border border-border hover:border-primary/30 transition-all duration-300 group cursor-pointer"
+                className="bg-card rounded-2xl overflow-hidden border border-border hover:border-primary/30 transition-all duration-300 group flex flex-col"
                 style={{ boxShadow: "var(--card-shadow)" }}
-                onClick={() => setOpenService(i)}
               >
-                <span className="text-4xl mb-4 block group-hover:scale-110 transition-transform duration-300">{service.icon}</span>
-                <h3 className="text-lg font-display font-bold text-foreground mb-3">{service.title}</h3>
-                <p className="font-body text-muted-foreground text-sm leading-relaxed mb-4">{service.desc}</p>
-                <ul className="space-y-2 mb-4">
-                  {service.features.map((f) => (
-                    <li key={f} className="flex items-center gap-2 text-sm font-body text-foreground/80">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-                <span className="text-primary text-sm font-semibold font-body group-hover:underline">Learn more →</span>
+                <div className="relative h-44 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent" />
+                  <span className="absolute top-3 left-3 text-3xl drop-shadow-lg">{service.icon}</span>
+                </div>
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="text-lg font-display font-bold text-foreground mb-3">{service.title}</h3>
+                  <p className="font-body text-muted-foreground text-sm leading-relaxed mb-4">{service.desc}</p>
+                  <ul className="space-y-2 mb-5">
+                    {service.features.map((f) => (
+                      <li key={f} className="flex items-center gap-2 text-sm font-body text-foreground/80">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                  <button
+                    onClick={() => setOpenService(i)}
+                    className="mt-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-primary/10 text-primary font-body font-semibold text-sm hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
+                    Read more →
+                  </button>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -149,7 +164,7 @@ const Services = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4"
+            className="fixed inset-0 z-[100] bg-foreground/40 backdrop-blur-xl flex items-center justify-center p-4"
             onClick={() => setOpenService(null)}
           >
             <motion.div
@@ -157,28 +172,34 @@ const Services = () => {
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.9, opacity: 0, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="bg-card rounded-2xl p-8 max-w-2xl w-full max-h-[80vh] overflow-y-auto border border-border relative"
-              style={{ boxShadow: "0 25px 60px -12px rgba(0,0,0,0.4)" }}
+              className="bg-card/95 backdrop-blur-md rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-hidden border border-border relative flex flex-col"
+              style={{ boxShadow: "0 25px 60px -12px rgba(0,0,0,0.45)" }}
               onClick={(e) => e.stopPropagation()}
             >
-              <button
-                onClick={() => setOpenService(null)}
-                className="absolute top-4 right-4 text-muted-foreground hover:text-foreground text-2xl font-bold transition-colors"
-              >
-                ✕
-              </button>
-              <span className="text-5xl mb-4 block">{services[openService].icon}</span>
-              <h2 className="text-2xl font-display font-bold text-foreground mb-2">{services[openService].title}</h2>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {services[openService].features.map((f) => (
-                  <span key={f} className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold font-body">{f}</span>
-                ))}
+              <div className="relative h-52 overflow-hidden flex-shrink-0">
+                <img src={services[openService].image} alt={services[openService].title} className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+                <span className="absolute top-4 left-4 text-5xl drop-shadow-lg">{services[openService].icon}</span>
+                <button
+                  onClick={() => setOpenService(null)}
+                  className="absolute top-4 right-4 w-9 h-9 rounded-full bg-background/80 backdrop-blur text-foreground hover:bg-background flex items-center justify-center text-lg font-bold transition-colors"
+                >
+                  ✕
+                </button>
               </div>
-              <p className="font-body text-muted-foreground leading-relaxed text-[15px]">{services[openService].details}</p>
-              <div className="mt-6 pt-4 border-t border-border">
-                <a href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-body font-semibold text-sm hover:opacity-90 transition-opacity">
-                  Get in Touch →
-                </a>
+              <div className="p-8 overflow-y-auto">
+                <h2 className="text-2xl font-display font-bold text-foreground mb-3">{services[openService].title}</h2>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {services[openService].features.map((f) => (
+                    <span key={f} className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold font-body">{f}</span>
+                  ))}
+                </div>
+                <p className="font-body text-muted-foreground leading-relaxed text-[15px]">{services[openService].details}</p>
+                <div className="mt-6 pt-4 border-t border-border">
+                  <a href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-body font-semibold text-sm hover:opacity-90 transition-opacity">
+                    Get in Touch →
+                  </a>
+                </div>
               </div>
             </motion.div>
           </motion.div>
