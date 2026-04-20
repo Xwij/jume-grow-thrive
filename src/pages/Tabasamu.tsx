@@ -54,7 +54,7 @@ const sections = [
   },
 ];
 
-const floaties = ["🌸", "🦋", "🌟", "🌈", "🍃", "☀️", "🐞", "🌻"];
+const floaties = ["🌸", "🦋", "🌟", "🌈", "🍃", "☀️", "🐞", "🌻", "🎈", "⭐", "🦄", "🌺", "🍀", "💖"];
 
 const Tabasamu = () => {
   return (
