@@ -25,6 +25,7 @@ const services = [
   },
   {
     icon: "📚",
+    image: trainingImg,
     title: "Training & Workshops",
     desc: "Hands-on training programs in sustainable agriculture, water harvesting, agroforestry, and mushroom cultivation for individuals, groups, and organizations.",
     features: ["Short courses (1–5 days)", "Certificate programs", "Custom group training"],
@@ -33,6 +34,7 @@ const services = [
   },
   {
     icon: "🌍",
+    image: communityImg,
     title: "Community Development",
     desc: "We partner with communities to design and implement projects that improve food security, water access, and livelihoods through ecological approaches.",
     features: ["Needs assessment", "Project planning", "Capacity building"],
@@ -41,6 +43,7 @@ const services = [
   },
   {
     icon: "🤝",
+    image: volunteerImg,
     title: "Volunteer & Internship Programs",
     desc: "International and local volunteers can join our campus to learn, contribute, and experience regenerative agriculture first-hand.",
     features: ["Work-stay programs", "Research placements", "Cultural exchange"],
@@ -49,6 +52,7 @@ const services = [
   },
   {
     icon: "🌳",
+    image: nurseryImg,
     title: "Tree Nursery & Seedlings",
     desc: "We produce and distribute quality tree seedlings for agroforestry, reforestation, and food forest establishment.",
     features: ["Indigenous species", "Fruit tree varieties", "Bulk orders available"],
@@ -57,6 +61,7 @@ const services = [
   },
   {
     icon: "🍄",
+    image: mushroomImg,
     title: "Mushroom Production Support",
     desc: "From substrate preparation to marketing, we help entrepreneurs and groups set up profitable mushroom enterprises.",
     features: ["Spawn supply", "Technical training", "Enterprise mentoring"],
@@ -65,6 +70,7 @@ const services = [
   },
   {
     icon: "💧",
+    image: waterImg,
     title: "Water Harvesting & 3Rs Systems",
     desc: "Designing and installing rainwater harvesting, greywater reuse and 'Reduce, Reuse, Recycle' systems for homes, schools and farms.",
     features: ["Rainwater tanks & ponds", "Greywater reuse", "Borehole planning"],
@@ -73,6 +79,7 @@ const services = [
   },
   {
     icon: "☀️",
+    image: solarImg,
     title: "Solar Drying & Value Addition",
     desc: "Solar dryers and processing units that turn surplus harvests into shelf-stable, high-value products.",
     features: ["Indigenous vegetable drying", "Seed preservation", "Packaging & branding"],
