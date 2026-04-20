@@ -36,7 +36,10 @@ const Navbar = () => {
               </Link>
             )
           )}
-          <Link to="/contact" className="ml-2 px-5 py-2 rounded-lg bg-primary text-primary-foreground font-body text-sm font-semibold hover:opacity-90 transition-opacity">
+          <Link to="/donate" className="ml-2 px-5 py-2 rounded-lg bg-pink-500 text-white font-body text-sm font-semibold hover:bg-pink-600 transition-colors">
+            💛 Donate
+          </Link>
+          <Link to="/contact" className="ml-1 px-5 py-2 rounded-lg bg-primary text-primary-foreground font-body text-sm font-semibold hover:opacity-90 transition-opacity">
             Contact
           </Link>
         </div>
@@ -61,6 +64,9 @@ const Navbar = () => {
               </Link>
             )
           )}
+          <Link to="/donate" onClick={() => setOpen(false)} className="block px-4 py-2.5 font-body text-sm font-semibold text-pink-600">
+            💛 Donate
+          </Link>
           <Link to="/contact" onClick={() => setOpen(false)} className="block px-4 py-2.5 font-body text-sm font-semibold text-primary">
             Contact Us
           </Link>

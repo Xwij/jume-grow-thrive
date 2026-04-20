@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import kidsHarvestImg from "@/assets/kids-harvest.jpg";
-import kidsPlayingImg from "@/assets/kids-playing.jpg";
+import tabasamuJoy from "@/assets/tabasamu-joy.jpg";
+import tabasamuCircle from "@/assets/tabasamu-circle.jpg";
 import communityKidsImg from "@/assets/community-kids.jpg";
 import communityGardenImg from "@/assets/community-garden.jpg";
 import waterProjectImg from "@/assets/water-project.jpg";
@@ -35,7 +35,7 @@ const sections = [
     icon: "♻️",
     title: "Sustainability in Action",
     body: "Through OTEPIC's 3Rs approach—Reduce, Reuse, Recycle—the children are learning practical ways to care for the environment. From composting to water conservation, these lessons are shaping a more sustainable future.",
-    image: kidsHarvestImg,
+    image: tabasamuCircle,
     color: "#84cc16",
   },
   {
@@ -49,12 +49,12 @@ const sections = [
     icon: "🌼",
     title: "A Home Full of Smiles",
     body: "Despite challenges, Tabasamu remains a place of joy, resilience, and hope. The children continue to grow in confidence, supported by a caring and empowering environment.",
-    image: kidsPlayingImg,
+    image: tabasamuJoy,
     color: "#ec4899",
   },
 ];
 
-const floaties = ["🌸", "🦋", "🌟", "🌈", "🍃", "☀️", "🐞", "🌻"];
+const floaties = ["🌸", "🦋", "🌟", "🌈", "🍃", "☀️", "🐞", "🌻", "🎈", "⭐", "🦄", "🌺", "🍀", "💖"];
 
 const Tabasamu = () => {
   return (
@@ -92,7 +92,7 @@ const Tabasamu = () => {
       {/* Hero — bright kid-friendly */}
       <section className="relative pt-28 pb-20 section-padding overflow-hidden z-10">
         <div className="absolute inset-0">
-          <img src={kidsPlayingImg} alt="Tabasamu Children's Home" className="w-full h-full object-cover" />
+          <img src={tabasamuJoy} alt="Tabasamu Children's Home" className="w-full h-full object-cover" />
           <div className="absolute inset-0" style={{
             background: "linear-gradient(135deg, rgba(236,72,153,0.75) 0%, rgba(168,85,247,0.7) 40%, rgba(34,197,94,0.75) 100%)",
           }} />
@@ -224,12 +224,15 @@ const Tabasamu = () => {
             <p className="font-body text-white/95 text-lg leading-relaxed mb-8 max-w-xl mx-auto">
               We're focused on expanding food production, improving water access, and strengthening sustainable projects that support long-term independence. 🌱
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-white text-pink-600 font-body font-bold hover:scale-105 transition-transform shadow-lg">
-                💛 Support Tabasamu →
+            <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
+              <Link to="/donate" className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-white text-pink-600 font-body font-bold hover:scale-105 transition-transform shadow-lg">
+                💛 Donate Now →
+              </Link>
+              <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-white text-white font-body font-bold hover:bg-white/10 transition-colors">
+                Sponsor a Child ✨
               </Link>
               <Link to="/impact" className="inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-white text-white font-body font-bold hover:bg-white/10 transition-colors">
-                See Our Impact ✨
+                See Our Impact 🌟
               </Link>
             </div>
           </motion.div>
