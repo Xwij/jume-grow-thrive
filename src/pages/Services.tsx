@@ -4,10 +4,19 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import avocadosImg from "@/assets/avocados.jpg";
 import bananasImg from "@/assets/bananas.jpg";
+import permacultureImg from "@/assets/agroforestry-team.jpg";
+import trainingImg from "@/assets/outdoor-class.jpg";
+import communityImg from "@/assets/community-meeting.jpg";
+import volunteerImg from "@/assets/field-training.jpg";
+import nurseryImg from "@/assets/seedlings-nursery.jpg";
+import mushroomImg from "@/assets/mushroom-closeup.jpg";
+import waterImg from "@/assets/water-pond.jpg";
+import solarImg from "@/assets/banana-harvest.jpg";
 
 const services = [
   {
     icon: "🌱",
+    image: permacultureImg,
     title: "Permaculture Consultancy",
     desc: "Expert farm and landscape design using permaculture principles. We help you create productive, self-sustaining systems tailored to your land and climate.",
     features: ["Site analysis & design", "Implementation support", "Follow-up mentoring"],
