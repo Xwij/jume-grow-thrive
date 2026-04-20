@@ -4,10 +4,19 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import avocadosImg from "@/assets/avocados.jpg";
 import bananasImg from "@/assets/bananas.jpg";
+import permacultureImg from "@/assets/agroforestry-team.jpg";
+import trainingImg from "@/assets/outdoor-class.jpg";
+import communityImg from "@/assets/community-meeting.jpg";
+import volunteerImg from "@/assets/field-training.jpg";
+import nurseryImg from "@/assets/seedlings-nursery.jpg";
+import mushroomImg from "@/assets/mushroom-closeup.jpg";
+import waterImg from "@/assets/water-pond.jpg";
+import solarImg from "@/assets/banana-harvest.jpg";
 
 const services = [
   {
     icon: "🌱",
+    image: permacultureImg,
     title: "Permaculture Consultancy",
     desc: "Expert farm and landscape design using permaculture principles. We help you create productive, self-sustaining systems tailored to your land and climate.",
     features: ["Site analysis & design", "Implementation support", "Follow-up mentoring"],
@@ -16,6 +25,7 @@ const services = [
   },
   {
     icon: "📚",
+    image: trainingImg,
     title: "Training & Workshops",
     desc: "Hands-on training programs in sustainable agriculture, water harvesting, agroforestry, and mushroom cultivation for individuals, groups, and organizations.",
     features: ["Short courses (1–5 days)", "Certificate programs", "Custom group training"],
@@ -24,6 +34,7 @@ const services = [
   },
   {
     icon: "🌍",
+    image: communityImg,
     title: "Community Development",
     desc: "We partner with communities to design and implement projects that improve food security, water access, and livelihoods through ecological approaches.",
     features: ["Needs assessment", "Project planning", "Capacity building"],
@@ -32,6 +43,7 @@ const services = [
   },
   {
     icon: "🤝",
+    image: volunteerImg,
     title: "Volunteer & Internship Programs",
     desc: "International and local volunteers can join our campus to learn, contribute, and experience regenerative agriculture first-hand.",
     features: ["Work-stay programs", "Research placements", "Cultural exchange"],
@@ -40,6 +52,7 @@ const services = [
   },
   {
     icon: "🌳",
+    image: nurseryImg,
     title: "Tree Nursery & Seedlings",
     desc: "We produce and distribute quality tree seedlings for agroforestry, reforestation, and food forest establishment.",
     features: ["Indigenous species", "Fruit tree varieties", "Bulk orders available"],
@@ -48,6 +61,7 @@ const services = [
   },
   {
     icon: "🍄",
+    image: mushroomImg,
     title: "Mushroom Production Support",
     desc: "From substrate preparation to marketing, we help entrepreneurs and groups set up profitable mushroom enterprises.",
     features: ["Spawn supply", "Technical training", "Enterprise mentoring"],
@@ -56,6 +70,7 @@ const services = [
   },
   {
     icon: "💧",
+    image: waterImg,
     title: "Water Harvesting & 3Rs Systems",
     desc: "Designing and installing rainwater harvesting, greywater reuse and 'Reduce, Reuse, Recycle' systems for homes, schools and farms.",
     features: ["Rainwater tanks & ponds", "Greywater reuse", "Borehole planning"],
@@ -64,6 +79,7 @@ const services = [
   },
   {
     icon: "☀️",
+    image: solarImg,
     title: "Solar Drying & Value Addition",
     desc: "Solar dryers and processing units that turn surplus harvests into shelf-stable, high-value products.",
     features: ["Indigenous vegetable drying", "Seed preservation", "Packaging & branding"],
@@ -104,22 +120,37 @@ const Services = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="bg-card rounded-2xl p-8 border border-border hover:border-primary/30 transition-all duration-300 group cursor-pointer"
+                className="bg-card rounded-2xl overflow-hidden border border-border hover:border-primary/30 transition-all duration-300 group flex flex-col"
                 style={{ boxShadow: "var(--card-shadow)" }}
-                onClick={() => setOpenService(i)}
               >
-                <span className="text-4xl mb-4 block group-hover:scale-110 transition-transform duration-300">{service.icon}</span>
-                <h3 className="text-lg font-display font-bold text-foreground mb-3">{service.title}</h3>
-                <p className="font-body text-muted-foreground text-sm leading-relaxed mb-4">{service.desc}</p>
-                <ul className="space-y-2 mb-4">
-                  {service.features.map((f) => (
-                    <li key={f} className="flex items-center gap-2 text-sm font-body text-foreground/80">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-                <span className="text-primary text-sm font-semibold font-body group-hover:underline">Learn more →</span>
+                <div className="relative h-44 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent" />
+                  <span className="absolute top-3 left-3 text-3xl drop-shadow-lg">{service.icon}</span>
+                </div>
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="text-lg font-display font-bold text-foreground mb-3">{service.title}</h3>
+                  <p className="font-body text-muted-foreground text-sm leading-relaxed mb-4">{service.desc}</p>
+                  <ul className="space-y-2 mb-5">
+                    {service.features.map((f) => (
+                      <li key={f} className="flex items-center gap-2 text-sm font-body text-foreground/80">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                  <button
+                    onClick={() => setOpenService(i)}
+                    className="mt-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-primary/10 text-primary font-body font-semibold text-sm hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
+                    Read more →
+                  </button>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -133,7 +164,7 @@ const Services = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4"
+            className="fixed inset-0 z-[100] bg-foreground/40 backdrop-blur-xl flex items-center justify-center p-4"
             onClick={() => setOpenService(null)}
           >
             <motion.div
@@ -141,28 +172,34 @@ const Services = () => {
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.9, opacity: 0, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="bg-card rounded-2xl p-8 max-w-2xl w-full max-h-[80vh] overflow-y-auto border border-border relative"
-              style={{ boxShadow: "0 25px 60px -12px rgba(0,0,0,0.4)" }}
+              className="bg-card/95 backdrop-blur-md rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-hidden border border-border relative flex flex-col"
+              style={{ boxShadow: "0 25px 60px -12px rgba(0,0,0,0.45)" }}
               onClick={(e) => e.stopPropagation()}
             >
-              <button
-                onClick={() => setOpenService(null)}
-                className="absolute top-4 right-4 text-muted-foreground hover:text-foreground text-2xl font-bold transition-colors"
-              >
-                ✕
-              </button>
-              <span className="text-5xl mb-4 block">{services[openService].icon}</span>
-              <h2 className="text-2xl font-display font-bold text-foreground mb-2">{services[openService].title}</h2>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {services[openService].features.map((f) => (
-                  <span key={f} className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold font-body">{f}</span>
-                ))}
+              <div className="relative h-52 overflow-hidden flex-shrink-0">
+                <img src={services[openService].image} alt={services[openService].title} className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+                <span className="absolute top-4 left-4 text-5xl drop-shadow-lg">{services[openService].icon}</span>
+                <button
+                  onClick={() => setOpenService(null)}
+                  className="absolute top-4 right-4 w-9 h-9 rounded-full bg-background/80 backdrop-blur text-foreground hover:bg-background flex items-center justify-center text-lg font-bold transition-colors"
+                >
+                  ✕
+                </button>
               </div>
-              <p className="font-body text-muted-foreground leading-relaxed text-[15px]">{services[openService].details}</p>
-              <div className="mt-6 pt-4 border-t border-border">
-                <a href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-body font-semibold text-sm hover:opacity-90 transition-opacity">
-                  Get in Touch →
-                </a>
+              <div className="p-8 overflow-y-auto">
+                <h2 className="text-2xl font-display font-bold text-foreground mb-3">{services[openService].title}</h2>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {services[openService].features.map((f) => (
+                    <span key={f} className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold font-body">{f}</span>
+                  ))}
+                </div>
+                <p className="font-body text-muted-foreground leading-relaxed text-[15px]">{services[openService].details}</p>
+                <div className="mt-6 pt-4 border-t border-border">
+                  <a href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-body font-semibold text-sm hover:opacity-90 transition-opacity">
+                    Get in Touch →
+                  </a>
+                </div>
               </div>
             </motion.div>
           </motion.div>

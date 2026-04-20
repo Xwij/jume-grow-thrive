@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import philipImg from "@/assets/philip-munyasia.jpg";
 
 const ContactPage = () => {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
@@ -28,6 +29,54 @@ const ContactPage = () => {
             <p className="font-body text-muted-foreground max-w-2xl mx-auto">
               We'd love to hear from you. Reach out to learn more about our programs, volunteer opportunities, or partnerships.
             </p>
+          </motion.div>
+
+          {/* Director's story */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-5xl mx-auto mb-16"
+          >
+            <div className="grid md:grid-cols-5 gap-8 items-center bg-card rounded-2xl overflow-hidden border border-border" style={{ boxShadow: "var(--card-shadow)" }}>
+              <div className="md:col-span-2 relative h-72 md:h-full min-h-[320px]">
+                <img
+                  src={philipImg}
+                  alt="Philip Munyasia, Director of Jume College and OTEPIC"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent md:bg-gradient-to-r md:from-transparent md:to-card/20" />
+              </div>
+              <div className="md:col-span-3 p-8 md:p-10">
+                <p className="text-xs font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-2">Meet the Director</p>
+                <h2 className="text-2xl sm:text-3xl font-display font-bold text-foreground mb-3">Philip Munyasia</h2>
+                <p className="text-sm font-body text-primary font-semibold mb-5">Founder & Director — Jume College · OTEPIC Kenya</p>
+                <div className="space-y-4 font-body text-muted-foreground leading-relaxed text-[15px]">
+                  <p>
+                    Born and raised in the Kipsongo slums of Kitale, Philip grew up surrounded by hunger,
+                    poverty and post-election violence. As a young boy he scavenged in dumpsites to help feed
+                    his family — an experience that planted in him a fierce determination to change the story
+                    for his community.
+                  </p>
+                  <p>
+                    In 2007, in the aftermath of Kenya's worst ethnic clashes, Philip founded
+                    <strong className="text-foreground"> OTEPIC (Organic Technology Extension and Promotion of Initiative Centre)</strong>
+                    {" "}to bring people of different tribes together through farming, peace-building and
+                    sustainable living. What began as a small youth garden has grown into a movement
+                    reaching thousands of farmers, women, youth and children across Trans Nzoia County.
+                  </p>
+                  <p>
+                    Today Philip leads <strong className="text-foreground">Jume College</strong> — OTEPIC's
+                    permaculture training campus — and the <strong className="text-foreground">Tabasamu Children's
+                    Home</strong>, where orphaned and vulnerable children grow up with dignity, education and
+                    a thriving food garden of their own. His vision is simple and radical: that every family
+                    in Kenya should have access to clean water, healthy soil, nutritious food and the skills
+                    to live in harmony with the land.
+                  </p>
+                </div>
+              </div>
+            </div>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
