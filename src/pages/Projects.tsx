@@ -13,6 +13,45 @@ import mushroomImg from "@/assets/mushroom-closeup.jpg";
 import waterImg from "@/assets/water-pond.jpg";
 import solarImg from "@/assets/banana-harvest.jpg";
 
+const programs = [
+  {
+    title: "Permaculture Design Training",
+    desc: "Introduces participants to permaculture principles and regenerative land design. Learn to design farms and landscapes that work with nature.",
+    topics: ["Permaculture principles and ethics", "Garden and farm design", "Soil regeneration and composting", "Food forests and integrated farming systems"],
+    icon: "🌳",
+  },
+  {
+    title: "Biointensive Agriculture",
+    desc: "Highly productive organic farming methods that increase yields while improving soil health. Ideal for small farmers with limited land.",
+    topics: ["Deep soil preparation", "Intensive planting techniques", "Compost production", "Sustainable food production in small spaces"],
+    icon: "🌾",
+  },
+  {
+    title: "Water Harvesting & Retention",
+    desc: "Practical techniques to capture, store, and manage rainwater in the landscape. Helping communities become resilient to drought and climate change.",
+    topics: ["Rainwater harvesting systems", "Swales and contour design", "Small ponds and water retention", "Restoring the natural water cycle"],
+    icon: "💧",
+  },
+  {
+    title: "Agroforestry & Tree Nursery",
+    desc: "Learn how trees can transform farms and landscapes, providing food, shade, biomass, fuel, and long-term environmental benefits.",
+    topics: ["Establishing tree nurseries", "Integrating trees into farming", "Soil conservation and biodiversity", "Climate change resilience"],
+    icon: "🌲",
+  },
+  {
+    title: "Mushroom Cultivation",
+    desc: "Practical organic mushroom production for nutrition and income generation, supporting youth and community enterprises.",
+    topics: ["Substrate preparation", "Spawn management", "Mushroom house setup", "Harvesting and marketing"],
+    icon: "🍄",
+  },
+  {
+    title: "Hands-On Learning",
+    desc: "Learning is practical at Jume College. Students develop skills they can apply immediately in their communities.",
+    topics: ["Demonstration gardens", "Farm activities", "Water conservation projects", "Ecological restoration projects"],
+    icon: "🙌",
+  },
+];
+
 const services = [
   {
     icon: "🌱",
