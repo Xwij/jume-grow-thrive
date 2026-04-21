@@ -24,17 +24,11 @@ const Navbar = () => {
         </Link>
 
         <div className="hidden md:flex items-center gap-1">
-          {navLinks.map((link) =>
-            link.isAnchor ? (
-              <a key={link.label} href={link.to} className="px-4 py-2 font-body text-sm text-foreground/70 hover:text-foreground transition-colors rounded-lg hover:bg-muted">
-                {link.label}
-              </a>
-            ) : (
-              <Link key={link.label} to={link.to} className={`px-4 py-2 font-body text-sm rounded-lg transition-colors ${location.pathname === link.to ? "text-foreground bg-muted" : "text-foreground/70 hover:text-foreground hover:bg-muted"}`}>
-                {link.label}
-              </Link>
-            )
-          )}
+          {navLinks.map((link) => (
+            <Link key={link.label} to={link.to} className={`px-4 py-2 font-body text-sm rounded-lg transition-colors ${location.pathname === link.to ? "text-foreground bg-muted" : "text-foreground/70 hover:text-foreground hover:bg-muted"}`}>
+              {link.label}
+            </Link>
+          ))}
           <Link to="/donate" className="ml-2 px-5 py-2 rounded-lg bg-pink-500 text-white font-body text-sm font-semibold hover:bg-pink-600 transition-colors">
             💛 Donate
           </Link>
@@ -52,17 +46,11 @@ const Navbar = () => {
 
       {open && (
         <div className="md:hidden bg-background border-b border-border px-4 pb-4 space-y-1">
-          {navLinks.map((link) =>
-            link.isAnchor ? (
-              <a key={link.label} href={link.to} onClick={() => setOpen(false)} className="block px-4 py-2.5 font-body text-sm text-foreground/70 hover:text-foreground rounded-lg hover:bg-muted">
-                {link.label}
-              </a>
-            ) : (
-              <Link key={link.label} to={link.to} onClick={() => setOpen(false)} className={`block px-4 py-2.5 font-body text-sm rounded-lg ${location.pathname === link.to ? "text-foreground bg-muted" : "text-foreground/70 hover:text-foreground hover:bg-muted"}`}>
-                {link.label}
-              </Link>
-            )
-          )}
+          {navLinks.map((link) => (
+            <Link key={link.label} to={link.to} onClick={() => setOpen(false)} className={`block px-4 py-2.5 font-body text-sm rounded-lg ${location.pathname === link.to ? "text-foreground bg-muted" : "text-foreground/70 hover:text-foreground hover:bg-muted"}`}>
+              {link.label}
+            </Link>
+          ))}
           <Link to="/donate" onClick={() => setOpen(false)} className="block px-4 py-2.5 font-body text-sm font-semibold text-pink-600">
             💛 Donate
           </Link>
