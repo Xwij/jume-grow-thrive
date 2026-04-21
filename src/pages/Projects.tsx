@@ -127,7 +127,7 @@ const services = [
   },
 ];
 
-const Services = () => {
+const Projects = () => {
   const [openService, setOpenService] = useState<number | null>(null);
 
   return (
@@ -142,14 +142,74 @@ const Services = () => {
         <div className="container-narrow relative z-10">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-center max-w-3xl mx-auto">
             <p className="text-sm font-body tracking-[0.15em] uppercase text-background/60 font-semibold mb-3">What We Do</p>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-background mb-4">Our Services</h1>
-            <p className="font-body text-background/80 text-lg">Comprehensive solutions for sustainable agriculture, community development, and environmental restoration.</p>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-background mb-4">Our Projects</h1>
+            <p className="font-body text-background/80 text-lg">Training programs and services for sustainable agriculture, community development, and environmental restoration.</p>
           </motion.div>
         </div>
       </section>
 
+      {/* Training Programs */}
+      <section id="programs" className="section-padding bg-background">
+        <div className="container-narrow">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-sm font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-3">Training Programs</p>
+            <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">What We Teach</h2>
+            <p className="font-body text-muted-foreground max-w-2xl mx-auto">
+              Education happens in the classroom and in the field through hands-on training, demonstration gardens, and community projects.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {programs.map((program, i) => (
+              <motion.div
+                key={program.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                className="bg-card rounded-xl p-8 border border-border hover:border-primary/30 transition-all duration-300"
+                style={{ boxShadow: "var(--card-shadow)" }}
+              >
+                <span className="text-4xl mb-4 block">{program.icon}</span>
+                <h3 className="text-xl font-display font-bold text-foreground mb-3">{program.title}</h3>
+                <p className="font-body text-muted-foreground text-sm leading-relaxed mb-4">{program.desc}</p>
+                <ul className="space-y-2">
+                  {program.topics.map((topic) => (
+                    <li key={topic} className="flex items-start gap-2 text-sm font-body text-foreground/80">
+                      <span className="text-primary mt-0.5 text-xs">●</span>
+                      {topic}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Services */}
-      <section className="section-padding bg-background">
+      <section id="services" className="section-padding" style={{ background: "var(--section-gradient)" }}>
+        <div className="container-narrow">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-sm font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-3">Our Services</p>
+            <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">How We Serve</h2>
+            <p className="font-body text-muted-foreground max-w-2xl mx-auto">
+              Comprehensive solutions for individuals, communities, and organizations.
+            </p>
+          </motion.div>
+
         <div className="container-narrow">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, i) => (
