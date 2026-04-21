@@ -10,8 +10,7 @@ const Navbar = () => {
   const navLinks = [
     { label: "Home", to: "/" },
     { label: "About", to: "/about" },
-    { label: "Programs", to: isHome ? "#programs" : "/#programs", isAnchor: isHome },
-    { label: "Services", to: "/services" },
+    { label: "Projects", to: "/projects" },
     { label: "Gallery", to: "/gallery" },
     { label: "Impact", to: "/impact" },
     { label: "Newsletters", to: "/newsletters" },

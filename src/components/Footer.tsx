@@ -19,17 +19,17 @@ const Footer = () => {
             <div className="space-y-2">
               <Link to="/" className="block font-body text-sm hover:text-background transition-colors">Home</Link>
               <Link to="/about" className="block font-body text-sm hover:text-background transition-colors">Jume College</Link>
-              <Link to="/services" className="block font-body text-sm hover:text-background transition-colors">Services</Link>
+              <Link to="/projects" className="block font-body text-sm hover:text-background transition-colors">Projects</Link>
               <Link to="/newsletters" className="block font-body text-sm hover:text-background transition-colors">Newsletters</Link>
             </div>
           </div>
           <div>
             <h4 className="font-body font-semibold text-background text-sm mb-3 uppercase tracking-wider">Programs</h4>
             <div className="space-y-2">
-              <a href="/#programs" className="block font-body text-sm hover:text-background transition-colors">Permaculture</a>
-              <a href="/#programs" className="block font-body text-sm hover:text-background transition-colors">Biointensive Farming</a>
-              <a href="/#programs" className="block font-body text-sm hover:text-background transition-colors">Water Harvesting</a>
-              <a href="/#programs" className="block font-body text-sm hover:text-background transition-colors">Agroforestry</a>
+              <Link to="/projects#programs" className="block font-body text-sm hover:text-background transition-colors">Permaculture</Link>
+              <Link to="/projects#programs" className="block font-body text-sm hover:text-background transition-colors">Biointensive Farming</Link>
+              <Link to="/projects#programs" className="block font-body text-sm hover:text-background transition-colors">Water Harvesting</Link>
+              <Link to="/projects#programs" className="block font-body text-sm hover:text-background transition-colors">Agroforestry</Link>
             </div>
           </div>
           <div>
