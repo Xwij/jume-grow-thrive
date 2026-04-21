@@ -330,4 +330,4 @@ const Projects = () => {
   );
 };
 
-export default Services;
+export default Projects;
