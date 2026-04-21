@@ -2,7 +2,6 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ImpactStrip from "@/components/ImpactStrip";
 import AboutSection from "@/components/AboutSection";
-import ProgramsSection from "@/components/ProgramsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import GallerySection from "@/components/GallerySection";
 import CropDiversificationSection from "@/components/CropDiversificationSection";
@@ -16,7 +15,6 @@ const Index = () => {
       <HeroSection />
       <ImpactStrip />
       <AboutSection />
-      <ProgramsSection />
       <TestimonialsSection />
       <GallerySection />
       <CropDiversificationSection />

@@ -7,7 +7,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import Index from "./pages/Index.tsx";
 import Contact from "./pages/Contact.tsx";
 
-import Services from "./pages/Services.tsx";
+import Projects from "./pages/Projects.tsx";
 import About from "./pages/About.tsx";
 import Gallery from "./pages/Gallery.tsx";
 import Impact from "./pages/Impact.tsx";
@@ -28,7 +28,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/contact" element={<Contact />} />
           
-          <Route path="/services" element={<Services />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/services" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/impact" element={<Impact />} />
