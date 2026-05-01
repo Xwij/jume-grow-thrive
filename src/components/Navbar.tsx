@@ -5,7 +5,6 @@ import logo from "@/assets/jume-logo.png";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
-  const isHome = location.pathname === "/";
 
   const navLinks = [
     { label: "Home", to: "/" },
@@ -14,6 +13,15 @@ const Navbar = () => {
     { label: "Gallery", to: "/gallery" },
     { label: "Impact", to: "/impact" },
     { label: "Newsletters", to: "/newsletters" },
+  ];
+
+  const projectStrip = [
+    { label: "Tabasamu Children's Home", to: "/tabasamu" },
+    { label: "Permaculture Training", to: "/projects#programs" },
+    { label: "Water Harvesting", to: "/projects#services" },
+    { label: "Tree Nursery", to: "/projects#services" },
+    { label: "Mushroom Production", to: "/projects#services" },
+    { label: "Community Development", to: "/projects#services" },
   ];
 
   return (
@@ -30,7 +38,7 @@ const Navbar = () => {
             </Link>
           ))}
           <Link to="/donate" className="ml-2 px-5 py-2 rounded-lg bg-pink-500 text-white font-body text-sm font-semibold hover:bg-pink-600 transition-colors">
-            💛 Donate
+            Donate
           </Link>
           <Link to="/contact" className="ml-1 px-5 py-2 rounded-lg bg-primary text-primary-foreground font-body text-sm font-semibold hover:opacity-90 transition-opacity">
             Contact
@@ -44,6 +52,30 @@ const Navbar = () => {
         </button>
       </div>
 
+      {/* Sub-strip: project quick links + newsletter */}
+      <div className="hidden md:block border-t border-border/40 bg-muted/40">
+        <div className="container-narrow flex items-center gap-1 px-4 sm:px-6 lg:px-8 h-10 overflow-x-auto">
+          <span className="text-[11px] font-body uppercase tracking-widest text-muted-foreground mr-3 shrink-0">Projects:</span>
+          {projectStrip.map((p) => (
+            <Link
+              key={p.label}
+              to={p.to}
+              className="shrink-0 px-3 py-1 rounded-md text-xs font-body text-foreground/75 hover:text-foreground hover:bg-background transition-colors whitespace-nowrap"
+            >
+              {p.label}
+            </Link>
+          ))}
+          <div className="ml-auto shrink-0">
+            <Link
+              to="/newsletters"
+              className="inline-flex items-center px-3 py-1 rounded-md bg-secondary text-secondary-foreground text-xs font-body font-semibold hover:opacity-90 transition-opacity whitespace-nowrap"
+            >
+              Newsletters →
+            </Link>
+          </div>
+        </div>
+      </div>
+
       {open && (
         <div className="md:hidden bg-background border-b border-border px-4 pb-4 space-y-1">
           {navLinks.map((link) => (
@@ -52,11 +84,19 @@ const Navbar = () => {
             </Link>
           ))}
           <Link to="/donate" onClick={() => setOpen(false)} className="block px-4 py-2.5 font-body text-sm font-semibold text-pink-600">
-            💛 Donate
+            Donate
           </Link>
           <Link to="/contact" onClick={() => setOpen(false)} className="block px-4 py-2.5 font-body text-sm font-semibold text-primary">
             Contact Us
           </Link>
+          <div className="pt-2 mt-2 border-t border-border">
+            <p className="px-4 py-1 text-[10px] uppercase tracking-widest text-muted-foreground">Projects</p>
+            {projectStrip.map((p) => (
+              <Link key={p.label} to={p.to} onClick={() => setOpen(false)} className="block px-4 py-2 text-sm font-body text-foreground/75 hover:bg-muted rounded-lg">
+                {p.label}
+              </Link>
+            ))}
+          </div>
         </div>
       )}
     </nav>

@@ -31,9 +31,31 @@ import mulchingTreeImg from "@/assets/mulching-tree.jpg";
 import treePlantingFieldImg from "@/assets/tree-planting-field.jpg";
 import womenTillingImg from "@/assets/women-tilling.jpg";
 import diggingWaterPanImg from "@/assets/digging-water-pan.jpg";
+// Newest uploads
+import communityCircleImg from "@/assets/community-circle.jpg";
+import trainingBandaImg from "@/assets/training-banda.jpg";
+import donkeyFieldImg from "@/assets/donkey-field.jpg";
+import donkeyTeamImg from "@/assets/donkey-team.jpg";
+import bandaCircleImg from "@/assets/banda-circle.jpg";
+import soapMakingImg from "@/assets/soap-making.jpg";
+import dripIrrigationImg from "@/assets/drip-irrigation.jpg";
+import bakingMuffinsImg from "@/assets/baking-muffins.jpg";
+import chefsTrainingImg from "@/assets/chefs-training.jpg";
+import bakeryBreadImg from "@/assets/bakery-bread.jpg";
 
 const gallery = [
-  // Latest uploads first
+  // Newest uploads first
+  { src: communityCircleImg, label: "Community Circle Gathering", span: "md:col-span-2 md:row-span-2", isNew: true },
+  { src: chefsTrainingImg, label: "Culinary Training", span: "", isNew: true },
+  { src: bakeryBreadImg, label: "Community Bakery", span: "", isNew: true },
+  { src: trainingBandaImg, label: "Banda Workshop", span: "md:col-span-2", isNew: true },
+  { src: bakingMuffinsImg, label: "Fresh Bakes", span: "", isNew: true },
+  { src: soapMakingImg, label: "Soap-Making Enterprise", span: "", isNew: true },
+  { src: dripIrrigationImg, label: "Drip Irrigation Bed", span: "md:col-span-2", isNew: true },
+  { src: donkeyTeamImg, label: "Working Together", span: "", isNew: true },
+  { src: donkeyFieldImg, label: "Field Companions", span: "", isNew: true },
+  { src: bandaCircleImg, label: "Circle Discussion", span: "md:col-span-2", isNew: true },
+  // Previous uploads
   { src: waterPondImg, label: "Water Harvesting Pond", span: "md:col-span-2 md:row-span-2", isNew: true },
   { src: seedlingsNurseryImg, label: "Tree Seedlings Nursery", span: "", isNew: true },
   { src: treePruningImg, label: "Pruning Workshop", span: "", isNew: true },
