@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import tabasamuJoy from "@/assets/tabasamu-joy.jpg";
 import avocadosImg from "@/assets/avocados.jpg";
 import bananasImg from "@/assets/bananas.jpg";
 import permacultureImg from "@/assets/agroforestry-team.jpg";
