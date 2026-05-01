@@ -150,9 +150,8 @@ const Tabasamu = () => {
               boxShadow: "0 20px 50px -20px rgba(245,158,11,0.4)",
             }}
           >
-            <span className="absolute -top-6 left-1/2 -translate-x-1/2 text-5xl bg-white px-3">👋</span>
             <p className="font-body text-lg text-foreground/80 leading-relaxed">
-              Greetings from <span className="font-bold text-pink-600">Tabasamu Children's Home</span>! We're happy to share encouraging updates and stories from our community, where children continue to grow, learn, and thrive in a nurturing environment. 💛
+              Greetings from <span className="font-bold text-pink-600">Tabasamu Children's Home</span>. We're happy to share encouraging updates and stories from our community, where children continue to grow, learn, and thrive in a nurturing environment.
             </p>
           </motion.div>
         </div>
