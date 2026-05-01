@@ -100,30 +100,37 @@ const Tabasamu = () => {
             background: "linear-gradient(135deg, rgba(236,72,153,0.75) 0%, rgba(168,85,247,0.7) 40%, rgba(34,197,94,0.75) 100%)",
           }} />
         </div>
+
+        {/* Confetti rain */}
+        <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+          {confettiPieces.map((c, i) => (
+            <motion.span
+              key={i}
+              className="absolute top-0 block rounded-sm"
+              style={{
+                left: c.left,
+                width: c.size,
+                height: c.size * 1.6,
+                background: c.color,
+              }}
+              initial={{ y: -40, rotate: 0, opacity: 0 }}
+              animate={{ y: "120vh", rotate: c.rotate + 720, opacity: [0, 1, 1, 0.8, 0] }}
+              transition={{ duration: c.duration, delay: c.delay, repeat: Infinity, ease: "linear" }}
+            />
+          ))}
+        </div>
+
         <div className="container-narrow relative z-10 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <motion.div
-              animate={{ rotate: [0, -8, 8, -8, 0] }}
-              transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
-              className="inline-block text-6xl sm:text-7xl mb-4"
-            >
-              🌈
-            </motion.div>
             <p className="text-sm font-body tracking-[0.2em] uppercase text-white/95 font-bold mb-3">
-              ✨ OTEPIC Newsletter ✨
+              OTEPIC Newsletter
             </p>
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold text-white mb-4 drop-shadow-lg">
               Tabasamu Children's Home
             </h1>
             <p className="font-body text-white text-lg sm:text-2xl font-semibold">
-              🌱 Growing Hope, One Smile at a Time 😊
+              Growing Hope, One Smile at a Time
             </p>
-            <div className="flex justify-center gap-3 mt-6 text-3xl">
-              <motion.span animate={{ y: [0, -8, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>🎈</motion.span>
-              <motion.span animate={{ y: [0, -8, 0] }} transition={{ duration: 1.5, repeat: Infinity, delay: 0.2 }}>🌻</motion.span>
-              <motion.span animate={{ y: [0, -8, 0] }} transition={{ duration: 1.5, repeat: Infinity, delay: 0.4 }}>🦋</motion.span>
-              <motion.span animate={{ y: [0, -8, 0] }} transition={{ duration: 1.5, repeat: Infinity, delay: 0.6 }}>⭐</motion.span>
-            </div>
           </motion.div>
         </div>
       </section>
