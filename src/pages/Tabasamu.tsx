@@ -179,12 +179,6 @@ const Tabasamu = () => {
                 }}
               >
                 <img src={s.image} alt={s.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" loading="lazy" />
-                <div
-                  className="absolute -top-3 -right-3 w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-lg"
-                  style={{ background: s.color }}
-                >
-                  {s.icon}
-                </div>
               </motion.div>
               <div className="relative">
                 <div
