@@ -11,42 +11,36 @@ import harvestKidsImg from "@/assets/harvest-kids.jpg";
 
 const sections = [
   {
-    icon: "🌿",
     title: "Learning Through the Garden",
     body: "Our garden remains a central part of daily life. The children are actively involved in planting, watering, and harvesting vegetables. Through this, they are gaining valuable skills while contributing to their own food supply. It's inspiring to see their connection with nature growing stronger each day.",
     image: communityGardenImg,
     color: "#22c55e",
   },
   {
-    icon: "🐔",
     title: "Poultry Project Update",
     body: "The chicken project continues to support the home with both nutrition and small income. The children take part in caring for the chickens, learning responsibility and teamwork in the process.",
     image: harvestKidsImg,
     color: "#f59e0b",
   },
   {
-    icon: "💧",
     title: "Water and Sanitation Focus",
     body: "Access to clean and reliable water is still a major need. We are continuing to work toward establishing a borehole and improving sanitation facilities to ensure a healthier environment for all.",
     image: waterProjectImg,
     color: "#06b6d4",
   },
   {
-    icon: "♻️",
     title: "Sustainability in Action",
     body: "Through OTEPIC's 3Rs approach—Reduce, Reuse, Recycle—the children are learning practical ways to care for the environment. From composting to water conservation, these lessons are shaping a more sustainable future.",
     image: tabasamuCircle,
     color: "#84cc16",
   },
   {
-    icon: "🎓",
     title: "Preparing for the Future",
     body: "As our children grow, we are committed to supporting them beyond school. We are developing pathways that connect them to social programs, vocational training, and community initiatives. These opportunities will help them build independence, discover their talents, and transition confidently into adulthood while staying rooted in values of sustainability, cooperation, and service.",
     image: communityKidsImg,
     color: "#a855f7",
   },
   {
-    icon: "🌼",
     title: "A Home Full of Smiles",
     body: "Despite challenges, Tabasamu remains a place of joy, resilience, and hope. The children continue to grow in confidence, supported by a caring and empowering environment.",
     image: tabasamuJoy,
@@ -55,6 +49,15 @@ const sections = [
 ];
 
 const floaties = ["🌸", "🦋", "🌟", "🌈", "🍃", "☀️", "🐞", "🌻", "🎈", "⭐", "🦄", "🌺", "🍀", "💖"];
+const confettiColors = ["#ec4899", "#f59e0b", "#22c55e", "#06b6d4", "#a855f7", "#fbbf24", "#f97316"];
+const confettiPieces = Array.from({ length: 40 }, (_, i) => ({
+  left: `${(i * 2.5) % 100}%`,
+  delay: (i % 10) * 0.4,
+  duration: 5 + (i % 5),
+  color: confettiColors[i % confettiColors.length],
+  rotate: (i * 37) % 360,
+  size: 6 + (i % 4) * 2,
+}));
 
 const Tabasamu = () => {
   return (
