@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import CountUp from "@/components/CountUp";
 
 const stats = [
-  { end: 1850, suffix: "+", label: "Farmers Trained" },
-  { end: 95000, suffix: "+ L", label: "Water Saved" },
-  { end: 4400, suffix: "+", label: "Trees Planted" },
-  { end: 700, suffix: "+", label: "Youth & Women" },
-  { end: 12000, suffix: "+ kg", label: "Food Produced" },
+  { end: 53000, suffix: "+", label: "Farmers Trained (25 communities)" },
+  { end: 30000, suffix: "+", label: "Trees Planted" },
+  { end: 3500, suffix: "+", label: "People with Clean Water" },
+  { end: 2000, suffix: "+", label: "Youth & Women Empowered" },
+  { end: 5, suffix: "", label: "Water Retention Landscapes" },
 ];
 
 const ImpactStrip = () => {
