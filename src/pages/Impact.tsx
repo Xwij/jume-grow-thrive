@@ -18,11 +18,11 @@ import communityGardenImg from "@/assets/community-garden.jpg";
 import workersImg from "@/assets/workers.jpg";
 
 const stats: { label: string; end: number; suffix?: string }[] = [
-  { label: "Farmers Trained", end: 1850, suffix: "+" },
-  { label: "Litres of Water Saved", end: 95000, suffix: "+" },
-  { label: "Trees Planted", end: 4400, suffix: "+" },
-  { label: "Youth & Women Engaged", end: 700, suffix: "+" },
-  { label: "Kg of Food Produced", end: 12000, suffix: "+" },
+  { label: "Farmers Trained (25 communities)", end: 53000, suffix: "+" },
+  { label: "Trees Planted", end: 30000, suffix: "+" },
+  { label: "People with Free Clean Water", end: 3500, suffix: "+" },
+  { label: "Youth & Women Empowered", end: 2000, suffix: "+" },
+  { label: "Water Retention Landscapes", end: 5 },
   { label: "Community Projects", end: 27 },
 ];
 
