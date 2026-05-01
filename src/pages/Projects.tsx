@@ -179,7 +179,6 @@ const Projects = () => {
               <img src={tabasamuJoy} alt="Tabasamu Children's Home" className="w-full h-full object-cover" loading="lazy" />
             </div>
             <div className="p-8 sm:p-10">
-              <span className="text-4xl mb-4 block">🌈</span>
               <h3 className="text-2xl font-display font-bold text-foreground mb-3">Growing Hope, One Smile at a Time</h3>
               <p className="font-body text-muted-foreground leading-relaxed mb-6">
                 Tabasamu is a children's home where kids learn through the garden, care for poultry, practice the 3Rs, and grow in a loving, sustainable community. It is one of the most cherished projects under the Jume College — OTEPIC family.
