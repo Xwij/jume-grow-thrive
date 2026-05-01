@@ -150,9 +150,57 @@ const Projects = () => {
         </div>
       </section>
 
-      {/* Training Programs */}
-      <section id="programs" className="section-padding bg-background">
+      {/* Featured Project: Tabasamu Children's Home */}
+      <section className="section-padding bg-background">
         <div className="container-narrow">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-10"
+          >
+            <p className="text-sm font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-3">Featured Project</p>
+            <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">Tabasamu Children's Home</h2>
+            <p className="font-body text-muted-foreground max-w-2xl mx-auto">
+              A flagship project of Jume College — providing a nurturing home, education, food security, and a future of hope for vulnerable children.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="grid md:grid-cols-2 gap-8 items-center bg-card rounded-2xl overflow-hidden border border-border"
+            style={{ boxShadow: "var(--card-shadow)" }}
+          >
+            <div className="relative h-64 md:h-full min-h-[280px] overflow-hidden">
+              <img src={tabasamuJoy} alt="Tabasamu Children's Home" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div className="p-8 sm:p-10">
+              <span className="text-4xl mb-4 block">🌈</span>
+              <h3 className="text-2xl font-display font-bold text-foreground mb-3">Growing Hope, One Smile at a Time</h3>
+              <p className="font-body text-muted-foreground leading-relaxed mb-6">
+                Tabasamu is a children's home where kids learn through the garden, care for poultry, practice the 3Rs, and grow in a loving, sustainable community. It is one of the most cherished projects under the Jume College — OTEPIC family.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link to="/tabasamu" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-body font-semibold text-sm hover:opacity-90 transition-opacity">
+                  Visit Tabasamu →
+                </Link>
+                <Link to="/donate" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-pink-500 text-white font-body font-semibold text-sm hover:bg-pink-600 transition-colors">
+                  💛 Support the Children
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Training Programs */}
+      <section id="programs" className="section-padding bg-muted/30">
+        <div className="container-narrow">
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
