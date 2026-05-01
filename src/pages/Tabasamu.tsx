@@ -213,29 +213,21 @@ const Tabasamu = () => {
               boxShadow: "0 25px 60px -15px rgba(236,72,153,0.5)",
             }}
           >
-            <motion.span
-              animate={{ rotate: 360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              className="absolute -top-10 -right-10 text-9xl opacity-20"
-            >
-              ☀️
-            </motion.span>
-            <span className="text-5xl mb-3 block">🔭</span>
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-white mb-4">
               Looking Ahead
             </h2>
             <p className="font-body text-white/95 text-lg leading-relaxed mb-8 max-w-xl mx-auto">
-              We're focused on expanding food production, improving water access, and strengthening sustainable projects that support long-term independence. 🌱
+              We're focused on expanding food production, improving water access, and strengthening sustainable projects that support long-term independence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
               <Link to="/donate" className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-white text-pink-600 font-body font-bold hover:scale-105 transition-transform shadow-lg">
-                💛 Donate Now →
+                Donate Now →
               </Link>
               <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-white text-white font-body font-bold hover:bg-white/10 transition-colors">
-                Sponsor a Child ✨
+                Sponsor a Child
               </Link>
               <Link to="/impact" className="inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-white text-white font-body font-bold hover:bg-white/10 transition-colors">
-                See Our Impact 🌟
+                See Our Impact
               </Link>
             </div>
           </motion.div>
