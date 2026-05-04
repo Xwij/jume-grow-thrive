@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { BookOpen, Download, Eye, X } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import tabasamuJoy from "@/assets/tabasamu-joy.jpg";
@@ -15,42 +16,174 @@ import mushroomImg from "@/assets/mushroom-closeup.jpg";
 import waterImg from "@/assets/water-pond.jpg";
 import solarImg from "@/assets/banana-harvest.jpg";
 
+// Program section images
+import progPermaImg from "@/assets/agroforestry-team.jpg";
+import progBioImg from "@/assets/women-tilling.jpg";
+import progWaterImg from "@/assets/water-pond.jpg";
+import progAgroforestryImg from "@/assets/tree-planting-field.jpg";
+import progMushroomImg from "@/assets/mushroom-farmer.jpg";
+import progHandsImg from "@/assets/field-training-2.jpg";
+
+// Prospectus / chapter images
+import chAnimalImg from "@/assets/donkey-team.jpg";
+import chEnvImg from "@/assets/water-pond.jpg";
+import chAgroEcoImg from "@/assets/community-circle.jpg";
+import chPermaImg from "@/assets/agroforestry-team.jpg";
+import chSustainImg from "@/assets/farmer-harvest.jpg";
+import chBioImg from "@/assets/soil-preparation.jpg";
+import chHortiImg from "@/assets/passion-farming.jpg";
+import chEngineeringImg from "@/assets/agri-engineering.jpg";
+import chCommunityImg from "@/assets/community-kids.jpg";
+import chSoapImg from "@/assets/soap-poster.jpg";
+import chHospitalityImg from "@/assets/hospitality-baking.jpg";
+import chTailoringImg from "@/assets/tailoring.jpg";
+import chICTImg from "@/assets/campus.jpg";
+
+const PROSPECTUS_PDF = "/prospectus/OTEPIC_Agricultural_Modular_Courses_Prospectus.pdf";
+
 const programs = [
   {
     title: "Permaculture Design Training",
+    image: progPermaImg,
     desc: "Introduces participants to permaculture principles and regenerative land design. Learn to design farms and landscapes that work with nature.",
     topics: ["Permaculture principles and ethics", "Garden and farm design", "Soil regeneration and composting", "Food forests and integrated farming systems"],
-    icon: "🌳",
+    details:
+      "Our Permaculture Design Training walks participants through the full cycle of regenerative land design — from observing natural patterns to creating productive, low-input systems. You will learn the 12 permaculture principles, zone & sector planning, water-flow design, food-forest layering, soil-building techniques, and integrated animal systems. Field sessions take place across our living campus where every demonstration site has been designed using these same principles, giving you a practical reference you can adapt to your own land.",
   },
   {
     title: "Biointensive Agriculture",
+    image: progBioImg,
     desc: "Highly productive organic farming methods that increase yields while improving soil health. Ideal for small farmers with limited land.",
     topics: ["Deep soil preparation", "Intensive planting techniques", "Compost production", "Sustainable food production in small spaces"],
-    icon: "🌾",
+    details:
+      "Biointensive Agriculture is one of the most productive small-scale food systems in the world — and we teach it from the ground up. Participants learn double-digging, hexagonal close-spacing, calorie-and-compost crop ratios, seed saving and on-farm fertility cycles. The result: farmers can grow more food on less land, while continuously rebuilding soil. This module is ideal for households, school gardens, and farmer cooperatives working with limited acreage.",
   },
   {
     title: "Water Harvesting & Retention",
+    image: progWaterImg,
     desc: "Practical techniques to capture, store, and manage rainwater in the landscape. Helping communities become resilient to drought and climate change.",
     topics: ["Rainwater harvesting systems", "Swales and contour design", "Small ponds and water retention", "Restoring the natural water cycle"],
-    icon: "💧",
+    details:
+      "Water is life. This program equips trainees with the practical skills to harvest every drop that falls on their land — through roof catchment, contour swales, retention ponds, sand-dams, check-dams, and greywater reuse. We also cover soil-moisture management, mulching strategies and drought-tolerant cropping. By the end, participants are able to plan and install simple, affordable water systems for homes, farms, schools and entire communities.",
   },
   {
     title: "Agroforestry & Tree Nursery",
+    image: progAgroforestryImg,
     desc: "Learn how trees can transform farms and landscapes, providing food, shade, biomass, fuel, and long-term environmental benefits.",
     topics: ["Establishing tree nurseries", "Integrating trees into farming", "Soil conservation and biodiversity", "Climate change resilience"],
-    icon: "🌲",
+    details:
+      "Trees are the backbone of resilient landscapes. Our Agroforestry & Tree Nursery program teaches species selection, propagation, grafting, hardening-off and nursery management, alongside on-farm integration techniques such as alley cropping, hedgerows, windbreaks and food forests. Participants graduate with the skills to start their own nurseries, supply seedlings to their communities, and re-green degraded land.",
   },
   {
     title: "Mushroom Cultivation",
+    image: progMushroomImg,
     desc: "Practical organic mushroom production for nutrition and income generation, supporting youth and community enterprises.",
     topics: ["Substrate preparation", "Spawn management", "Mushroom house setup", "Harvesting and marketing"],
-    icon: "🍄",
+    details:
+      "Mushroom cultivation is a high-value, low-land enterprise perfect for youth and women's groups. We cover the entire production chain — substrate preparation from local materials, sterilisation, spawn handling, incubation, fruiting-room conditions, harvesting, drying and packaging. Participants leave with a working understanding of how to set up a profitable mushroom unit and how to plug into local markets.",
   },
   {
     title: "Hands-On Learning",
+    image: progHandsImg,
     desc: "Learning is practical at Jume College. Students develop skills they can apply immediately in their communities.",
     topics: ["Demonstration gardens", "Farm activities", "Water conservation projects", "Ecological restoration projects"],
-    icon: "🙌",
+    details:
+      "Every program at Jume College is grounded in real, hands-on practice. Students spend the majority of their time in demonstration gardens, the tree nursery, the mushroom unit, and on community restoration projects. This learning-by-doing approach ensures graduates leave not just with theoretical knowledge, but with the muscle memory, confidence and proven track record to deliver results in their own communities.",
+  },
+];
+
+// Prospectus chapters (extracted from OTEPIC Modular Courses Prospectus)
+const chapters = [
+  {
+    no: "01",
+    title: "Animal Production",
+    image: chAnimalImg,
+    summary:
+      "Importance of livestock in food security, animal nutrition & feeding, breeding & genetics, livestock management, animal health, dairy/poultry/beef/pig production, plus agribusiness & technology. Practical sessions cover handling, vaccination, feed formulation and farm business management.",
+  },
+  {
+    no: "02",
+    title: "Environmental Science",
+    image: chEnvImg,
+    summary:
+      "Earth systems, ecosystems & biodiversity, natural resource management, pollution & environmental health, climate change & policy, GIS and remote sensing. Equips students to analyse human impacts and design sustainability strategies at local, national and global levels.",
+  },
+  {
+    no: "03",
+    title: "Agro-ecology & Agro-biodiversity",
+    image: chAgroEcoImg,
+    summary:
+      "Ecological principles, soil management, natural pest control, agroforestry & apiculture, food sovereignty and family nutrition, plus market and value-addition. Builds an integrated, holistic understanding of food systems and a community of practice for long-term agro-ecological transformation.",
+  },
+  {
+    no: "04",
+    title: "Permaculture Course",
+    image: chPermaImg,
+    summary:
+      "A standardised 72-hour curriculum focused on ecological design, sustainability, and regenerative practice. Delivered over two weeks, weekend series, or online — applying ecological principles to homes, landscapes and communities.",
+  },
+  {
+    no: "05",
+    title: "Sustainable Agriculture",
+    image: chSustainImg,
+    summary:
+      "Ecological farming methods, soil and water conservation, organic farming, Integrated Pest Management (IPM), regenerative techniques, farm business planning and crop diversification — preparing farmers and managers for resilient, profitable enterprises.",
+  },
+  {
+    no: "06",
+    title: "Grow Biointensive",
+    image: chBioImg,
+    summary:
+      "High-yield, soil-building organic agriculture using deep beds, close spacing, compost crops and on-farm fertility cycles. Designed to grow more food on less land while continuously regenerating soil — ideal for smallholders and school gardens.",
+  },
+  {
+    no: "07",
+    title: "Horticulture",
+    image: chHortiImg,
+    summary:
+      "Plant propagation, cultivation techniques, garden design and post-harvest management for fruit, vegetable and ornamental production. Includes botany basics, greenhouse work, nursery management and value addition.",
+  },
+  {
+    no: "08",
+    title: "Engineering / Agricultural Engineering",
+    image: chEngineeringImg,
+    summary:
+      "Building technology (masonry, carpentry, technical drawing, structural mechanics, site management), welding & fabrication, and applied engineering mathematics. Certificate (6–12 months) and Diploma (2–3 years) levels with industrial attachment, leading to specialisations in precision agriculture and post-harvest technology.",
+  },
+  {
+    no: "09",
+    title: "Community Development",
+    image: chCommunityImg,
+    summary:
+      "Skills to plan, implement and evaluate community initiatives — needs assessment, project management, resource mobilisation and leadership. Prepares practitioners for roles in NGOs, government agencies and community-based organisations.",
+  },
+  {
+    no: "10",
+    title: "Soap Making (Short Course)",
+    image: chSoapImg,
+    summary:
+      "Saponification science, safe lye handling, cold-press and hot-press techniques, liquid soap, shower gel, washing soap and gardener soap. A practical income-generating skill for women's groups, youth and small enterprises.",
+  },
+  {
+    no: "11",
+    title: "Hospitality & Baking",
+    image: chHospitalityImg,
+    summary:
+      "Culinary arts, bakery and pastry production, food safety and hygiene, kitchen management and customer service. Hands-on training preparing graduates for hotels, restaurants, community bakeries and self-employment.",
+  },
+  {
+    no: "12",
+    title: "Tailoring & Garment Making",
+    image: chTailoringImg,
+    summary:
+      "Modular vocational training (Grades III, II and I) — from basic stitching to advanced garment construction, pattern cutting, costing and small-business management. A pathway to dignified self-employment for youth and women.",
+  },
+  {
+    no: "13",
+    title: "ICT, Liberal & Business Studies",
+    image: chICTImg,
+    summary:
+      "Computer science, cyber security, ICT technician and AI fundamentals; Counselling Psychology, Library & Information, Project Management and Social Work; Accountancy, Banking & Finance and Business Management — equipping students for the modern workplace.",
   },
 ];
 
@@ -62,7 +195,7 @@ const services = [
     desc: "Expert farm and landscape design using permaculture principles. We help you create productive, self-sustaining systems tailored to your land and climate.",
     features: ["Site analysis & design", "Implementation support", "Follow-up mentoring"],
     details:
-      "Our permaculture consultancy service provides a comprehensive, regenerative approach to land management. We begin with a thorough site analysis — evaluating soil health, water flow, sun exposure, existing vegetation, microclimates, and the social context of the land. From there, we develop a detailed design plan rooted in permaculture zones and sectors, integrating food forests, swales, keyline design, companion planting, and natural pest management. We walk with you through implementation, offering hands-on guidance, sourcing of indigenous and adapted species, and periodic reviews to ensure your system matures into a thriving, low-maintenance ecosystem. Whether you have a small homestead, a school compound, or a large community farm, our designs are tailored to maximise yield while regenerating the landscape and building long-term resilience to drought and climate change.",
+      "Our permaculture consultancy service provides a comprehensive, regenerative approach to land management. We begin with a thorough site analysis — evaluating soil health, water flow, sun exposure, existing vegetation, microclimates, and the social context of the land. From there, we develop a detailed design plan rooted in permaculture zones and sectors, integrating food forests, swales, keyline design, companion planting, and natural pest management. We walk with you through implementation, offering hands-on guidance, sourcing of indigenous and adapted species, and periodic reviews to ensure your system matures into a thriving, low-maintenance ecosystem.",
   },
   {
     icon: "📚",
@@ -71,7 +204,7 @@ const services = [
     desc: "Hands-on training programs in sustainable agriculture, water harvesting, agroforestry, and mushroom cultivation for individuals, groups, and organizations.",
     features: ["Short courses (1–5 days)", "Certificate programs", "Custom group training"],
     details:
-      "Jume College offers immersive, practical training that goes far beyond the classroom. Our workshops cover sustainable agriculture, biointensive food production, rainwater harvesting (tanks, swales and retention ponds), agroforestry systems, organic composting, vermiculture, mushroom cultivation, solar drying of indigenous vegetables, seed saving and value addition. Courses range from one-day introductions to multi-week certificate programs. We also design custom training packages for NGOs, farmer cooperatives, schools, faith-based groups and government agencies. Every training session includes field demonstrations on our working campus, take-home reference materials, and post-training mentorship so participants can implement what they have learned. Our graduates leave equipped with skills they can immediately apply on their own farms, in their schools, and across their communities.",
+      "Jume College offers immersive, practical training that goes far beyond the classroom. Our workshops cover sustainable agriculture, biointensive food production, rainwater harvesting, agroforestry systems, organic composting, vermiculture, mushroom cultivation, solar drying, seed saving and value addition. Courses range from one-day introductions to multi-week certificate programs. Every training includes field demonstrations, take-home materials, and post-training mentorship.",
   },
   {
     icon: "🌍",
@@ -80,7 +213,7 @@ const services = [
     desc: "We partner with communities to design and implement projects that improve food security, water access, and livelihoods through ecological approaches.",
     features: ["Needs assessment", "Project planning", "Capacity building"],
     details:
-      "Our community development approach is participatory, holistic and rooted in the lived realities of the people we serve. We start by listening — conducting needs assessments, mapping local resources, challenges and aspirations, and honouring traditional knowledge. Together with community members we co-design projects that address food security, clean water access, income generation, environmental restoration, and peace-building. Past initiatives include community food forests, school gardens, women's farming cooperatives, rainwater harvesting systems, youth enterprise programs, and conflict-transformation through shared agricultural work. We emphasise capacity building and local ownership so that communities can sustain, replicate and scale their initiatives long after we step back. Our goal is lasting, community-owned transformation.",
+      "Our community development approach is participatory and rooted in lived realities. We listen first — mapping local resources, challenges and aspirations — then co-design projects addressing food security, clean water, income generation, environmental restoration and peace-building. We emphasise capacity building and local ownership so communities can sustain, replicate and scale their initiatives long after we step back.",
   },
   {
     icon: "🤝",
@@ -89,7 +222,7 @@ const services = [
     desc: "International and local volunteers can join our campus to learn, contribute, and experience regenerative agriculture first-hand.",
     features: ["Work-stay programs", "Research placements", "Cultural exchange"],
     details:
-      "Our volunteer and internship programs welcome people from across Kenya and around the world to live, work and learn at Jume College. Participants engage in daily farm activities — planting, harvesting, composting, mushroom production, tree-nursery work, water-system maintenance and community outreach — while gaining a deep understanding of permaculture and sustainable living. Programs range from two weeks to six months. We also host research placements for university students studying agriculture, ecology, public health and development. Volunteers enjoy cultural exchange, shared community meals, language learning, and the chance to make a tangible, hands-on impact. Accommodation and meals are provided on campus. It is an experience that transforms perspectives and builds lifelong friendships and partnerships.",
+      "Our volunteer and internship programs welcome people from across Kenya and around the world to live, work and learn at Jume College. Participants engage in daily farm activities and community outreach while gaining a deep understanding of permaculture and sustainable living. Programs range from two weeks to six months. Accommodation and meals are provided on campus.",
   },
   {
     icon: "🌳",
@@ -98,7 +231,7 @@ const services = [
     desc: "We produce and distribute quality tree seedlings for agroforestry, reforestation, and food forest establishment.",
     features: ["Indigenous species", "Fruit tree varieties", "Bulk orders available"],
     details:
-      "Our on-campus tree nursery produces tens of thousands of seedlings annually, including indigenous trees (Markhamia, Croton, Prunus africana, Warburgia), fruit trees (avocado, mango, passion fruit, guava, citrus, pawpaw), nitrogen-fixing species (Calliandra, Sesbania, Leucaena, Grevillea), medicinal plants and timber species. We supply seedlings to individual farmers, schools, faith communities, county governments and reforestation programs. Each seedling comes with planting and aftercare guidance to maximise survival rates. Bulk orders are available at discounted rates for large-scale tree-planting and watershed-restoration projects. The nursery also serves as a living training ground where students and volunteers learn propagation, grafting, hardening-off and nursery management — skills they carry into their own enterprises and home gardens.",
+      "Our on-campus nursery produces tens of thousands of seedlings annually — indigenous trees, fruit trees, nitrogen-fixers, medicinal plants and timber species. We supply farmers, schools, faith communities, county governments and reforestation programs. Bulk orders available at discounted rates.",
   },
   {
     icon: "🍄",
@@ -107,7 +240,7 @@ const services = [
     desc: "From substrate preparation to marketing, we help entrepreneurs and groups set up profitable mushroom enterprises.",
     features: ["Spawn supply", "Technical training", "Enterprise mentoring"],
     details:
-      "Mushroom farming is one of the most accessible and profitable agri-enterprises for youth, women and smallholders, and we provide end-to-end support to get you started. Our services include spawn (seed) production and supply, substrate preparation training using locally available materials such as sugarcane bagasse, sawdust and cereal straw, sterilisation and inoculation techniques, incubation and fruiting room setup, harvesting, post-harvest handling, value addition (drying, packaging) and market linkage. We offer both group training and one-to-one mentoring, helping entrepreneurs develop business plans, set up low-cost growing units, and connect with reliable buyers. Our oyster mushroom production unit on campus serves as a live demonstration, and trainees get hands-on practice from day one.",
+      "We provide end-to-end support — spawn supply, substrate training, sterilisation and inoculation, fruiting-room setup, harvesting, post-harvest handling, value addition and market linkage. Group training and one-to-one mentoring available.",
   },
   {
     icon: "💧",
@@ -116,7 +249,7 @@ const services = [
     desc: "Designing and installing rainwater harvesting, greywater reuse and 'Reduce, Reuse, Recycle' systems for homes, schools and farms.",
     features: ["Rainwater tanks & ponds", "Greywater reuse", "Borehole planning"],
     details:
-      "Water is life — and in our drylands, every drop counts. We design and install rainwater harvesting systems (gutters, tanks, underground reservoirs and retention ponds), greywater-reuse systems for kitchens and bathing areas, and integrated landscape features such as swales and check-dams that slow, sink and spread water across the land. We support schools, children's homes (such as Tabasamu), farmer groups and households to plan boreholes, sand-dams and solar-pumped systems. Our work follows OTEPIC's 3Rs philosophy — Reduce, Reuse, Recycle — turning waste water and runoff into productive resources. Training and ongoing maintenance support are included with every installation.",
+      "We design and install rainwater harvesting systems, greywater reuse, swales, check-dams and integrated water features. Following OTEPIC's 3Rs philosophy — Reduce, Reuse, Recycle — we turn waste water and runoff into productive resources.",
   },
   {
     icon: "☀️",
@@ -125,12 +258,15 @@ const services = [
     desc: "Solar dryers and processing units that turn surplus harvests into shelf-stable, high-value products.",
     features: ["Indigenous vegetable drying", "Seed preservation", "Packaging & branding"],
     details:
-      "Post-harvest losses rob farmers of income and communities of nutrition. Our solar drying program equips farmer groups with simple, affordable solar dryers that preserve indigenous vegetables (managu, terere, sagaa), fruits, herbs, mushrooms and seeds without the use of fossil fuels. We train participants in hygienic processing, packaging, branding and basic food-business management so that surplus harvests become a year-round source of income and household nutrition. The program is closely linked with our enterprise and market-access work, helping growers move from farm gate to consumer shelf with confidence.",
+      "Our solar drying program equips farmer groups with simple, affordable solar dryers preserving indigenous vegetables, fruits, herbs, mushrooms and seeds without fossil fuels. Training includes processing, packaging, branding and basic food-business management.",
   },
 ];
 
 const Projects = () => {
   const [openService, setOpenService] = useState<number | null>(null);
+  const [openProgram, setOpenProgram] = useState<number | null>(null);
+  const [openChapter, setOpenChapter] = useState<number | null>(null);
+  const [showProspectus, setShowProspectus] = useState(false);
 
   return (
     <div className="min-h-screen">
@@ -145,21 +281,15 @@ const Projects = () => {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-center max-w-3xl mx-auto">
             <p className="text-sm font-body tracking-[0.15em] uppercase text-background/60 font-semibold mb-3">What We Do</p>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-background mb-4">Our Projects</h1>
-            <p className="font-body text-background/80 text-lg">Training programs and services for sustainable agriculture, community development, and environmental restoration.</p>
+            <p className="font-body text-background/80 text-lg">Training programs, courses and services for sustainable agriculture, community development, and environmental restoration.</p>
           </motion.div>
         </div>
       </section>
 
-      {/* Featured Project: Tabasamu Children's Home */}
+      {/* Featured Project: Tabasamu */}
       <section className="section-padding bg-background">
         <div className="container-narrow">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-10"
-          >
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-10">
             <p className="text-sm font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-3">Featured Project</p>
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">Tabasamu Children's Home</h2>
             <p className="font-body text-muted-foreground max-w-2xl mx-auto">
@@ -167,28 +297,21 @@ const Projects = () => {
             </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="grid md:grid-cols-2 gap-8 items-center bg-card rounded-2xl overflow-hidden border border-border"
-            style={{ boxShadow: "var(--card-shadow)" }}
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="grid md:grid-cols-2 gap-8 items-center bg-card rounded-2xl overflow-hidden border border-border" style={{ boxShadow: "var(--card-shadow)" }}>
             <div className="relative h-64 md:h-full min-h-[280px] overflow-hidden">
               <img src={tabasamuJoy} alt="Tabasamu Children's Home" className="w-full h-full object-cover" loading="lazy" />
             </div>
             <div className="p-8 sm:p-10">
               <h3 className="text-2xl font-display font-bold text-foreground mb-3">Growing Hope, One Smile at a Time</h3>
               <p className="font-body text-muted-foreground leading-relaxed mb-6">
-                Tabasamu is a children's home where kids learn through the garden, care for poultry, practice the 3Rs, and grow in a loving, sustainable community. It is one of the most cherished projects under the Jume College — OTEPIC family.
+                Tabasamu is a children's home where kids learn through the garden, care for poultry, practice the 3Rs, and grow in a loving, sustainable community.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link to="/tabasamu" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-body font-semibold text-sm hover:opacity-90 transition-opacity">
                   Visit Tabasamu →
                 </Link>
                 <Link to="/donate" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-pink-500 text-white font-body font-semibold text-sm hover:bg-pink-600 transition-colors">
-                  💛 Support the Children
+                  Support the Children
                 </Link>
               </div>
             </div>
@@ -196,17 +319,70 @@ const Projects = () => {
         </div>
       </section>
 
-      {/* Training Programs */}
+      {/* Prospectus — chapters */}
+      <section id="prospectus" className="section-padding bg-background">
+        <div className="container-narrow">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10">
+            <p className="text-sm font-body tracking-[0.15em] uppercase text-red-600 font-semibold mb-3">Prospectus</p>
+            <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">
+              OTEPIC Agricultural Modular Courses
+            </h2>
+            <p className="font-body text-muted-foreground max-w-2xl mx-auto mb-6">
+              A modular curriculum spanning agro-ecology, environmental science, permaculture, engineering, hospitality, ICT and more — offered as 1-week, 2-week, 1-month, 3-month, 9-month or 1-year programs.
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              <button
+                onClick={() => setShowProspectus(true)}
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-red-600 text-white font-body font-semibold text-sm hover:bg-red-700 transition-colors shadow"
+              >
+                <Eye className="w-4 h-4" /> View the Prospectus
+              </button>
+              <a
+                href={PROSPECTUS_PDF}
+                download
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border-2 border-border text-foreground font-body font-semibold text-sm hover:bg-muted transition-colors"
+              >
+                <Download className="w-4 h-4" /> Download PDF
+              </a>
+            </div>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {chapters.map((c, i) => (
+              <motion.button
+                key={c.title}
+                onClick={() => setOpenChapter(i)}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: (i % 6) * 0.06 }}
+                className="text-left bg-card rounded-2xl overflow-hidden border border-border hover:border-red-500/50 transition-all group flex flex-col"
+                style={{ boxShadow: "var(--card-shadow)" }}
+              >
+                <div className="relative h-40 overflow-hidden">
+                  <img src={c.image} alt={c.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-transparent to-transparent" />
+                  <span className="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-red-600 text-white text-[11px] font-bold tracking-wider">
+                    CHAPTER {c.no}
+                  </span>
+                  <h3 className="absolute bottom-3 left-3 right-3 text-background font-display font-bold text-base drop-shadow-lg">{c.title}</h3>
+                </div>
+                <div className="p-5 flex-1 flex flex-col">
+                  <p className="font-body text-muted-foreground text-sm leading-relaxed line-clamp-3 mb-3">{c.summary}</p>
+                  <span className="mt-auto inline-flex items-center gap-1.5 text-xs font-body font-semibold text-red-600">
+                    <BookOpen className="w-3.5 h-3.5" /> Read chapter →
+                  </span>
+                </div>
+              </motion.button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Training Programs — with images & Read More */}
       <section id="programs" className="section-padding bg-muted/30">
         <div className="container-narrow">
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-12">
             <p className="text-sm font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-3">Training Programs</p>
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">What We Teach</h2>
             <p className="font-body text-muted-foreground max-w-2xl mx-auto">
@@ -222,20 +398,31 @@ const Projects = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="bg-card rounded-xl p-8 border border-border hover:border-primary/30 transition-all duration-300"
+                className="bg-card rounded-2xl overflow-hidden border border-border hover:border-primary/30 transition-all duration-300 flex flex-col group"
                 style={{ boxShadow: "var(--card-shadow)" }}
               >
-                <span className="text-4xl mb-4 block">{program.icon}</span>
-                <h3 className="text-xl font-display font-bold text-foreground mb-3">{program.title}</h3>
-                <p className="font-body text-muted-foreground text-sm leading-relaxed mb-4">{program.desc}</p>
-                <ul className="space-y-2">
-                  {program.topics.map((topic) => (
-                    <li key={topic} className="flex items-start gap-2 text-sm font-body text-foreground/80">
-                      <span className="text-primary mt-0.5 text-xs">●</span>
-                      {topic}
-                    </li>
-                  ))}
-                </ul>
+                <div className="relative h-44 overflow-hidden">
+                  <img src={program.image} alt={program.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent" />
+                </div>
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="text-lg font-display font-bold text-foreground mb-3">{program.title}</h3>
+                  <p className="font-body text-muted-foreground text-sm leading-relaxed mb-4">{program.desc}</p>
+                  <ul className="space-y-2 mb-5">
+                    {program.topics.map((topic) => (
+                      <li key={topic} className="flex items-start gap-2 text-sm font-body text-foreground/80">
+                        <span className="text-primary mt-0.5 text-xs">●</span>
+                        {topic}
+                      </li>
+                    ))}
+                  </ul>
+                  <button
+                    onClick={() => setOpenProgram(i)}
+                    className="mt-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-primary/10 text-primary font-body font-semibold text-sm hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
+                    Read more →
+                  </button>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -245,13 +432,7 @@ const Projects = () => {
       {/* Services */}
       <section id="services" className="section-padding" style={{ background: "var(--section-gradient)" }}>
         <div className="container-narrow">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-12">
             <p className="text-sm font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-3">Our Services</p>
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">How We Serve</h2>
             <p className="font-body text-muted-foreground max-w-2xl mx-auto">
@@ -271,12 +452,7 @@ const Projects = () => {
                 style={{ boxShadow: "var(--card-shadow)" }}
               >
                 <div className="relative h-44 overflow-hidden">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
+                  <img src={service.image} alt={service.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent" />
                   <span className="absolute top-3 left-3 text-3xl drop-shadow-lg">{service.icon}</span>
                 </div>
@@ -304,56 +480,96 @@ const Projects = () => {
         </div>
       </section>
 
-      {/* Service Detail Popup */}
+      {/* Service / Program Popups (Gaussian blur) */}
       <AnimatePresence>
         {openService !== null && (
+          <PopupCard
+            image={services[openService].image}
+            title={services[openService].title}
+            chips={services[openService].features}
+            body={services[openService].details}
+            onClose={() => setOpenService(null)}
+            icon={services[openService].icon}
+          />
+        )}
+        {openProgram !== null && (
+          <PopupCard
+            image={programs[openProgram].image}
+            title={programs[openProgram].title}
+            chips={programs[openProgram].topics}
+            body={programs[openProgram].details}
+            onClose={() => setOpenProgram(null)}
+          />
+        )}
+        {openChapter !== null && (
+          <PopupCard
+            image={chapters[openChapter].image}
+            title={`Chapter ${chapters[openChapter].no} — ${chapters[openChapter].title}`}
+            chips={[]}
+            body={chapters[openChapter].summary}
+            onClose={() => setOpenChapter(null)}
+            footer={
+              <button
+                onClick={() => {
+                  setOpenChapter(null);
+                  setShowProspectus(true);
+                }}
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-red-600 text-white font-body font-semibold text-sm hover:bg-red-700 transition-colors"
+              >
+                <Eye className="w-4 h-4" /> Open in Prospectus Viewer
+              </button>
+            }
+          />
+        )}
+      </AnimatePresence>
+
+      {/* Lively prospectus viewer */}
+      <AnimatePresence>
+        {showProspectus && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] bg-foreground/40 backdrop-blur-xl flex items-center justify-center p-4"
-            onClick={() => setOpenService(null)}
+            className="fixed inset-0 z-[120] bg-foreground/70 backdrop-blur-xl flex flex-col"
           >
             <motion.div
-              initial={{ scale: 0.9, opacity: 0, y: 20 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.9, opacity: 0, y: 20 }}
-              transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="bg-card/95 backdrop-blur-md rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-hidden border border-border relative flex flex-col"
-              style={{ boxShadow: "0 25px 60px -12px rgba(0,0,0,0.45)" }}
-              onClick={(e) => e.stopPropagation()}
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              className="flex items-center gap-3 px-4 sm:px-6 py-3 bg-gradient-to-r from-red-600 to-red-700 text-white shadow-lg"
             >
-              <div className="relative h-52 overflow-hidden flex-shrink-0">
-                <img src={services[openService].image} alt={services[openService].title} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
-                <span className="absolute top-4 left-4 text-5xl drop-shadow-lg">{services[openService].icon}</span>
-                <button
-                  onClick={() => setOpenService(null)}
-                  className="absolute top-4 right-4 w-9 h-9 rounded-full bg-background/80 backdrop-blur text-foreground hover:bg-background flex items-center justify-center text-lg font-bold transition-colors"
-                >
-                  ✕
-                </button>
+              <BookOpen className="w-5 h-5" />
+              <div className="flex-1 min-w-0">
+                <p className="text-[10px] uppercase tracking-widest text-white/70 font-semibold">OTEPIC</p>
+                <h3 className="font-display font-bold text-base sm:text-lg truncate">Agricultural Modular Courses Prospectus</h3>
               </div>
-              <div className="p-8 overflow-y-auto">
-                <h2 className="text-2xl font-display font-bold text-foreground mb-3">{services[openService].title}</h2>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {services[openService].features.map((f) => (
-                    <span key={f} className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold font-body">{f}</span>
-                  ))}
-                </div>
-                <p className="font-body text-muted-foreground leading-relaxed text-[15px]">{services[openService].details}</p>
-                <div className="mt-6 pt-4 border-t border-border">
-                  <a href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-body font-semibold text-sm hover:opacity-90 transition-opacity">
-                    Get in Touch →
-                  </a>
-                </div>
-              </div>
+              <a
+                href={PROSPECTUS_PDF}
+                download
+                className="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/15 hover:bg-white/25 text-white text-xs font-semibold transition-colors"
+              >
+                <Download className="w-3.5 h-3.5" /> Download
+              </a>
+              <button
+                onClick={() => setShowProspectus(false)}
+                className="w-9 h-9 rounded-full bg-white/15 hover:bg-white/25 flex items-center justify-center transition-colors"
+                aria-label="Close prospectus"
+              >
+                <X className="w-4 h-4" />
+              </button>
             </motion.div>
+            <motion.iframe
+              initial={{ scale: 0.96, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.1 }}
+              src={PROSPECTUS_PDF}
+              title="OTEPIC Prospectus"
+              className="flex-1 w-full bg-white"
+            />
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* CTA with images */}
+      {/* CTA */}
       <section className="section-padding" style={{ background: "var(--section-gradient)" }}>
         <div className="container-narrow">
           <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -378,5 +594,72 @@ const Projects = () => {
     </div>
   );
 };
+
+// Reusable Gaussian-blur popup
+const PopupCard = ({
+  image,
+  title,
+  chips,
+  body,
+  onClose,
+  icon,
+  footer,
+}: {
+  image: string;
+  title: string;
+  chips: string[];
+  body: string;
+  onClose: () => void;
+  icon?: string;
+  footer?: React.ReactNode;
+}) => (
+  <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    className="fixed inset-0 z-[100] bg-foreground/40 backdrop-blur-xl flex items-center justify-center p-4"
+    onClick={onClose}
+  >
+    <motion.div
+      initial={{ scale: 0.9, opacity: 0, y: 20 }}
+      animate={{ scale: 1, opacity: 1, y: 0 }}
+      exit={{ scale: 0.9, opacity: 0, y: 20 }}
+      transition={{ type: "spring", damping: 25, stiffness: 300 }}
+      className="bg-card/95 backdrop-blur-md rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-hidden border border-border relative flex flex-col"
+      style={{ boxShadow: "0 25px 60px -12px rgba(0,0,0,0.45)" }}
+      onClick={(e) => e.stopPropagation()}
+    >
+      <div className="relative h-52 overflow-hidden flex-shrink-0">
+        <img src={image} alt={title} className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+        {icon && <span className="absolute top-4 left-4 text-5xl drop-shadow-lg">{icon}</span>}
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 w-9 h-9 rounded-full bg-background/80 backdrop-blur text-foreground hover:bg-background flex items-center justify-center text-lg font-bold transition-colors"
+        >
+          ✕
+        </button>
+      </div>
+      <div className="p-8 overflow-y-auto">
+        <h2 className="text-2xl font-display font-bold text-foreground mb-3">{title}</h2>
+        {chips.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-4">
+            {chips.map((f) => (
+              <span key={f} className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold font-body">{f}</span>
+            ))}
+          </div>
+        )}
+        <p className="font-body text-muted-foreground leading-relaxed text-[15px] whitespace-pre-line">{body}</p>
+        <div className="mt-6 pt-4 border-t border-border">
+          {footer ?? (
+            <a href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-body font-semibold text-sm hover:opacity-90 transition-opacity">
+              Get in Touch →
+            </a>
+          )}
+        </div>
+      </div>
+    </motion.div>
+  </motion.div>
+);
 
 export default Projects;

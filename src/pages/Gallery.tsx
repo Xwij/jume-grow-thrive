@@ -42,9 +42,27 @@ import dripIrrigationImg from "@/assets/drip-irrigation.jpg";
 import bakingMuffinsImg from "@/assets/baking-muffins.jpg";
 import chefsTrainingImg from "@/assets/chefs-training.jpg";
 import bakeryBreadImg from "@/assets/bakery-bread.jpg";
+// Latest uploads
+import otepicCollageImg from "@/assets/otepic-amani-collage.jpg";
+import chefsPastriesImg from "@/assets/chefs-pastries.jpg";
+import soapPosterImg from "@/assets/soap-poster.jpg";
+import agriEngineeringImg from "@/assets/agri-engineering.jpg";
+import hospitalityBakingImg from "@/assets/hospitality-baking.jpg";
+import hospitalityBakeryImg from "@/assets/hospitality-bakery.jpg";
+import soapWomenImg from "@/assets/soap-women.jpg";
+import tailoringImg from "@/assets/tailoring.jpg";
 
 const gallery = [
-  // Newest uploads first
+  // Latest uploads
+  { src: otepicCollageImg, label: "OTEPIC Amani Garden — Real Food Revolution", span: "md:col-span-2 md:row-span-2", isNew: true },
+  { src: chefsPastriesImg, label: "Hospitality — Chefs Training", span: "", isNew: true },
+  { src: hospitalityBakingImg, label: "Hospitality — Baking", span: "", isNew: true },
+  { src: hospitalityBakeryImg, label: "Hospitality — Bakery Production", span: "md:col-span-2", isNew: true },
+  { src: tailoringImg, label: "Tailoring & Garment Making", span: "", isNew: true },
+  { src: soapWomenImg, label: "Soap Making — Women's Enterprise", span: "", isNew: true },
+  { src: soapPosterImg, label: "Soap Making Skill Training", span: "md:col-span-2", isNew: true },
+  { src: agriEngineeringImg, label: "Agricultural Engineering — Drip Irrigation", span: "", isNew: true },
+  // Newest previous uploads
   { src: communityCircleImg, label: "Community Circle Gathering", span: "md:col-span-2 md:row-span-2", isNew: true },
   { src: chefsTrainingImg, label: "Culinary Training", span: "", isNew: true },
   { src: bakeryBreadImg, label: "Community Bakery", span: "", isNew: true },

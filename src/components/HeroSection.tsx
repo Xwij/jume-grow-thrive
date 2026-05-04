@@ -112,7 +112,10 @@ const HeroSection = () => {
               Explore Projects
             </a>
             <a href="/newsletters" className="inline-flex items-center justify-center px-6 py-3 rounded-lg border-2 border-border text-foreground font-body font-semibold text-sm hover:bg-muted transition-colors">
-              📚 Newsletters
+              Report Newsletter
+            </a>
+            <a href="/projects#prospectus" className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-red-600 text-white font-body font-semibold text-sm hover:bg-red-700 transition-colors shadow">
+              View Prospectus →
             </a>
           </div>
         </div>

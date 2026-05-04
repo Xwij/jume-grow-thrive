@@ -12,7 +12,7 @@ const Navbar = () => {
     { label: "Projects", to: "/projects" },
     { label: "Gallery", to: "/gallery" },
     { label: "Impact", to: "/impact" },
-    { label: "Newsletters", to: "/newsletters" },
+    { label: "Report Newsletter", to: "/newsletters" },
   ];
 
   const projectStrip = [
@@ -52,15 +52,15 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Sub-strip: project quick links + newsletter */}
-      <div className="hidden md:block border-t border-border/40 bg-muted/40">
+      {/* Sub-strip: project quick links + newsletter (red strip) */}
+      <div className="hidden md:block bg-red-600 text-white">
         <div className="container-narrow flex items-center gap-1 px-4 sm:px-6 lg:px-8 h-10 overflow-x-auto">
-          <span className="text-[11px] font-body uppercase tracking-widest text-muted-foreground mr-3 shrink-0">Projects:</span>
+          <span className="text-[11px] font-body uppercase tracking-widest text-white/80 mr-3 shrink-0">Projects:</span>
           {projectStrip.map((p) => (
             <Link
               key={p.label}
               to={p.to}
-              className="shrink-0 px-3 py-1 rounded-md text-xs font-body text-foreground/75 hover:text-foreground hover:bg-background transition-colors whitespace-nowrap"
+              className="shrink-0 px-3 py-1 rounded-md text-xs font-body text-white/90 hover:text-white hover:bg-white/15 transition-colors whitespace-nowrap"
             >
               {p.label}
             </Link>
@@ -68,9 +68,9 @@ const Navbar = () => {
           <div className="ml-auto shrink-0">
             <Link
               to="/newsletters"
-              className="inline-flex items-center px-3 py-1 rounded-md bg-secondary text-secondary-foreground text-xs font-body font-semibold hover:opacity-90 transition-opacity whitespace-nowrap"
+              className="inline-flex items-center px-3 py-1 rounded-md bg-white text-red-600 text-xs font-body font-semibold hover:bg-white/90 transition-colors whitespace-nowrap"
             >
-              Newsletters →
+              Report Newsletter →
             </Link>
           </div>
         </div>
