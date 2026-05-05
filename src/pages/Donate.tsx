@@ -105,14 +105,17 @@ const Donate = () => {
             <div className="space-y-5 font-body text-foreground/80">
               <div>
                 <h3 className="font-bold text-foreground mb-1">💳 Donate via PayPal</h3>
-                <p>Give securely from anywhere in the world using a credit card or PayPal account. 100% goes to our programs.</p>
+                <p>
+                  Give securely from anywhere in the world using a credit card or PayPal account. Send your contribution to our PayPal email:{" "}
+                  <a href={`mailto:${PAYPAL_EMAIL}`} className="text-primary font-semibold underline">{PAYPAL_EMAIL}</a>
+                </p>
               </div>
               <div>
                 <h3 className="font-bold text-foreground mb-1">🏦 Bank Transfer (International)</h3>
                 <p>Contact us for bank details and wire instructions for larger gifts and partnerships.</p>
               </div>
               <div>
-                <h3 className="font-bold text-foreground mb-1">📞 Talk to Us</h3>
+                <h3 className="font-bold text-foreground mb-1">📞 Talk to us for other donation options</h3>
                 <p>Call <a href="tel:+254725429179" className="text-primary underline">+254 725 429 179</a> to discuss sponsorship, in-kind gifts, or partnerships.</p>
               </div>
             </div>
