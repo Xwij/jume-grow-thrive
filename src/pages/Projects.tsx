@@ -280,7 +280,7 @@ const Projects = () => {
         <div className="container-narrow relative z-10">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-center max-w-3xl mx-auto">
             <p className="text-sm font-body tracking-[0.15em] uppercase text-background/60 font-semibold mb-3">What We Do</p>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-background mb-4">Our Projects</h1>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-background mb-4">Trainings & Projects</h1>
             <p className="font-body text-background/80 text-lg">Training programs, courses and services for sustainable agriculture, community development, and environmental restoration.</p>
           </motion.div>
         </div>
