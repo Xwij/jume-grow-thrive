@@ -43,7 +43,7 @@ const ContactPage = () => {
               <div className="md:col-span-2 relative h-72 md:h-full min-h-[320px]">
                 <img
                   src={philipImg}
-                  alt="Philip Munyasia, Director of Jume College and OTEPIC"
+                  alt="Philip Munyasia, Director of Jume College"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent md:bg-gradient-to-r md:from-transparent md:to-card/20" />
@@ -51,7 +51,7 @@ const ContactPage = () => {
               <div className="md:col-span-3 p-8 md:p-10">
                 <p className="text-xs font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-2">Meet the Director</p>
                 <h2 className="text-2xl sm:text-3xl font-display font-bold text-foreground mb-3">Philip Munyasia</h2>
-                <p className="text-sm font-body text-primary font-semibold mb-5">Founder & Director — Jume College · OTEPIC Kenya</p>
+                <p className="text-sm font-body text-primary font-semibold mb-5">Founder & Director — Jume College Kenya</p>
                 <div className="space-y-4 font-body text-muted-foreground leading-relaxed text-[15px]">
                   <p>
                     Born and raised in the Kipsongo slums of Kitale, Philip grew up surrounded by hunger,
@@ -61,13 +61,13 @@ const ContactPage = () => {
                   </p>
                   <p>
                     In 2007, in the aftermath of Kenya's worst ethnic clashes, Philip founded
-                    <strong className="text-foreground"> OTEPIC (Organic Technology Extension and Promotion of Initiative Centre)</strong>
+                    <strong className="text-foreground"> Jume College</strong>
                     {" "}to bring people of different tribes together through farming, peace-building and
                     sustainable living. What began as a small youth garden has grown into a movement
                     reaching thousands of farmers, women, youth and children across Trans Nzoia County.
                   </p>
                   <p>
-                    Today Philip leads <strong className="text-foreground">Jume College</strong> — OTEPIC's
+                    Today Philip leads <strong className="text-foreground">Jume College</strong> — a
                     permaculture training campus — and the <strong className="text-foreground">Tabasamu Children's
                     Home</strong>, where orphaned and vulnerable children grow up with dignity, education and
                     a thriving food garden of their own. His vision is simple and radical: that every family
@@ -106,7 +106,7 @@ const ContactPage = () => {
                   <span className="text-2xl">✉️</span>
                   <div>
                     <h3 className="font-body font-semibold text-foreground text-sm">Email</h3>
-                    <a href="mailto:otepic07@yahoo.com" className="font-body text-primary text-sm hover:underline">otepic07@yahoo.com</a>
+                    <a href="mailto:info@jumecollege.education" className="font-body text-primary text-sm hover:underline">info@jumecollege.education</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">

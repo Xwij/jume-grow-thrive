@@ -293,7 +293,7 @@ const Projects = () => {
             <p className="text-sm font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-3">Training Programs</p>
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">What We Teach</h2>
             <p className="font-body text-muted-foreground max-w-2xl mx-auto">
-              Education happens in the classroom and in the field through hands-on training, demonstration gardens, and community projects.
+              At Jume College, education happens in the classroom and in the field. Through hands-on training, demonstration gardens, water-harvesting sites, food forests and live community projects, our students don't just learn ideas — they leave equipped with practical, repeatable skills they can apply immediately on their own land and in their own communities. Every program below combines classroom theory with months of field practice, mentorship from experienced trainers, and access to our living permaculture campus.
             </p>
           </motion.div>
 
@@ -343,7 +343,7 @@ const Projects = () => {
             <p className="text-sm font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-3">Our Services</p>
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">How We Serve</h2>
             <p className="font-body text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive solutions for individuals, communities, and organizations.
+              Beyond the classroom, Jume College offers a full suite of consultancy, training, and on-the-ground project services for individuals, farmer cooperatives, schools, faith communities, NGOs, and county governments. From regenerative farm design and water-system installation to youth volunteer programs, tree-nursery supply, mushroom enterprises and solar value-addition — we walk with you from initial idea through implementation and long-term mentoring.
             </p>
           </motion.div>
 
@@ -393,10 +393,10 @@ const Projects = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10">
             <p className="text-sm font-body tracking-[0.15em] uppercase text-red-600 font-semibold mb-3">Prospectus</p>
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">
-              Jume Modular Courses
+              Jume College Modular Courses
             </h2>
             <p className="font-body text-muted-foreground max-w-2xl mx-auto mb-6">
-              A modular curriculum spanning agro-ecology, environmental science, permaculture, engineering, hospitality, ICT and more — offered as 1-week, 2-week, 1-month, 3-month, 9-month or 1-year programs.
+              A modular curriculum spanning agro-ecology, environmental science, permaculture, engineering, hospitality, ICT and more — offered as 1-week, 2-week, 1-month, 3-month, 9-month or 1-year programs. Click any course below to read more, or open the prospectus library to view all recently uploaded course documents.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-3">
               <button
@@ -405,13 +405,6 @@ const Projects = () => {
               >
                 <Eye className="w-4 h-4" /> View the Prospectus
               </button>
-              <a
-                href={PROSPECTUS_PDF}
-                download
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border-2 border-border text-foreground font-body font-semibold text-sm hover:bg-muted transition-colors"
-              >
-                <Download className="w-4 h-4" /> Download PDF
-              </a>
             </div>
           </motion.div>
 
@@ -451,7 +444,7 @@ const Projects = () => {
             <p className="text-sm font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-3">Featured Project</p>
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">Tabasamu Children's Home</h2>
             <p className="font-body text-muted-foreground max-w-2xl mx-auto">
-              A flagship project of Jume College — providing a nurturing home, education, food security, and a future of hope for vulnerable children.
+              Tabasamu — meaning "smile" in Swahili — is the flagship project of Jume College. It is a loving home where orphaned and vulnerable children grow up with dignity, daily nutritious meals from our gardens, school sponsorship, healthcare, and a thriving food garden of their own. The children learn permaculture, care for poultry, practice the 3Rs (Reduce, Reuse, Recycle), and step into the future as confident, skilled young leaders rooted in their community.
             </p>
           </motion.div>
 
@@ -516,7 +509,7 @@ const Projects = () => {
         )}
       </AnimatePresence>
 
-      {/* Lively prospectus viewer */}
+      {/* Lively prospectus library — recent uploads */}
       <AnimatePresence>
         {showProspectus && (
           <motion.div
@@ -533,15 +526,8 @@ const Projects = () => {
               <BookOpen className="w-5 h-5" />
               <div className="flex-1 min-w-0">
                 <p className="text-[10px] uppercase tracking-widest text-white/70 font-semibold">Jume College</p>
-                <h3 className="font-display font-bold text-base sm:text-lg truncate">Jume Modular Courses Prospectus</h3>
+                <h3 className="font-display font-bold text-base sm:text-lg truncate">Recent Prospectus Uploads</h3>
               </div>
-              <a
-                href={PROSPECTUS_PDF}
-                download
-                className="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/15 hover:bg-white/25 text-white text-xs font-semibold transition-colors"
-              >
-                <Download className="w-3.5 h-3.5" /> Download
-              </a>
               <button
                 onClick={() => setShowProspectus(false)}
                 className="w-9 h-9 rounded-full bg-white/15 hover:bg-white/25 flex items-center justify-center transition-colors"
@@ -550,14 +536,38 @@ const Projects = () => {
                 <X className="w-4 h-4" />
               </button>
             </motion.div>
-            <motion.iframe
-              initial={{ scale: 0.96, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.1 }}
-              src={PROSPECTUS_PDF}
-              title="OTEPIC Prospectus"
-              className="flex-1 w-full bg-white"
-            />
+              className="flex-1 overflow-y-auto p-6 sm:p-10"
+            >
+              <div className="max-w-4xl mx-auto">
+                <p className="text-white/85 font-body mb-6 text-sm sm:text-base">
+                  All prospectus documents uploaded in the last few days. Click any title to open it in a new tab.
+                </p>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  {chapters.map((c) => (
+                    <a
+                      key={c.title}
+                      href={c.pdf}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center gap-4 bg-white/95 hover:bg-white rounded-xl p-4 transition-colors shadow"
+                    >
+                      <div className="w-12 h-12 rounded-lg bg-red-600/10 text-red-600 flex items-center justify-center flex-shrink-0">
+                        <BookOpen className="w-6 h-6" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="font-display font-bold text-foreground text-sm truncate">{c.title}</p>
+                        <p className="text-xs text-muted-foreground">Recently uploaded · PDF</p>
+                      </div>
+                      <Eye className="w-4 h-4 text-red-600 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -643,13 +653,7 @@ const PopupCard = ({
           </div>
         )}
         <p className="font-body text-muted-foreground leading-relaxed text-[15px] whitespace-pre-line">{body}</p>
-        <div className="mt-6 pt-4 border-t border-border">
-          {footer ?? (
-            <a href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-body font-semibold text-sm hover:opacity-90 transition-opacity">
-              Get in Touch →
-            </a>
-          )}
-        </div>
+        {footer && <div className="mt-6 pt-4 border-t border-border">{footer}</div>}
       </div>
     </motion.div>
   </motion.div>

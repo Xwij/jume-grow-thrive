@@ -25,8 +25,8 @@ const tiers = [
 const Donate = () => {
   const [openInfo, setOpenInfo] = useState<typeof useCases[number] | null>(null);
 
-  const PAYPAL_EMAIL = "otepic07@yahoo.com";
-  const paypalUrl = `https://www.paypal.com/donate/?business=${encodeURIComponent(PAYPAL_EMAIL)}&item_name=${encodeURIComponent("Support OTEPIC / Jume College")}&currency_code=USD`;
+  const PAYPAL_EMAIL = "munyasiaphilip2@gmail.com";
+  const paypalUrl = `https://www.paypal.com/signin?returnUri=${encodeURIComponent(`https://www.paypal.com/myaccount/transfer/homepage/pay?recipient=${PAYPAL_EMAIL}`)}`;
 
   return (
     <div className="min-h-screen bg-background">
@@ -105,20 +105,23 @@ const Donate = () => {
             <div className="space-y-5 font-body text-foreground/80">
               <div>
                 <h3 className="font-bold text-foreground mb-1">💳 Donate via PayPal</h3>
-                <p>Give securely from anywhere in the world using a credit card or PayPal account. 100% goes to our programs.</p>
+                <p>
+                  Give securely from anywhere in the world using a credit card or PayPal account. Send your contribution to our PayPal email:{" "}
+                  <a href={`mailto:${PAYPAL_EMAIL}`} className="text-primary font-semibold underline">{PAYPAL_EMAIL}</a>
+                </p>
               </div>
               <div>
                 <h3 className="font-bold text-foreground mb-1">🏦 Bank Transfer (International)</h3>
                 <p>Contact us for bank details and wire instructions for larger gifts and partnerships.</p>
               </div>
               <div>
-                <h3 className="font-bold text-foreground mb-1">📞 Talk to Us</h3>
+                <h3 className="font-bold text-foreground mb-1">📞 Talk to us for other donation options</h3>
                 <p>Call <a href="tel:+254725429179" className="text-primary underline">+254 725 429 179</a> to discuss sponsorship, in-kind gifts, or partnerships.</p>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 justify-center mt-8">
               <a href={paypalUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-7 py-3 rounded-lg bg-[#0070ba] text-white font-body font-semibold hover:bg-[#005a96] transition-colors shadow">
-                Donate with PayPal →
+                Login to PayPal to Donate →
               </a>
               <Link to="/contact" className="inline-flex items-center justify-center px-7 py-3 rounded-lg bg-primary text-primary-foreground font-body font-semibold hover:opacity-90 transition-opacity">
                 Contact Us
@@ -163,7 +166,7 @@ const Donate = () => {
                 Your donation directly funds this program at OTEPIC and Tabasamu Children's Home. Every gift, no matter the size, creates lasting change for the children, farmers and communities we serve in Trans Nzoia, Kenya.
               </p>
               <a href={paypalUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-[#0070ba] text-white font-body font-semibold text-sm hover:bg-[#005a96] transition-colors">
-                Donate with PayPal →
+                Login to PayPal to Donate →
               </a>
             </motion.div>
           </motion.div>
