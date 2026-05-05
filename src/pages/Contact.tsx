@@ -43,7 +43,7 @@ const ContactPage = () => {
               <div className="md:col-span-2 relative h-72 md:h-full min-h-[320px]">
                 <img
                   src={philipImg}
-                  alt="Philip Munyasia, Director of Jume College and OTEPIC"
+                  alt="Philip Munyasia, Director of Jume College"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent md:bg-gradient-to-r md:from-transparent md:to-card/20" />
