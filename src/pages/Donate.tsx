@@ -25,8 +25,8 @@ const tiers = [
 const Donate = () => {
   const [openInfo, setOpenInfo] = useState<typeof useCases[number] | null>(null);
 
-  const PAYPAL_EMAIL = "otepic07@yahoo.com";
-  const paypalUrl = `https://www.paypal.com/donate/?business=${encodeURIComponent(PAYPAL_EMAIL)}&item_name=${encodeURIComponent("Support OTEPIC / Jume College")}&currency_code=USD`;
+  const PAYPAL_EMAIL = "munyasiaphilip2@gmail.com";
+  const paypalUrl = `https://www.paypal.com/signin?returnUri=${encodeURIComponent(`https://www.paypal.com/myaccount/transfer/homepage/pay?recipient=${PAYPAL_EMAIL}`)}`;
 
   return (
     <div className="min-h-screen bg-background">
