@@ -9,7 +9,7 @@ const Navbar = () => {
   const navLinks = [
     { label: "Home", to: "/" },
     { label: "About", to: "/about" },
-    { label: "Projects", to: "/projects" },
+    { label: "Trainings & Projects", to: "/projects" },
     { label: "Gallery", to: "/gallery" },
     { label: "Impact", to: "/impact" },
     { label: "Report Newsletter", to: "/newsletters" },
@@ -52,19 +52,12 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Sub-strip: project quick links + newsletter (red strip) */}
+      {/* Sub-strip (red) */}
       <div className="hidden md:block bg-red-600 text-white">
-        <div className="container-narrow flex items-center gap-1 px-4 sm:px-6 lg:px-8 h-10 overflow-x-auto">
-          <span className="text-[11px] font-body uppercase tracking-widest text-white/80 mr-3 shrink-0">Projects:</span>
-          {projectStrip.map((p) => (
-            <Link
-              key={p.label}
-              to={p.to}
-              className="shrink-0 px-3 py-1 rounded-md text-xs font-body text-white/90 hover:text-white hover:bg-white/15 transition-colors whitespace-nowrap"
-            >
-              {p.label}
-            </Link>
-          ))}
+        <div className="container-narrow flex items-center px-4 sm:px-6 lg:px-8 h-10">
+          <span className="text-[11px] font-body uppercase tracking-widest text-white/90 shrink-0">
+            The Jume College — OTEPIC Kenya
+          </span>
           <div className="ml-auto shrink-0">
             <Link
               to="/newsletters"

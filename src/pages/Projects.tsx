@@ -280,7 +280,7 @@ const Projects = () => {
         <div className="container-narrow relative z-10">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-center max-w-3xl mx-auto">
             <p className="text-sm font-body tracking-[0.15em] uppercase text-background/60 font-semibold mb-3">What We Do</p>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-background mb-4">Our Projects</h1>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-background mb-4">Trainings & Projects</h1>
             <p className="font-body text-background/80 text-lg">Training programs, courses and services for sustainable agriculture, community development, and environmental restoration.</p>
           </motion.div>
         </div>
@@ -325,7 +325,7 @@ const Projects = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10">
             <p className="text-sm font-body tracking-[0.15em] uppercase text-red-600 font-semibold mb-3">Prospectus</p>
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">
-              OTEPIC Agricultural Modular Courses
+              OTEPIC Modular Courses
             </h2>
             <p className="font-body text-muted-foreground max-w-2xl mx-auto mb-6">
               A modular curriculum spanning agro-ecology, environmental science, permaculture, engineering, hospitality, ICT and more — offered as 1-week, 2-week, 1-month, 3-month, 9-month or 1-year programs.
@@ -540,7 +540,7 @@ const Projects = () => {
               <BookOpen className="w-5 h-5" />
               <div className="flex-1 min-w-0">
                 <p className="text-[10px] uppercase tracking-widest text-white/70 font-semibold">OTEPIC</p>
-                <h3 className="font-display font-bold text-base sm:text-lg truncate">Agricultural Modular Courses Prospectus</h3>
+                <h3 className="font-display font-bold text-base sm:text-lg truncate">Modular Courses Prospectus</h3>
               </div>
               <a
                 href={PROSPECTUS_PDF}
