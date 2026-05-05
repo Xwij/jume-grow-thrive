@@ -1,33 +1,25 @@
 import { motion } from "framer-motion";
-import farmerHarvestImg from "@/assets/farmer-harvest.jpg";
-import treePlantingImg from "@/assets/tree-planting.jpg";
-import mushroomFarmerImg from "@/assets/mushroom-farmer.jpg";
-import outdoorClassImg from "@/assets/outdoor-class.jpg";
 
 const testimonials = [
   {
     quote: "Jume College changed my life. I learned how to grow food for my family and earn an income from mushroom farming. I never imagined farming could be this rewarding.",
     name: "James Wekesa",
     role: "Mushroom Enterprise Graduate",
-    image: mushroomFarmerImg,
   },
   {
     quote: "The permaculture training opened my eyes to a new way of farming. My soil is healthier, my harvests are bigger, and I no longer need expensive chemicals.",
     name: "Peter Ochieng",
     role: "Permaculture Training Alumni",
-    image: farmerHarvestImg,
   },
   {
     quote: "As a young person, I thought farming was for old people. Jume College showed me that agriculture is innovation, science, and opportunity all in one.",
     name: "Brian Simiyu",
     role: "Youth Farming Initiative",
-    image: treePlantingImg,
   },
   {
     quote: "The community training sessions brought our village together. We now share knowledge, seeds, and hope for a better future for our children.",
     name: "Mary Nekesa",
     role: "Community Leader",
-    image: outdoorClassImg,
   },
 ];
 
@@ -66,16 +58,9 @@ const TestimonialsSection = () => {
               <p className="font-body text-foreground/90 leading-relaxed mb-6 mt-4 italic">
                 {t.quote}
               </p>
-              <div className="flex items-center gap-4">
-                <img
-                  src={t.image}
-                  alt={t.name}
-                  className="w-14 h-14 rounded-full object-cover border-2 border-primary/20"
-                />
-                <div>
-                  <p className="font-display font-bold text-foreground text-sm">{t.name}</p>
-                  <p className="font-body text-muted-foreground text-xs">{t.role}</p>
-                </div>
+              <div>
+                <p className="font-display font-bold text-foreground text-sm">{t.name}</p>
+                <p className="font-body text-muted-foreground text-xs">{t.role}</p>
               </div>
             </motion.div>
           ))}
