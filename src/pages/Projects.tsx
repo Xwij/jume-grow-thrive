@@ -393,10 +393,10 @@ const Projects = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10">
             <p className="text-sm font-body tracking-[0.15em] uppercase text-red-600 font-semibold mb-3">Prospectus</p>
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">
-              Jume Modular Courses
+              Jume College Modular Courses
             </h2>
             <p className="font-body text-muted-foreground max-w-2xl mx-auto mb-6">
-              A modular curriculum spanning agro-ecology, environmental science, permaculture, engineering, hospitality, ICT and more — offered as 1-week, 2-week, 1-month, 3-month, 9-month or 1-year programs.
+              A modular curriculum spanning agro-ecology, environmental science, permaculture, engineering, hospitality, ICT and more — offered as 1-week, 2-week, 1-month, 3-month, 9-month or 1-year programs. Click any course below to read more, or open the prospectus library to view all recently uploaded course documents.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-3">
               <button
@@ -405,13 +405,6 @@ const Projects = () => {
               >
                 <Eye className="w-4 h-4" /> View the Prospectus
               </button>
-              <a
-                href={PROSPECTUS_PDF}
-                download
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border-2 border-border text-foreground font-body font-semibold text-sm hover:bg-muted transition-colors"
-              >
-                <Download className="w-4 h-4" /> Download PDF
-              </a>
             </div>
           </motion.div>
 
