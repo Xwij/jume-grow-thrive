@@ -343,7 +343,7 @@ const Projects = () => {
             <p className="text-sm font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-3">Our Services</p>
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">How We Serve</h2>
             <p className="font-body text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive solutions for individuals, communities, and organizations.
+              Beyond the classroom, Jume College offers a full suite of consultancy, training, and on-the-ground project services for individuals, farmer cooperatives, schools, faith communities, NGOs, and county governments. From regenerative farm design and water-system installation to youth volunteer programs, tree-nursery supply, mushroom enterprises and solar value-addition — we walk with you from initial idea through implementation and long-term mentoring.
             </p>
           </motion.div>
 
