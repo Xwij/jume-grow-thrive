@@ -30,11 +30,10 @@ const Newsletters = () => {
       <Navbar />
       <main className="container mx-auto px-4 pt-28 pb-20">
         <header className="mb-10">
-          <p className="text-sm font-semibold text-primary tracking-widest uppercase">News Letters</p>
-          <h1 className="text-5xl md:text-6xl font-bold mt-2">Jume &amp; Tabasamu E-News</h1>
+          <p className="text-sm font-semibold text-primary tracking-widest uppercase">Resources</p>
+          <h1 className="text-4xl md:text-5xl font-bold mt-2">Jume College Reports, Newsletters &amp; Training Resources</h1>
           <p className="text-muted-foreground mt-4 max-w-2xl">
-            Read or download our latest learning briefs, field guides and updates from
-            Jume College and Tabasamu Children's Home.
+            Read or download our latest reports, learning briefs, field guides and updates from Jume College.
           </p>
         </header>
 
