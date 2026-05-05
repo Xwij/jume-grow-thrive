@@ -121,7 +121,7 @@ const Donate = () => {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 justify-center mt-8">
               <a href={paypalUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-7 py-3 rounded-lg bg-[#0070ba] text-white font-body font-semibold hover:bg-[#005a96] transition-colors shadow">
-                Donate with PayPal →
+                Login to PayPal to Donate →
               </a>
               <Link to="/contact" className="inline-flex items-center justify-center px-7 py-3 rounded-lg bg-primary text-primary-foreground font-body font-semibold hover:opacity-90 transition-opacity">
                 Contact Us
@@ -166,7 +166,7 @@ const Donate = () => {
                 Your donation directly funds this program at OTEPIC and Tabasamu Children's Home. Every gift, no matter the size, creates lasting change for the children, farmers and communities we serve in Trans Nzoia, Kenya.
               </p>
               <a href={paypalUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-[#0070ba] text-white font-body font-semibold text-sm hover:bg-[#005a96] transition-colors">
-                Donate with PayPal →
+                Login to PayPal to Donate →
               </a>
             </motion.div>
           </motion.div>
