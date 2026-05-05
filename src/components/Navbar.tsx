@@ -53,21 +53,7 @@ const Navbar = () => {
       </div>
 
       {/* Sub-strip (red) */}
-      <div className="hidden md:block bg-red-600 text-white">
-        <div className="container-narrow flex items-center px-4 sm:px-6 lg:px-8 h-10">
-          <span className="text-[11px] font-body uppercase tracking-widest text-white/90 shrink-0">
-            The Jume College — OTEPIC Kenya
-          </span>
-          <div className="ml-auto shrink-0">
-            <Link
-              to="/newsletters"
-              className="inline-flex items-center px-3 py-1 rounded-md bg-white text-red-600 text-xs font-body font-semibold hover:bg-white/90 transition-colors whitespace-nowrap"
-            >
-              Reports & Newsletters →
-            </Link>
-          </div>
-        </div>
-      </div>
+      <div className="hidden md:block bg-red-600 h-2" aria-hidden="true" />
 
       {open && (
         <div className="md:hidden bg-background border-b border-border px-4 pb-4 space-y-1">

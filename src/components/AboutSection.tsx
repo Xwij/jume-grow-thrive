@@ -39,6 +39,24 @@ const AboutSection = () => {
           </p>
         </motion.div>
 
+        {/* Vision & Mission */}
+        <div className="grid md:grid-cols-2 gap-6 mb-16">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="bg-card rounded-2xl p-6 sm:p-8 border border-border" style={{ boxShadow: "var(--card-shadow)" }}>
+            <p className="text-xs font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-2">1.1</p>
+            <h3 className="text-xl sm:text-2xl font-display font-bold text-foreground mb-3">Our Vision</h3>
+            <p className="font-body text-muted-foreground text-sm leading-relaxed">
+              To have a community that is holistically empowered and lives in harmony with the ecology based on the three ethics of permaculture — earth care, people care and fairness.
+            </p>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }} className="bg-card rounded-2xl p-6 sm:p-8 border border-border" style={{ boxShadow: "var(--card-shadow)" }}>
+            <p className="text-xs font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-2">1.2</p>
+            <h3 className="text-xl sm:text-2xl font-display font-bold text-foreground mb-3">Our Mission</h3>
+            <p className="font-body text-muted-foreground text-sm leading-relaxed">
+              The JUME College – OTEPIC Kenya disseminates appropriate low-cost agricultural technologies through community education and participation in addressing food security based on the twelve permaculture principles. Through realistic and practical socio-economic and scientific agricultural technologies, we work to alleviate poverty, increase environmental resilience, and empower communities — improving bio-diversity and working towards sustainability. We believe everybody should be food secure and live in a better environment by looking at everything holistically using permaculture principles.
+            </p>
+          </motion.div>
+        </div>
+
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 mb-16">
           {values.map((item, i) => (
             <motion.div
@@ -88,15 +106,20 @@ const AboutSection = () => {
             ))}
           </div>
           <div>
-            <h3 className="text-2xl sm:text-3xl font-display font-bold text-foreground mb-4">More Than a Training Center</h3>
-            <p className="font-body text-muted-foreground leading-relaxed mb-4">
-              Jume College is a living laboratory for sustainable development, where innovation, traditional knowledge, and community action come together.
+            <h3 className="text-2xl sm:text-3xl font-display font-bold text-foreground mb-4">Our Main Objectives</h3>
+            <p className="font-body text-muted-foreground leading-relaxed mb-3 text-sm">
+              The JUME College – OTEPIC Kenya was initiated to promote permaculture principles through research, training, teaching, extension and consultancy.
             </p>
-            <p className="font-body text-muted-foreground leading-relaxed mb-6">
-              From farmers seeking better harvests to international volunteers eager to learn about ecological solutions, Jume College welcomes everyone who believes in building a healthier planet and stronger communities.
-            </p>
-            <a href="/about" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-body font-semibold text-sm hover:opacity-90 transition-opacity">
-              Learn Our Story →
+            <ul className="space-y-2 font-body text-muted-foreground text-sm leading-relaxed mb-6 list-decimal pl-5">
+              <li>Attain food security at the household level.</li>
+              <li>Provide adequate and safe drinking water for human, livestock and irrigation purposes.</li>
+              <li>Create wealth by starting, supporting and strengthening income-generating sustainable ecological agriculture activities based on permaculture principles.</li>
+              <li>Improve and sustain ecological farming systems.</li>
+              <li>Build the capacity of members and communities through sustainable ecological agriculture using holistic permaculture principles.</li>
+              <li>Advocate for animals' rights and animal humane education.</li>
+            </ul>
+            <a href="/about#org-works" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-body font-semibold text-sm hover:opacity-90 transition-opacity">
+              View More →
             </a>
           </div>
         </motion.div>
