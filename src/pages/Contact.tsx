@@ -51,7 +51,7 @@ const ContactPage = () => {
               <div className="md:col-span-3 p-8 md:p-10">
                 <p className="text-xs font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-2">Meet the Director</p>
                 <h2 className="text-2xl sm:text-3xl font-display font-bold text-foreground mb-3">Philip Munyasia</h2>
-                <p className="text-sm font-body text-primary font-semibold mb-5">Founder & Director — Jume College · OTEPIC Kenya</p>
+                <p className="text-sm font-body text-primary font-semibold mb-5">Founder & Director — Jume College Kenya</p>
                 <div className="space-y-4 font-body text-muted-foreground leading-relaxed text-[15px]">
                   <p>
                     Born and raised in the Kipsongo slums of Kitale, Philip grew up surrounded by hunger,
