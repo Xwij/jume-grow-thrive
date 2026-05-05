@@ -509,7 +509,7 @@ const Projects = () => {
         )}
       </AnimatePresence>
 
-      {/* Lively prospectus viewer */}
+      {/* Lively prospectus library — recent uploads */}
       <AnimatePresence>
         {showProspectus && (
           <motion.div
@@ -526,15 +526,8 @@ const Projects = () => {
               <BookOpen className="w-5 h-5" />
               <div className="flex-1 min-w-0">
                 <p className="text-[10px] uppercase tracking-widest text-white/70 font-semibold">Jume College</p>
-                <h3 className="font-display font-bold text-base sm:text-lg truncate">Jume Modular Courses Prospectus</h3>
+                <h3 className="font-display font-bold text-base sm:text-lg truncate">Recent Prospectus Uploads</h3>
               </div>
-              <a
-                href={PROSPECTUS_PDF}
-                download
-                className="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/15 hover:bg-white/25 text-white text-xs font-semibold transition-colors"
-              >
-                <Download className="w-3.5 h-3.5" /> Download
-              </a>
               <button
                 onClick={() => setShowProspectus(false)}
                 className="w-9 h-9 rounded-full bg-white/15 hover:bg-white/25 flex items-center justify-center transition-colors"
@@ -543,14 +536,38 @@ const Projects = () => {
                 <X className="w-4 h-4" />
               </button>
             </motion.div>
-            <motion.iframe
-              initial={{ scale: 0.96, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.1 }}
-              src={PROSPECTUS_PDF}
-              title="OTEPIC Prospectus"
-              className="flex-1 w-full bg-white"
-            />
+              className="flex-1 overflow-y-auto p-6 sm:p-10"
+            >
+              <div className="max-w-4xl mx-auto">
+                <p className="text-white/85 font-body mb-6 text-sm sm:text-base">
+                  All prospectus documents uploaded in the last few days. Click any title to open it in a new tab.
+                </p>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  {chapters.map((c) => (
+                    <a
+                      key={c.title}
+                      href={c.pdf}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center gap-4 bg-white/95 hover:bg-white rounded-xl p-4 transition-colors shadow"
+                    >
+                      <div className="w-12 h-12 rounded-lg bg-red-600/10 text-red-600 flex items-center justify-center flex-shrink-0">
+                        <BookOpen className="w-6 h-6" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="font-display font-bold text-foreground text-sm truncate">{c.title}</p>
+                        <p className="text-xs text-muted-foreground">Recently uploaded · PDF</p>
+                      </div>
+                      <Eye className="w-4 h-4 text-red-600 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
