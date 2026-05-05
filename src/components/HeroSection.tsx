@@ -115,7 +115,7 @@ const HeroSection = () => {
               Report Newsletter
             </a>
             <a href="/projects#prospectus" className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-red-600 text-white font-body font-semibold text-sm hover:bg-red-700 transition-colors shadow">
-              View Prospectus →
+              The Jume College – OTEPIC Kenya Training Prospectus →
             </a>
           </div>
         </div>

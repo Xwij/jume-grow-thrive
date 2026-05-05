@@ -95,10 +95,6 @@ const Donate = () => {
             <h2 className="text-3xl font-display font-bold text-foreground mb-6 text-center">How to Donate</h2>
             <div className="space-y-5 font-body text-foreground/80">
               <div>
-                <h3 className="font-bold text-foreground mb-1">📱 M-Pesa (Kenya)</h3>
-                <p>Paybill / Till — contact us for current details.</p>
-              </div>
-              <div>
                 <h3 className="font-bold text-foreground mb-1">🏦 Bank Transfer (International)</h3>
                 <p>Email <a href="mailto:otepic07@yahoo.com" className="text-primary underline">otepic07@yahoo.com</a> for bank details and wire instructions.</p>
               </div>
