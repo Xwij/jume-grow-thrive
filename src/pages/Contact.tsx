@@ -61,13 +61,13 @@ const ContactPage = () => {
                   </p>
                   <p>
                     In 2007, in the aftermath of Kenya's worst ethnic clashes, Philip founded
-                    <strong className="text-foreground"> OTEPIC (Organic Technology Extension and Promotion of Initiative Centre)</strong>
+                    <strong className="text-foreground"> Jume College</strong>
                     {" "}to bring people of different tribes together through farming, peace-building and
                     sustainable living. What began as a small youth garden has grown into a movement
                     reaching thousands of farmers, women, youth and children across Trans Nzoia County.
                   </p>
                   <p>
-                    Today Philip leads <strong className="text-foreground">Jume College</strong> — OTEPIC's
+                    Today Philip leads <strong className="text-foreground">Jume College</strong> — a
                     permaculture training campus — and the <strong className="text-foreground">Tabasamu Children's
                     Home</strong>, where orphaned and vulnerable children grow up with dignity, education and
                     a thriving food garden of their own. His vision is simple and radical: that every family
