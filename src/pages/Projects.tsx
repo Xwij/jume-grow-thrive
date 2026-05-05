@@ -643,13 +643,7 @@ const PopupCard = ({
           </div>
         )}
         <p className="font-body text-muted-foreground leading-relaxed text-[15px] whitespace-pre-line">{body}</p>
-        <div className="mt-6 pt-4 border-t border-border">
-          {footer ?? (
-            <a href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-body font-semibold text-sm hover:opacity-90 transition-opacity">
-              Get in Touch →
-            </a>
-          )}
-        </div>
+        {footer && <div className="mt-6 pt-4 border-t border-border">{footer}</div>}
       </div>
     </motion.div>
   </motion.div>
