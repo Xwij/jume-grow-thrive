@@ -106,7 +106,7 @@ const ContactPage = () => {
                   <span className="text-2xl">✉️</span>
                   <div>
                     <h3 className="font-body font-semibold text-foreground text-sm">Email</h3>
-                    <a href="mailto:otepic07@yahoo.com" className="font-body text-primary text-sm hover:underline">otepic07@yahoo.com</a>
+                    <a href="mailto:info@jumecollege.education" className="font-body text-primary text-sm hover:underline">info@jumecollege.education</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
