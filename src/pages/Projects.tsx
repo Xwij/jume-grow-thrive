@@ -532,8 +532,8 @@ const Projects = () => {
             >
               <BookOpen className="w-5 h-5" />
               <div className="flex-1 min-w-0">
-                <p className="text-[10px] uppercase tracking-widest text-white/70 font-semibold">OTEPIC</p>
-                <h3 className="font-display font-bold text-base sm:text-lg truncate">Modular Courses Prospectus</h3>
+                <p className="text-[10px] uppercase tracking-widest text-white/70 font-semibold">Jume College</p>
+                <h3 className="font-display font-bold text-base sm:text-lg truncate">Jume Modular Courses Prospectus</h3>
               </div>
               <a
                 href={PROSPECTUS_PDF}
