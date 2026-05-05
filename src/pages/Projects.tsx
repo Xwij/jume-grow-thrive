@@ -293,7 +293,7 @@ const Projects = () => {
             <p className="text-sm font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-3">Training Programs</p>
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">What We Teach</h2>
             <p className="font-body text-muted-foreground max-w-2xl mx-auto">
-              Education happens in the classroom and in the field through hands-on training, demonstration gardens, and community projects.
+              At Jume College, education happens in the classroom and in the field. Through hands-on training, demonstration gardens, water-harvesting sites, food forests and live community projects, our students don't just learn ideas — they leave equipped with practical, repeatable skills they can apply immediately on their own land and in their own communities. Every program below combines classroom theory with months of field practice, mentorship from experienced trainers, and access to our living permaculture campus.
             </p>
           </motion.div>
 
