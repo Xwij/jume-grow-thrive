@@ -444,7 +444,7 @@ const Projects = () => {
             <p className="text-sm font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-3">Featured Project</p>
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">Tabasamu Children's Home</h2>
             <p className="font-body text-muted-foreground max-w-2xl mx-auto">
-              A flagship project of Jume College — providing a nurturing home, education, food security, and a future of hope for vulnerable children.
+              Tabasamu — meaning "smile" in Swahili — is the flagship project of Jume College. It is a loving home where orphaned and vulnerable children grow up with dignity, daily nutritious meals from our gardens, school sponsorship, healthcare, and a thriving food garden of their own. The children learn permaculture, care for poultry, practice the 3Rs (Reduce, Reuse, Recycle), and step into the future as confident, skilled young leaders rooted in their community.
             </p>
           </motion.div>
 
