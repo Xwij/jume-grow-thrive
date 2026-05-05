@@ -23,6 +23,11 @@ const tiers = [
 ];
 
 const Donate = () => {
+  const [openInfo, setOpenInfo] = useState<typeof useCases[number] | null>(null);
+
+  const PAYPAL_EMAIL = "otepic07@yahoo.com";
+  const paypalUrl = `https://www.paypal.com/donate/?business=${encodeURIComponent(PAYPAL_EMAIL)}&item_name=${encodeURIComponent("Support OTEPIC / Jume College")}&currency_code=USD`;
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
