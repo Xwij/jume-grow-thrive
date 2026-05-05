@@ -12,7 +12,7 @@ const Navbar = () => {
     { label: "Trainings & Projects", to: "/projects" },
     { label: "Gallery", to: "/gallery" },
     { label: "Impact", to: "/impact" },
-    { label: "Report Newsletter", to: "/newsletters" },
+    { label: "Reports & Newsletters", to: "/newsletters" },
   ];
 
   const projectStrip = [
@@ -63,7 +63,7 @@ const Navbar = () => {
               to="/newsletters"
               className="inline-flex items-center px-3 py-1 rounded-md bg-white text-red-600 text-xs font-body font-semibold hover:bg-white/90 transition-colors whitespace-nowrap"
             >
-              Report Newsletter →
+              Reports & Newsletters →
             </Link>
           </div>
         </div>
