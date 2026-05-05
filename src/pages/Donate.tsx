@@ -58,20 +58,22 @@ const Donate = () => {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {useCases.map((u, i) => (
-              <motion.div
+              <motion.button
                 key={u.title}
+                onClick={() => setOpenInfo(u)}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="rounded-2xl p-7 bg-card border border-border hover:shadow-xl transition-shadow"
+                className="text-left rounded-2xl p-7 bg-card border border-border hover:shadow-xl hover:border-primary/40 transition-all"
               >
                 <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-4" style={{ background: `${u.color}20` }}>
                   {u.icon}
                 </div>
                 <h3 className="font-display font-bold text-xl text-foreground mb-2">{u.title}</h3>
-                <p className="font-body text-foreground/70 leading-relaxed">{u.desc}</p>
-              </motion.div>
+                <p className="font-body text-foreground/70 leading-relaxed mb-3">{u.desc}</p>
+                <span className="text-sm font-semibold text-primary">Learn more →</span>
+              </motion.button>
             ))}
           </div>
         </div>
