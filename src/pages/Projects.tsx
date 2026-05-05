@@ -499,20 +499,18 @@ const Projects = () => {
         {openChapter !== null && (
           <PopupCard
             image={chapters[openChapter].image}
-            title={`Chapter ${chapters[openChapter].no} — ${chapters[openChapter].title}`}
+            title={chapters[openChapter].title}
             chips={[]}
             body={chapters[openChapter].summary}
             onClose={() => setOpenChapter(null)}
             footer={
-              <button
-                onClick={() => {
-                  setOpenChapter(null);
-                  setShowProspectus(true);
-                }}
+              <a
+                href={chapters[openChapter].pdf}
+                download
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-red-600 text-white font-body font-semibold text-sm hover:bg-red-700 transition-colors"
               >
-                <Eye className="w-4 h-4" /> Open in Prospectus Viewer
-              </button>
+                <Download className="w-4 h-4" /> Download Prospectus
+              </a>
             }
           />
         )}
