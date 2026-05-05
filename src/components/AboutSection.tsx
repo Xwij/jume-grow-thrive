@@ -39,6 +39,24 @@ const AboutSection = () => {
           </p>
         </motion.div>
 
+        {/* Vision & Mission */}
+        <div className="grid md:grid-cols-2 gap-6 mb-16">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="bg-card rounded-2xl p-6 sm:p-8 border border-border" style={{ boxShadow: "var(--card-shadow)" }}>
+            <p className="text-xs font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-2">1.1</p>
+            <h3 className="text-xl sm:text-2xl font-display font-bold text-foreground mb-3">Our Vision</h3>
+            <p className="font-body text-muted-foreground text-sm leading-relaxed">
+              To have a community that is holistically empowered and lives in harmony with the ecology based on the three ethics of permaculture — earth care, people care and fairness.
+            </p>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }} className="bg-card rounded-2xl p-6 sm:p-8 border border-border" style={{ boxShadow: "var(--card-shadow)" }}>
+            <p className="text-xs font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-2">1.2</p>
+            <h3 className="text-xl sm:text-2xl font-display font-bold text-foreground mb-3">Our Mission</h3>
+            <p className="font-body text-muted-foreground text-sm leading-relaxed">
+              The JUME College – OTEPIC Kenya disseminates appropriate low-cost agricultural technologies through community education and participation in addressing food security based on the twelve permaculture principles. Through realistic and practical socio-economic and scientific agricultural technologies, we work to alleviate poverty, increase environmental resilience, and empower communities — improving bio-diversity and working towards sustainability. We believe everybody should be food secure and live in a better environment by looking at everything holistically using permaculture principles.
+            </p>
+          </motion.div>
+        </div>
+
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 mb-16">
           {values.map((item, i) => (
             <motion.div
