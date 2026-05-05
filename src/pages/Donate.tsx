@@ -1,5 +1,7 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import { X } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import donateHero from "@/assets/donate-hero.jpg";
@@ -21,6 +23,11 @@ const tiers = [
 ];
 
 const Donate = () => {
+  const [openInfo, setOpenInfo] = useState<typeof useCases[number] | null>(null);
+
+  const PAYPAL_EMAIL = "otepic07@yahoo.com";
+  const paypalUrl = `https://www.paypal.com/donate/?business=${encodeURIComponent(PAYPAL_EMAIL)}&item_name=${encodeURIComponent("Support OTEPIC / Jume College")}&currency_code=USD`;
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -51,20 +58,22 @@ const Donate = () => {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {useCases.map((u, i) => (
-              <motion.div
+              <motion.button
                 key={u.title}
+                onClick={() => setOpenInfo(u)}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="rounded-2xl p-7 bg-card border border-border hover:shadow-xl transition-shadow"
+                className="text-left rounded-2xl p-7 bg-card border border-border hover:shadow-xl hover:border-primary/40 transition-all"
               >
                 <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-4" style={{ background: `${u.color}20` }}>
                   {u.icon}
                 </div>
                 <h3 className="font-display font-bold text-xl text-foreground mb-2">{u.title}</h3>
-                <p className="font-body text-foreground/70 leading-relaxed">{u.desc}</p>
-              </motion.div>
+                <p className="font-body text-foreground/70 leading-relaxed mb-3">{u.desc}</p>
+                <span className="text-sm font-semibold text-primary">Learn more →</span>
+              </motion.button>
             ))}
           </div>
         </div>
@@ -95,8 +104,12 @@ const Donate = () => {
             <h2 className="text-3xl font-display font-bold text-foreground mb-6 text-center">How to Donate</h2>
             <div className="space-y-5 font-body text-foreground/80">
               <div>
+                <h3 className="font-bold text-foreground mb-1">💳 Donate via PayPal</h3>
+                <p>Give securely from anywhere in the world using a credit card or PayPal account. 100% goes to our programs.</p>
+              </div>
+              <div>
                 <h3 className="font-bold text-foreground mb-1">🏦 Bank Transfer (International)</h3>
-                <p>Email <a href="mailto:otepic07@yahoo.com" className="text-primary underline">otepic07@yahoo.com</a> for bank details and wire instructions.</p>
+                <p>Contact us for bank details and wire instructions for larger gifts and partnerships.</p>
               </div>
               <div>
                 <h3 className="font-bold text-foreground mb-1">📞 Talk to Us</h3>
@@ -104,16 +117,58 @@ const Donate = () => {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 justify-center mt-8">
-              <Link to="/contact" className="inline-flex items-center justify-center px-7 py-3 rounded-lg bg-primary text-primary-foreground font-body font-semibold hover:opacity-90 transition-opacity">
-                Contact Us to Donate →
-              </Link>
-              <a href="mailto:otepic07@yahoo.com" className="inline-flex items-center justify-center px-7 py-3 rounded-lg border border-border text-foreground font-body font-semibold hover:bg-muted transition-colors">
-                Email Us
+              <a href={paypalUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-7 py-3 rounded-lg bg-[#0070ba] text-white font-body font-semibold hover:bg-[#005a96] transition-colors shadow">
+                Donate with PayPal →
               </a>
+              <Link to="/contact" className="inline-flex items-center justify-center px-7 py-3 rounded-lg bg-primary text-primary-foreground font-body font-semibold hover:opacity-90 transition-opacity">
+                Contact Us
+              </Link>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Gaussian-blur info popup */}
+      <AnimatePresence>
+        {openInfo && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setOpenInfo(null)}
+            className="fixed inset-0 z-[100] bg-foreground/40 backdrop-blur-xl flex items-center justify-center p-4"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              onClick={(e) => e.stopPropagation()}
+              className="bg-card/95 backdrop-blur-md rounded-2xl max-w-lg w-full p-8 border border-border relative"
+              style={{ boxShadow: "0 25px 60px -12px rgba(0,0,0,0.45)" }}
+            >
+              <button
+                onClick={() => setOpenInfo(null)}
+                className="absolute top-4 right-4 w-9 h-9 rounded-full bg-background/80 hover:bg-background flex items-center justify-center"
+                aria-label="Close"
+              >
+                <X className="w-4 h-4" />
+              </button>
+              <div className="w-16 h-16 rounded-2xl flex items-center justify-center text-4xl mb-4" style={{ background: `${openInfo.color}20` }}>
+                {openInfo.icon}
+              </div>
+              <h3 className="text-2xl font-display font-bold text-foreground mb-3">{openInfo.title}</h3>
+              <p className="font-body text-foreground/75 leading-relaxed mb-6">{openInfo.desc}</p>
+              <p className="font-body text-foreground/70 leading-relaxed text-sm mb-6">
+                Your donation directly funds this program at OTEPIC and Tabasamu Children's Home. Every gift, no matter the size, creates lasting change for the children, farmers and communities we serve in Trans Nzoia, Kenya.
+              </p>
+              <a href={paypalUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-[#0070ba] text-white font-body font-semibold text-sm hover:bg-[#005a96] transition-colors">
+                Donate with PayPal →
+              </a>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <Footer />
     </div>
