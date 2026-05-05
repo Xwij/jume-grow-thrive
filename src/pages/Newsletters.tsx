@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Download, FileText, Eye, X } from "lucide-react";
+import { Download, FileText, Eye, X, Clock } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -11,7 +11,7 @@ type Item = {
   date: string;
 };
 
-const items: Item[] = [
+const trainingMaterials: Item[] = [
   { title: "Carbon Farming", file: "Carbon_Farming.pdf", size: "953 KB", date: "Apr 14, 2026" },
   { title: "Companion Planting", file: "Companion_Planting.pdf", size: "1.9 MB", date: "Apr 14, 2026" },
   { title: "Compost Making", file: "Compost_Making.pdf", size: "2.7 MB", date: "Apr 14, 2026" },
@@ -21,6 +21,30 @@ const items: Item[] = [
   { title: "Plant Spacing", file: "PLANT_SPACING.pdf", size: "2.1 MB", date: "Apr 14, 2026" },
   { title: "Seed Propagation", file: "Seed_Propagation.pdf", size: "1.9 MB", date: "Apr 14, 2026" },
 ];
+
+const ComingSoonSection = ({ title, subtitle }: { title: string; subtitle: string }) => (
+  <section className="rounded-2xl border bg-card shadow-sm overflow-hidden mb-8">
+    <div className="flex items-center gap-3 px-6 py-4 border-b bg-muted/40">
+      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+        <FileText className="w-5 h-5 text-primary" />
+      </div>
+      <div>
+        <h2 className="text-lg font-semibold">{title}</h2>
+        <p className="text-xs text-muted-foreground">{subtitle}</p>
+      </div>
+    </div>
+    <div className="px-6 py-12 flex flex-col items-center justify-center text-center">
+      <Clock className="w-10 h-10 text-muted-foreground/60 mb-3" />
+      <p className="font-display text-xl font-bold text-foreground mb-1">Coming Soon</p>
+      <p className="text-sm text-muted-foreground max-w-sm mb-5">
+        We are preparing this collection. Please check back shortly.
+      </p>
+      <Button disabled variant="outline" className="opacity-70 cursor-not-allowed">
+        Coming Soon
+      </Button>
+    </div>
+  </section>
+);
 
 const Newsletters = () => {
   const [open, setOpen] = useState<Item | null>(null);
@@ -37,13 +61,20 @@ const Newsletters = () => {
           </p>
         </header>
 
-        <div className="rounded-2xl border bg-card shadow-sm overflow-hidden">
+        <ComingSoonSection title="Reports" subtitle="Annual and project reports" />
+        <ComingSoonSection title="Newsletters" subtitle="Periodic community updates" />
+
+        {/* Training Materials — main */}
+        <section className="rounded-2xl border bg-card shadow-sm overflow-hidden">
           <div className="flex items-center gap-3 px-6 py-4 border-b bg-muted/40">
             <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
               <FileText className="w-5 h-5 text-primary" />
             </div>
-            <h2 className="text-lg font-semibold">News Letter</h2>
-            <span className="ml-auto text-sm text-muted-foreground">{items.length} files</span>
+            <div>
+              <h2 className="text-lg font-semibold">Training Materials</h2>
+              <p className="text-xs text-muted-foreground">Practical permaculture & agricultural learning briefs</p>
+            </div>
+            <span className="ml-auto text-sm text-muted-foreground">{trainingMaterials.length} files</span>
           </div>
 
           <div className="hidden md:grid grid-cols-12 px-6 py-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground border-b">
@@ -55,7 +86,7 @@ const Newsletters = () => {
           </div>
 
           <ul className="divide-y">
-            {items.map((it) => (
+            {trainingMaterials.map((it) => (
               <li
                 key={it.file}
                 className="grid grid-cols-1 md:grid-cols-12 gap-3 px-6 py-4 items-center hover:bg-muted/30 transition-colors"
@@ -87,7 +118,7 @@ const Newsletters = () => {
               </li>
             ))}
           </ul>
-        </div>
+        </section>
       </main>
 
       {open && (
