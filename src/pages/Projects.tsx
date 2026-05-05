@@ -92,98 +92,98 @@ const programs = [
   },
 ];
 
-// Prospectus chapters (extracted from OTEPIC Modular Courses Prospectus)
+// Prospectus chapters (each maps to its own uploaded prospectus PDF)
 const chapters = [
   {
-    no: "01",
     title: "Animal Production",
     image: chAnimalImg,
+    pdf: "/prospectus/ANIMAL_PRODUCTION.pdf",
     summary:
       "Importance of livestock in food security, animal nutrition & feeding, breeding & genetics, livestock management, animal health, dairy/poultry/beef/pig production, plus agribusiness & technology. Practical sessions cover handling, vaccination, feed formulation and farm business management.",
   },
   {
-    no: "02",
-    title: "Environmental Science",
-    image: chEnvImg,
-    summary:
-      "Earth systems, ecosystems & biodiversity, natural resource management, pollution & environmental health, climate change & policy, GIS and remote sensing. Equips students to analyse human impacts and design sustainability strategies at local, national and global levels.",
-  },
-  {
-    no: "03",
     title: "Agro-ecology & Agro-biodiversity",
     image: chAgroEcoImg,
+    pdf: "/prospectus/AGRO.pdf",
     summary:
-      "Ecological principles, soil management, natural pest control, agroforestry & apiculture, food sovereignty and family nutrition, plus market and value-addition. Builds an integrated, holistic understanding of food systems and a community of practice for long-term agro-ecological transformation.",
+      "Ecological principles, soil management, natural pest control, agroforestry & apiculture, food sovereignty and family nutrition, plus market and value-addition. Builds an integrated, holistic understanding of food systems for long-term agro-ecological transformation.",
   },
   {
-    no: "04",
-    title: "Permaculture Course",
-    image: chPermaImg,
-    summary:
-      "A standardised 72-hour curriculum focused on ecological design, sustainability, and regenerative practice. Delivered over two weeks, weekend series, or online — applying ecological principles to homes, landscapes and communities.",
-  },
-  {
-    no: "05",
-    title: "Sustainable Agriculture",
-    image: chSustainImg,
-    summary:
-      "Ecological farming methods, soil and water conservation, organic farming, Integrated Pest Management (IPM), regenerative techniques, farm business planning and crop diversification — preparing farmers and managers for resilient, profitable enterprises.",
-  },
-  {
-    no: "06",
-    title: "Grow Biointensive",
-    image: chBioImg,
-    summary:
-      "High-yield, soil-building organic agriculture using deep beds, close spacing, compost crops and on-farm fertility cycles. Designed to grow more food on less land while continuously regenerating soil — ideal for smallholders and school gardens.",
-  },
-  {
-    no: "07",
-    title: "Horticulture",
-    image: chHortiImg,
-    summary:
-      "Plant propagation, cultivation techniques, garden design and post-harvest management for fruit, vegetable and ornamental production. Includes botany basics, greenhouse work, nursery management and value addition.",
-  },
-  {
-    no: "08",
-    title: "Engineering / Agricultural Engineering",
+    title: "Agricultural Engineering",
     image: chEngineeringImg,
+    pdf: "/prospectus/AGRICULTURAL_ENGINEERING.pdf",
     summary:
-      "Building technology (masonry, carpentry, technical drawing, structural mechanics, site management), welding & fabrication, and applied engineering mathematics. Certificate (6–12 months) and Diploma (2–3 years) levels with industrial attachment, leading to specialisations in precision agriculture and post-harvest technology.",
+      "Applied engineering for agriculture — farm machinery, irrigation systems, post-harvest technology, soil & water engineering, and precision agriculture. Combines workshop practice with farm-based projects.",
   },
   {
-    no: "09",
+    title: "Building Technology",
+    image: chEnvImg,
+    pdf: "/prospectus/BUILDING_TECHNOLOGY.pdf",
+    summary:
+      "Masonry, technical drawing, structural mechanics, site management and sustainable building practice. Certificate and Diploma pathways with industrial attachment.",
+  },
+  {
+    title: "Carpentry & Joinery",
+    image: chSustainImg,
+    pdf: "/prospectus/CARPENTRY_AND_JOINERY.pdf",
+    summary:
+      "Hands-on training in woodwork, joinery, furniture making and finishing. Equips graduates with employable skills and the foundation to start their own workshops.",
+  },
+  {
     title: "Community Development",
     image: chCommunityImg,
+    pdf: "/prospectus/COMMUNITY_DEVELOPMENT.pdf",
     summary:
       "Skills to plan, implement and evaluate community initiatives — needs assessment, project management, resource mobilisation and leadership. Prepares practitioners for roles in NGOs, government agencies and community-based organisations.",
   },
   {
-    no: "10",
+    title: "Computer & Information Technology",
+    image: chICTImg,
+    pdf: "/prospectus/COMPUTER_AND_INFORMATION_TECHNOLOGY.pdf",
+    summary:
+      "Computer fundamentals, networking, cyber security, ICT technician skills and AI basics — equipping students for the modern digital workplace.",
+  },
+  {
+    title: "Cooking Skills",
+    image: chHospitalityImg,
+    pdf: "/prospectus/COOKING_SKILLS.pdf",
+    summary:
+      "Culinary arts, food preparation, nutrition, kitchen management, and food safety & hygiene. Practical kitchen training for hotels, restaurants, and self-employment.",
+  },
+  {
+    title: "Baking Technology",
+    image: chHospitalityImg,
+    pdf: "/prospectus/BAKING_TECHNOLOGY.pdf",
+    summary:
+      "Bakery and pastry production, dough science, bread, cakes and confectionery, plus bakery business management. Hands-on training preparing graduates for community bakeries and self-employment.",
+  },
+  {
+    title: "Accommodation Operations",
+    image: chHortiImg,
+    pdf: "/prospectus/ACCOMMODATION_OPERATIONS.pdf",
+    summary:
+      "Front office, housekeeping, guest services, hospitality standards and accommodation management — pathways to careers in hotels, lodges and the wider tourism sector.",
+  },
+  {
     title: "Soap Making (Short Course)",
     image: chSoapImg,
+    pdf: "/prospectus/OTEPIC_Agricultural_Modular_Courses_Prospectus.pdf",
     summary:
       "Saponification science, safe lye handling, cold-press and hot-press techniques, liquid soap, shower gel, washing soap and gardener soap. A practical income-generating skill for women's groups, youth and small enterprises.",
   },
   {
-    no: "11",
-    title: "Hospitality & Baking",
-    image: chHospitalityImg,
-    summary:
-      "Culinary arts, bakery and pastry production, food safety and hygiene, kitchen management and customer service. Hands-on training preparing graduates for hotels, restaurants, community bakeries and self-employment.",
-  },
-  {
-    no: "12",
     title: "Tailoring & Garment Making",
     image: chTailoringImg,
+    pdf: "/prospectus/OTEPIC_Agricultural_Modular_Courses_Prospectus.pdf",
     summary:
-      "Modular vocational training (Grades III, II and I) — from basic stitching to advanced garment construction, pattern cutting, costing and small-business management. A pathway to dignified self-employment for youth and women.",
+      "Modular vocational training (Grades III, II and I) — from basic stitching to advanced garment construction, pattern cutting, costing and small-business management.",
   },
   {
-    no: "13",
-    title: "ICT, Liberal & Business Studies",
-    image: chICTImg,
+    title: "Permaculture Course",
+    image: chPermaImg,
+    pdf: "/prospectus/OTEPIC_Agricultural_Modular_Courses_Prospectus.pdf",
     summary:
-      "Computer science, cyber security, ICT technician and AI fundamentals; Counselling Psychology, Library & Information, Project Management and Social Work; Accountancy, Banking & Finance and Business Management — equipping students for the modern workplace.",
+      "A standardised 72-hour curriculum focused on ecological design, sustainability, and regenerative practice. Delivered over two weeks, weekend series, or online.",
   },
 ];
 
