@@ -330,7 +330,7 @@ const services = [
   {
     icon: "🌱",
     image: permacultureImg,
-    title: "Permaculture Consultancy",
+    title: "Through Permaculture Consultancy",
     desc: "Through expert farm and landscape design using permaculture principles, we help you create productive, self-sustaining systems tailored to your land and climate.",
     features: ["Site analysis & design", "Implementation support", "Follow-up mentoring"],
     details:
@@ -339,7 +339,7 @@ const services = [
   {
     icon: "📚",
     image: trainingImg,
-    title: "Training & Workshops",
+    title: "Through Training & Workshops",
     desc: "Through hands-on training programs in sustainable agriculture, water harvesting, agroforestry, and mushroom cultivation for individuals, groups, and organizations.",
     features: ["Short courses (1–5 days)", "Certificate programs", "Custom group training"],
     details:
@@ -348,7 +348,7 @@ const services = [
   {
     icon: "🌍",
     image: communityImg,
-    title: "Community Development",
+    title: "Through Community Development",
     desc: "Through partnership with communities we design and implement projects that improve food security, water access, and livelihoods through ecological approaches.",
     features: ["Needs assessment", "Project planning", "Capacity building"],
     details:
@@ -357,7 +357,7 @@ const services = [
   {
     icon: "🤝",
     image: volunteerImg,
-    title: "Volunteer & Internship Programs",
+    title: "Through Volunteer & Internship Programs",
     desc: "Through international and local volunteer placements, participants join our campus to learn, contribute, and experience regenerative agriculture first-hand.",
     features: ["Work-stay programs", "Research placements", "Cultural exchange"],
     details:
@@ -366,7 +366,7 @@ const services = [
   {
     icon: "🌳",
     image: nurseryImg,
-    title: "Tree Nursery & Seedlings",
+    title: "Through Tree Nursery & Seedlings",
     desc: "Through our on-campus nursery, we produce and distribute quality tree seedlings for agroforestry, reforestation, and food forest establishment.",
     features: ["Indigenous species", "Fruit tree varieties", "Bulk orders available"],
     details:
@@ -479,7 +479,7 @@ const Projects = () => {
                 to="/contact"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-red-600 text-white font-body font-semibold text-sm hover:bg-red-700 transition-colors shadow"
               >
-                Contact us to Apply Now →
+                Contact us To Apply
               </Link>
               <button
                 onClick={() => setShowProspectus(true)}
@@ -780,7 +780,7 @@ const Projects = () => {
                 Whether you're a farmer looking for training, an organization seeking partnership, or a volunteer ready to make a difference — we'd love to hear from you.
               </p>
               <a href="/contact" className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-body font-semibold text-base hover:opacity-90 transition-opacity">
-                Contact Us →
+                Contact us To Apply
               </a>
             </motion.div>
           </div>
