@@ -184,7 +184,7 @@ const Impact = () => {
             <figcaption className="p-3 font-body text-sm font-semibold text-foreground text-center">Before</figcaption>
           </figure>
           <figure className="rounded-2xl overflow-hidden bg-card border border-border" style={{ boxShadow: "var(--card-shadow)" }}>
-            <img src={communityGardenImg} alt="After — restored garden" className="w-full h-72 object-contain bg-muted" />
+            <img src={waterAfterNewImg} alt="After — restored garden" className="w-full h-72 object-contain bg-muted" />
             <figcaption className="p-3 font-body text-sm font-semibold text-foreground text-center">After</figcaption>
           </figure>
         </div>
