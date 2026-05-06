@@ -44,7 +44,7 @@ const ContactPage = () => {
                 <img
                   src={philipImg}
                   alt="Philip Munyasia, Director of Jume College"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain bg-muted"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent md:bg-gradient-to-r md:from-transparent md:to-card/20" />
               </div>

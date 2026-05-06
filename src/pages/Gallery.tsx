@@ -140,7 +140,7 @@ const Gallery = () => {
       {/* Hero */}
       <section className="relative pt-28 pb-16 section-padding overflow-hidden">
         <div className="absolute inset-0">
-          <img src={campusImg} alt="Gallery" className="w-full h-full object-cover" />
+          <img src={campusImg} alt="Gallery" className="w-full h-full object-contain bg-muted" />
           <div className="absolute inset-0 hero-gradient-animated" />
         </div>
         <div className="container-narrow relative z-10 text-center">
@@ -233,7 +233,7 @@ const Gallery = () => {
                 className="rounded-2xl overflow-hidden bg-card border border-border"
                 style={{ boxShadow: "var(--card-shadow)" }}
               >
-                <video controls preload="metadata" className="w-full aspect-video object-cover" playsInline>
+                <video controls preload="metadata" className="w-full aspect-video object-contain bg-muted" playsInline>
                   <source src={vid.src} type="video/mp4" />
                 </video>
                 <div className="p-4">

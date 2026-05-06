@@ -393,7 +393,7 @@ const CourseSlider = ({ chapters }: { chapters: { title: string; image: string; 
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-contain bg-muted"
         />
       </AnimatePresence>
       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/20" />
@@ -515,7 +515,7 @@ const Projects = () => {
                     style={{ boxShadow: "var(--card-shadow)" }}
                   >
                     <div className="relative h-[260px] sm:h-[340px] overflow-hidden">
-                      <img src={dept.hero} alt={dept.name} className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                      <img src={dept.hero} alt={dept.name} className="absolute inset-0 w-full h-full object-contain bg-muted" loading="lazy" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/20" />
                       <div className="absolute inset-0 flex flex-col items-center justify-end text-center px-6 pb-8">
                         {dept.subtitle && (
@@ -541,7 +541,7 @@ const Projects = () => {
                             style={{ boxShadow: "var(--card-shadow)" }}
                           >
                             <div className="relative h-32 overflow-hidden">
-                              <img src={c.image} alt={c.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
+                              <img src={c.image} alt={c.title} className="w-full h-full object-contain bg-muted transition-transform duration-700 group-hover:scale-110" loading="lazy" />
                               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
                               <h4 className="absolute bottom-2 left-3 right-3 text-white font-display font-bold text-sm drop-shadow-lg leading-tight">
                                 {c.title}
@@ -572,8 +572,8 @@ const Projects = () => {
         <div className="container-narrow">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="grid grid-cols-2 gap-4">
-              <img src={avocadosImg} alt="Avocado harvest" className="rounded-2xl w-full h-48 object-cover" loading="lazy" />
-              <img src={bananasImg} alt="Banana plantation" className="rounded-2xl w-full h-48 object-cover" loading="lazy" />
+              <img src={avocadosImg} alt="Avocado harvest" className="rounded-2xl w-full h-48 object-contain bg-muted" loading="lazy" />
+              <img src={bananasImg} alt="Banana plantation" className="rounded-2xl w-full h-48 object-contain bg-muted" loading="lazy" />
             </div>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <h2 className="text-2xl sm:text-3xl font-display font-bold text-foreground mb-4">Ready to Get Started?</h2>
@@ -613,7 +613,7 @@ const Projects = () => {
                 style={{ boxShadow: "var(--card-shadow)" }}
               >
                 <div className="relative h-44 overflow-hidden">
-                  <img src={service.image} alt={service.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <img src={service.image} alt={service.title} loading="lazy" className="w-full h-full object-contain bg-muted transition-transform duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent" />
                   <span className="absolute top-3 left-3 text-3xl drop-shadow-lg">{service.icon}</span>
                 </div>
@@ -656,7 +656,7 @@ const Projects = () => {
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="grid md:grid-cols-2 gap-8 items-center bg-card rounded-2xl overflow-hidden border border-border" style={{ boxShadow: "var(--card-shadow)" }}>
             <div className="relative h-64 md:h-full min-h-[280px] overflow-hidden">
-              <img src={tabasamuJoy} alt="Tabasamu Children's Home" className="w-full h-full object-cover" loading="lazy" />
+              <img src={tabasamuJoy} alt="Tabasamu Children's Home" className="w-full h-full object-contain bg-muted" loading="lazy" />
             </div>
             <div className="p-8 sm:p-10">
               <h3 className="text-2xl font-display font-bold text-foreground mb-3">Growing Hope, One Smile at a Time</h3>
@@ -828,7 +828,7 @@ const PopupCard = ({
       onClick={(e) => e.stopPropagation()}
     >
       <div className="relative h-52 overflow-hidden flex-shrink-0">
-        <img src={image} alt={title} className="w-full h-full object-cover" />
+        <img src={image} alt={title} className="w-full h-full object-contain bg-muted" />
         <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
         {icon && <span className="absolute top-4 left-4 text-5xl drop-shadow-lg">{icon}</span>}
         <button

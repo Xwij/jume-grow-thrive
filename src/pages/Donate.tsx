@@ -35,7 +35,7 @@ const Donate = () => {
       {/* Hero */}
       <section className="relative pt-28 pb-20 section-padding overflow-hidden">
         <div className="absolute inset-0">
-          <img src={donateHero} alt="Children we support" className="w-full h-full object-cover" />
+          <img src={donateHero} alt="Children we support" className="w-full h-full object-contain bg-muted" />
           <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(34,197,94,0.85) 0%, rgba(245,158,11,0.75) 60%, rgba(236,72,153,0.8) 100%)" }} />
         </div>
         <div className="container-narrow relative z-10 text-center">
