@@ -358,6 +358,62 @@ const services = [
   },
 ];
 
+const CourseSlider = ({ chapters }: { chapters: { title: string; image: string; summary: string }[] }) => {
+  const [i, setI] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setI((v) => (v + 1) % chapters.length), 2000);
+    return () => clearInterval(id);
+  }, [chapters.length]);
+  const c = chapters[i];
+  return (
+    <div className="relative h-[340px] sm:h-[420px] overflow-hidden">
+      <AnimatePresence mode="wait">
+        <motion.img
+          key={c.image}
+          src={c.image}
+          alt={c.title}
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </AnimatePresence>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/20" />
+      <div className="absolute inset-0 flex flex-col items-center justify-end text-center px-6 pb-10">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={c.title}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.5 }}
+            className="max-w-3xl"
+          >
+            <p className="text-xs sm:text-sm tracking-[0.2em] uppercase text-white/80 font-semibold mb-2">
+              Jume College Modular Course
+            </p>
+            <h3 className="text-2xl sm:text-4xl font-display font-bold text-white drop-shadow-lg mb-3">
+              {c.title}
+            </h3>
+            <p className="text-white/90 font-body text-sm sm:text-base leading-relaxed line-clamp-3">
+              {c.summary}
+            </p>
+          </motion.div>
+        </AnimatePresence>
+        <div className="mt-5 flex gap-1.5">
+          {chapters.map((_, idx) => (
+            <span
+              key={idx}
+              className={`h-1.5 rounded-full transition-all ${idx === i ? "w-6 bg-white" : "w-1.5 bg-white/40"}`}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const SectionDivider = () => (
   <div className="container-narrow">
     <div className="flex items-center gap-4 py-2">
