@@ -338,7 +338,6 @@ const Projects = () => {
       <section id="prospectus" className="section-padding bg-background">
         <div className="container-narrow">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10">
-            <p className="text-sm font-body tracking-[0.15em] uppercase text-red-600 font-semibold mb-3">Modular Courses</p>
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">
               Jume College Modular Courses
             </h2>
@@ -346,9 +345,15 @@ const Projects = () => {
               A modular curriculum spanning agro-ecology, environmental science, permaculture, engineering, hospitality, ICT and more — offered as 1-week, 2-week, 1-month, 3-month, 9-month or 1-year programs. Click any course below to read more, or open the library to view all recently uploaded course documents.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-3">
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-red-600 text-white font-body font-semibold text-sm hover:bg-red-700 transition-colors shadow"
+              >
+                Contact us to Apply Now →
+              </Link>
               <button
                 onClick={() => setShowProspectus(true)}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-red-600 text-white font-body font-semibold text-sm hover:bg-red-700 transition-colors shadow"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-card border border-red-600 text-red-600 font-body font-semibold text-sm hover:bg-red-50 transition-colors shadow"
               >
                 <Eye className="w-4 h-4" /> View All Courses
               </button>
