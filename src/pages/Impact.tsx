@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import CountUp from "@/components/CountUp";
 
 import waterProjectImg from "@/assets/water-project.jpg";
+import waterAfterNewImg from "@/assets/water-sustainability-new.jpeg";
 import farmerHarvestImg from "@/assets/farmer-harvest.jpg";
 import mushroomFarmerImg from "@/assets/mushroom-farmer.jpg";
 import treePlantingImg from "@/assets/tree-planting.jpg";
@@ -183,7 +184,7 @@ const Impact = () => {
             <figcaption className="p-3 font-body text-sm font-semibold text-foreground text-center">Before</figcaption>
           </figure>
           <figure className="rounded-2xl overflow-hidden bg-card border border-border" style={{ boxShadow: "var(--card-shadow)" }}>
-            <img src={communityGardenImg} alt="After — restored garden" className="w-full h-72 object-contain bg-muted" />
+            <img src={waterAfterNewImg} alt="After — restored garden" className="w-full h-72 object-contain bg-muted" />
             <figcaption className="p-3 font-body text-sm font-semibold text-foreground text-center">After</figcaption>
           </figure>
         </div>
