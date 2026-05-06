@@ -45,11 +45,12 @@ import chBakingImg from "@/assets/baking-cakes.jpg";
 import chAccommodationImg from "@/assets/hospitality-bread.jpg";
 import chCosmetologyImg from "@/assets/dept-cosmetology.png";
 import chElectricalImg from "@/assets/field-training-2.jpg";
-import chFashionImg from "@/assets/dept-fashion.png";
+import chFashionImg from "@/assets/dept-fashion-2.jpeg";
 import chTechEnterpriseImg from "@/assets/dept-tech-enterprise.png";
-import chSustAgImg from "@/assets/women-tilling.jpg";
+import chSustAgImg from "@/assets/sustainable-agri.jpeg";
 import chWeldingImg from "@/assets/digging-water-pan.jpg";
-import chPlumbingImg from "@/assets/drip-irrigation.jpg";
+import chPlumbingImg from "@/assets/plumbing.jpeg";
+import chBuildingConstructionImg from "@/assets/building-construction.jpeg";
 
 const PROSPECTUS_PDF = "/prospectus/OTEPIC_Agricultural_Modular_Courses_Prospectus.pdf";
 
