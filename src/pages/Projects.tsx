@@ -103,8 +103,9 @@ const programs = [
   },
 ];
 
-// Prospectus chapters (each maps to its own uploaded prospectus PDF)
-const chapters = [
+// Prospectus chapters grouped into the 4 official categories
+type Chapter = { title: string; image: string; pdf: string; summary: string };
+const chapters: Chapter[] = [
   {
     title: "Animal Production",
     image: chAnimalImg,
@@ -264,6 +265,51 @@ const chapters = [
   },
 ];
 
+// Group chapters by the 4 official slide categories
+const categories: { name: string; subtitle?: string; color: string; bg: string; titles: string[] }[] = [
+  {
+    name: "Art, Fashion & Design",
+    color: "from-pink-600 to-rose-600",
+    bg: "bg-pink-50",
+    titles: ["Tailoring & Garment Making", "Cosmetology", "Fashion Designer"],
+  },
+  {
+    name: "Other Courses",
+    color: "from-emerald-600 to-green-700",
+    bg: "bg-emerald-50",
+    titles: [
+      "Electrical Installation",
+      "Food Processing Technology",
+      "Soap Making (Short Course)",
+      "Computer & Information Technology",
+      "Building Technology",
+      "Community Development",
+    ],
+  },
+  {
+    name: "Modular Courses",
+    subtitle: "Agricultural-Based Courses",
+    color: "from-blue-700 to-indigo-700",
+    bg: "bg-blue-50",
+    titles: [
+      "Animal Production",
+      "Agro-ecology & Agro-biodiversity",
+      "Agricultural Engineering",
+      "Grow Bio-Intensive Course",
+      "Permaculture Course",
+      "Environmental Science",
+      "Horticulture",
+      "Sustainable Agriculture Course",
+    ],
+  },
+  {
+    name: "Hospitality",
+    color: "from-orange-600 to-amber-600",
+    bg: "bg-orange-50",
+    titles: ["Food & Beverage Operations", "Cooking Skills", "Baking Technology"],
+  },
+];
+
 const services = [
   {
     icon: "🌱",
@@ -311,6 +357,16 @@ const services = [
       "Our on-campus nursery produces tens of thousands of seedlings annually — indigenous trees, fruit trees, nitrogen-fixers, medicinal plants and timber species. We supply farmers, schools, faith communities, county governments and reforestation programs. Bulk orders available at discounted rates.",
   },
 ];
+
+const SectionDivider = () => (
+  <div className="container-narrow">
+    <div className="flex items-center gap-4 py-2">
+      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+      <div className="w-2 h-2 rounded-full bg-primary/40" />
+      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+    </div>
+  </div>
+);
 
 const Projects = () => {
   const [openService, setOpenService] = useState<number | null>(null);
@@ -362,34 +418,65 @@ const Projects = () => {
             </div>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {chapters.map((c, i) => (
-              <motion.button
-                key={c.title}
-                onClick={() => setOpenChapter(i)}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: (i % 6) * 0.06 }}
-                className="text-left bg-card rounded-2xl overflow-hidden border border-border hover:border-red-500/50 transition-all group flex flex-col"
-                style={{ boxShadow: "var(--card-shadow)" }}
-              >
-                <div className="relative h-40 overflow-hidden">
-                  <img src={c.image} alt={c.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-transparent to-transparent" />
-                  <h3 className="absolute bottom-3 left-3 right-3 text-background font-display font-bold text-base drop-shadow-lg">{c.title}</h3>
-                </div>
-                <div className="p-5 flex-1 flex flex-col">
-                  <p className="font-body text-muted-foreground text-sm leading-relaxed line-clamp-3 mb-3">{c.summary}</p>
-                  <span className="mt-auto inline-flex items-center gap-1.5 text-xs font-body font-semibold text-red-600">
-                    <BookOpen className="w-3.5 h-3.5" /> Read more →
-                  </span>
-                </div>
-              </motion.button>
-            ))}
+          {/* Categories grouped to match the official prospectus layout */}
+          <div className="space-y-12">
+            {categories.map((cat, ci) => {
+              const catChapters = cat.titles
+                .map((t) => ({ idx: chapters.findIndex((c) => c.title === t), t }))
+                .filter((x) => x.idx >= 0);
+              return (
+                <motion.div
+                  key={cat.name}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-80px" }}
+                  transition={{ duration: 0.55, delay: ci * 0.06 }}
+                  className={`rounded-3xl overflow-hidden border border-border ${cat.bg}`}
+                  style={{ boxShadow: "var(--card-shadow)" }}
+                >
+                  <div className={`bg-gradient-to-r ${cat.color} px-6 py-4 text-center`}>
+                    <h3 className="text-xl sm:text-2xl font-display font-bold text-white tracking-wide">
+                      {ci + 1}. {cat.name.toUpperCase()}
+                    </h3>
+                    {cat.subtitle && (
+                      <p className="text-white/85 font-body text-sm mt-0.5">{cat.subtitle}</p>
+                    )}
+                  </div>
+                  <div className="p-5 sm:p-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {catChapters.map(({ idx }) => {
+                      const c = chapters[idx];
+                      return (
+                        <button
+                          key={c.title}
+                          onClick={() => setOpenChapter(idx)}
+                          className="text-left bg-card rounded-xl overflow-hidden border border-border/70 hover:border-red-500/50 hover:-translate-y-0.5 transition-all group flex flex-col"
+                          style={{ boxShadow: "var(--card-shadow)" }}
+                        >
+                          <div className="relative h-32 overflow-hidden">
+                            <img src={c.image} alt={c.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+                            <h4 className="absolute bottom-2 left-3 right-3 text-white font-display font-bold text-sm drop-shadow-lg leading-tight">
+                              {c.title}
+                            </h4>
+                          </div>
+                          <div className="p-4 flex-1 flex flex-col">
+                            <p className="font-body text-muted-foreground text-xs leading-relaxed line-clamp-3 mb-2">{c.summary}</p>
+                            <span className="mt-auto inline-flex items-center gap-1.5 text-[11px] font-body font-semibold text-red-600">
+                              <BookOpen className="w-3 h-3" /> Read more →
+                            </span>
+                          </div>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
+
+      <SectionDivider />
 
       {/* Services */}
       <section id="services" className="section-padding" style={{ background: "var(--section-gradient)" }}>
@@ -441,6 +528,8 @@ const Projects = () => {
           </div>
         </div>
       </section>
+
+      <SectionDivider />
 
       {/* Featured Project: Tabasamu (last section) */}
       <section className="section-padding bg-muted/30">
@@ -586,6 +675,8 @@ const Projects = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
+      <SectionDivider />
 
       {/* CTA */}
       <section className="section-padding" style={{ background: "var(--section-gradient)" }}>

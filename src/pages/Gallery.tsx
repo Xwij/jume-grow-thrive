@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -21,7 +22,6 @@ import campusImg from "@/assets/campus.jpg";
 import trainingFieldImg from "@/assets/training-field.jpg";
 import communityGardenImg from "@/assets/community-garden.jpg";
 import communityKidsImg from "@/assets/community-kids.jpg";
-// New uploads
 import waterPondImg from "@/assets/water-pond.jpg";
 import treePruningImg from "@/assets/tree-pruning.jpg";
 import agroforestryTeamImg from "@/assets/agroforestry-team.jpg";
@@ -31,7 +31,6 @@ import mulchingTreeImg from "@/assets/mulching-tree.jpg";
 import treePlantingFieldImg from "@/assets/tree-planting-field.jpg";
 import womenTillingImg from "@/assets/women-tilling.jpg";
 import diggingWaterPanImg from "@/assets/digging-water-pan.jpg";
-// Newest uploads
 import communityCircleImg from "@/assets/community-circle.jpg";
 import trainingBandaImg from "@/assets/training-banda.jpg";
 import donkeyFieldImg from "@/assets/donkey-field.jpg";
@@ -42,7 +41,6 @@ import dripIrrigationImg from "@/assets/drip-irrigation.jpg";
 import bakingMuffinsImg from "@/assets/baking-muffins.jpg";
 import chefsTrainingImg from "@/assets/chefs-training.jpg";
 import bakeryBreadImg from "@/assets/bakery-bread.jpg";
-// Latest uploads
 import otepicCollageImg from "@/assets/otepic-amani-collage.jpg";
 import chefsPastriesImg from "@/assets/chefs-pastries.jpg";
 import soapPosterImg from "@/assets/soap-poster.jpg";
@@ -52,56 +50,54 @@ import hospitalityBakeryImg from "@/assets/hospitality-bakery.jpg";
 import soapWomenImg from "@/assets/soap-women.jpg";
 import tailoringImg from "@/assets/tailoring.jpg";
 
-const gallery = [
-  // Latest uploads
-  { src: otepicCollageImg, label: "OTEPIC Amani Garden — Real Food Revolution", span: "md:col-span-2 md:row-span-2", isNew: true },
-  { src: chefsPastriesImg, label: "Hospitality — Chefs Training", span: "", isNew: true },
-  { src: hospitalityBakingImg, label: "Hospitality — Baking", span: "", isNew: true },
-  { src: hospitalityBakeryImg, label: "Hospitality — Bakery Production", span: "md:col-span-2", isNew: true },
-  { src: tailoringImg, label: "Tailoring & Garment Making", span: "", isNew: true },
-  { src: soapWomenImg, label: "Soap Making — Women's Enterprise", span: "", isNew: true },
-  { src: soapPosterImg, label: "Soap Making Skill Training", span: "md:col-span-2", isNew: true },
-  { src: agriEngineeringImg, label: "Agricultural Engineering — Drip Irrigation", span: "", isNew: true },
-  // Newest previous uploads
-  { src: communityCircleImg, label: "Community Circle Gathering", span: "md:col-span-2 md:row-span-2", isNew: true },
-  { src: chefsTrainingImg, label: "Culinary Training", span: "", isNew: true },
-  { src: bakeryBreadImg, label: "Community Bakery", span: "", isNew: true },
-  { src: trainingBandaImg, label: "Banda Workshop", span: "md:col-span-2", isNew: true },
-  { src: bakingMuffinsImg, label: "Fresh Bakes", span: "", isNew: true },
-  { src: soapMakingImg, label: "Soap-Making Enterprise", span: "", isNew: true },
-  { src: dripIrrigationImg, label: "Drip Irrigation Bed", span: "md:col-span-2", isNew: true },
-  { src: donkeyTeamImg, label: "Working Together", span: "", isNew: true },
-  { src: donkeyFieldImg, label: "Field Companions", span: "", isNew: true },
-  { src: bandaCircleImg, label: "Circle Discussion", span: "md:col-span-2", isNew: true },
-  // Previous uploads
-  { src: waterPondImg, label: "Water Harvesting Pond", span: "md:col-span-2 md:row-span-2", isNew: true },
-  { src: seedlingsNurseryImg, label: "Tree Seedlings Nursery", span: "", isNew: true },
-  { src: treePruningImg, label: "Pruning Workshop", span: "", isNew: true },
-  { src: bananaGroveImg, label: "Banana Grove", span: "md:col-span-2", isNew: true },
-  { src: agroforestryTeamImg, label: "Agroforestry Training", span: "", isNew: true },
-  { src: womenTillingImg, label: "Women Preparing Land", span: "", isNew: true },
-  { src: diggingWaterPanImg, label: "Digging Water Pan", span: "md:col-span-2", isNew: true },
-  { src: treePlantingFieldImg, label: "Planting Day", span: "", isNew: true },
-  { src: mulchingTreeImg, label: "Mulching Young Trees", span: "", isNew: true },
-  // Existing collection
-  { src: kidsHarvestImg, label: "Kids with Fresh Harvest", span: "md:col-span-2" },
-  { src: mushroomBucketImg, label: "Mushroom Bucket Growing", span: "" },
-  { src: kidsPlayingImg, label: "Kids at Play", span: "" },
-  { src: soilPrepImg, label: "Soil Preparation", span: "md:col-span-2" },
-  { src: fieldTrainingImg, label: "Community Field Training", span: "" },
-  { src: passionFruitImg, label: "Passion Fruit Harvest", span: "" },
-  { src: farmerHarvestImg, label: "Proud Farmer", span: "md:col-span-2 md:row-span-2" },
-  { src: bananaHarvestImg, label: "Banana Harvest", span: "" },
-  { src: mushroomCloseupImg, label: "Oyster Mushrooms", span: "" },
-  { src: treePlantingImg, label: "Tree Planting", span: "md:col-span-2" },
-  { src: passionFarmingImg, label: "Agroforestry in Action", span: "" },
-  { src: mushroomFarmerImg, label: "Mushroom Production", span: "" },
-  { src: campusImg, label: "Jume College Campus", span: "md:col-span-2" },
-  { src: outdoorClassImg, label: "Outdoor Learning Session", span: "" },
-  { src: trainingFieldImg, label: "Training in the Field", span: "" },
-  { src: communityGardenImg, label: "Community Garden", span: "" },
-  { src: communityKidsImg, label: "Students & Community", span: "" },
-  { src: fieldTraining2Img, label: "Hands-On Training", span: "md:col-span-2" },
+type GalleryItem = { src: string; label: string; isNew?: boolean };
+
+const gallery: GalleryItem[] = [
+  { src: otepicCollageImg, label: "OTEPIC Amani Garden — Real Food Revolution", isNew: true },
+  { src: chefsPastriesImg, label: "Hospitality — Chefs Training", isNew: true },
+  { src: hospitalityBakingImg, label: "Hospitality — Baking", isNew: true },
+  { src: hospitalityBakeryImg, label: "Hospitality — Bakery Production", isNew: true },
+  { src: tailoringImg, label: "Tailoring & Garment Making", isNew: true },
+  { src: soapWomenImg, label: "Soap Making — Women's Enterprise", isNew: true },
+  { src: soapPosterImg, label: "Soap Making Skill Training", isNew: true },
+  { src: agriEngineeringImg, label: "Agricultural Engineering — Drip Irrigation", isNew: true },
+  { src: communityCircleImg, label: "Community Circle Gathering", isNew: true },
+  { src: chefsTrainingImg, label: "Culinary Training", isNew: true },
+  { src: bakeryBreadImg, label: "Community Bakery", isNew: true },
+  { src: trainingBandaImg, label: "Banda Workshop", isNew: true },
+  { src: bakingMuffinsImg, label: "Fresh Bakes", isNew: true },
+  { src: soapMakingImg, label: "Soap-Making Enterprise", isNew: true },
+  { src: dripIrrigationImg, label: "Drip Irrigation Bed", isNew: true },
+  { src: donkeyTeamImg, label: "Working Together", isNew: true },
+  { src: donkeyFieldImg, label: "Field Companions", isNew: true },
+  { src: bandaCircleImg, label: "Circle Discussion", isNew: true },
+  { src: waterPondImg, label: "Water Harvesting Pond", isNew: true },
+  { src: seedlingsNurseryImg, label: "Tree Seedlings Nursery", isNew: true },
+  { src: treePruningImg, label: "Pruning Workshop", isNew: true },
+  { src: bananaGroveImg, label: "Banana Grove", isNew: true },
+  { src: agroforestryTeamImg, label: "Agroforestry Training", isNew: true },
+  { src: womenTillingImg, label: "Women Preparing Land", isNew: true },
+  { src: diggingWaterPanImg, label: "Digging Water Pan", isNew: true },
+  { src: treePlantingFieldImg, label: "Planting Day", isNew: true },
+  { src: mulchingTreeImg, label: "Mulching Young Trees", isNew: true },
+  { src: kidsHarvestImg, label: "Kids with Fresh Harvest" },
+  { src: mushroomBucketImg, label: "Mushroom Bucket Growing" },
+  { src: kidsPlayingImg, label: "Kids at Play" },
+  { src: soilPrepImg, label: "Soil Preparation" },
+  { src: fieldTrainingImg, label: "Community Field Training" },
+  { src: passionFruitImg, label: "Passion Fruit Harvest" },
+  { src: farmerHarvestImg, label: "Proud Farmer" },
+  { src: bananaHarvestImg, label: "Banana Harvest" },
+  { src: mushroomCloseupImg, label: "Oyster Mushrooms" },
+  { src: treePlantingImg, label: "Tree Planting" },
+  { src: passionFarmingImg, label: "Agroforestry in Action" },
+  { src: mushroomFarmerImg, label: "Mushroom Production" },
+  { src: campusImg, label: "Jume College Campus" },
+  { src: outdoorClassImg, label: "Outdoor Learning Session" },
+  { src: trainingFieldImg, label: "Training in the Field" },
+  { src: communityGardenImg, label: "Community Garden" },
+  { src: communityKidsImg, label: "Students & Community" },
+  { src: fieldTraining2Img, label: "Hands-On Training" },
 ];
 
 const videos = [
@@ -115,10 +111,30 @@ const videos = [
 ];
 
 const Gallery = () => {
-  const [selected, setSelected] = useState<{ src: string; label: string } | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
+  const next = useCallback(() => {
+    setSelectedIndex((i) => (i === null ? null : (i + 1) % gallery.length));
+  }, []);
+  const prev = useCallback(() => {
+    setSelectedIndex((i) => (i === null ? null : (i - 1 + gallery.length) % gallery.length));
+  }, []);
+
+  useEffect(() => {
+    if (selectedIndex === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "ArrowRight") next();
+      else if (e.key === "ArrowLeft") prev();
+      else if (e.key === "Escape") setSelectedIndex(null);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [selectedIndex, next, prev]);
+
+  const selected = selectedIndex !== null ? gallery[selectedIndex] : null;
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{ fontFamily: "Inter, Montserrat, system-ui, sans-serif" }}>
       <Navbar />
 
       {/* Hero */}
@@ -129,9 +145,9 @@ const Gallery = () => {
         </div>
         <div className="container-narrow relative z-10 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <p className="text-sm font-body tracking-[0.15em] uppercase text-background/60 font-semibold mb-3">Media</p>
+            <p className="text-sm font-body tracking-[0.15em] uppercase text-background/80 font-semibold mb-3">Media</p>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-background mb-4">Gallery & Videos</h1>
-            <p className="font-body text-background/80 text-lg">A visual journey through our campus, training, and community impact.</p>
+            <p className="font-body text-background/90 text-lg">A visual journey through our campus, training, and community impact.</p>
           </motion.div>
         </div>
       </section>
@@ -142,37 +158,38 @@ const Gallery = () => {
           <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-2xl sm:text-3xl font-display font-bold text-foreground mb-8 text-center">
             Photo Gallery
           </motion.h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-4">
             {gallery.map((img, i) => (
-              <motion.div
-                key={img.label}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 3.1, delay: i * 0.03, ease: "easeOut" }}
-                className={`relative overflow-hidden rounded-2xl group cursor-pointer ${img.span}`}
+              <motion.button
+                type="button"
+                key={img.label + i}
+                initial={{ opacity: 0, y: 16, scale: 0.97 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: (i % 10) * 0.04, ease: "easeOut" }}
+                whileHover={{ y: -4 }}
+                onClick={() => setSelectedIndex(i)}
+                className="relative overflow-hidden rounded-2xl group cursor-pointer aspect-square bg-muted/40 ring-1 ring-border/50 hover:ring-primary/50 transition-all"
               >
-                <div
-                  className={`w-full ${img.span.includes("row-span-2") ? "h-full min-h-[300px] md:min-h-[420px]" : "aspect-square"}`}
-                  onClick={() => setSelected(img)}
-                >
-                  <img
-                    src={img.src}
-                    alt={img.label}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    loading="lazy"
-                  />
-                </div>
+                <img
+                  src={img.src}
+                  alt={img.label}
+                  className="absolute inset-0 w-full h-full object-contain p-1 transition-transform duration-700 group-hover:scale-[1.04]"
+                  loading="lazy"
+                />
                 {img.isNew && (
-                  <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-secondary text-secondary-foreground text-[10px] sm:text-xs font-bold font-body uppercase tracking-wider shadow-lg">
+                  <span className="absolute top-2 left-2 z-10 px-2 py-0.5 rounded-full bg-secondary text-secondary-foreground text-[10px] font-bold uppercase tracking-wider shadow">
                     New
                   </span>
                 )}
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <span className="absolute bottom-3 left-3 right-3 text-background font-body text-xs sm:text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg">
-                  {img.label}
-                </span>
-              </motion.div>
+                {/* Always-visible darkened label bar */}
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/55 to-transparent pt-6 pb-2 px-2.5">
+                  <span className="block text-white text-[11px] sm:text-xs font-semibold leading-tight drop-shadow tracking-wide">
+                    {img.label}
+                  </span>
+                </div>
+              </motion.button>
             ))}
           </div>
 
@@ -216,12 +233,7 @@ const Gallery = () => {
                 className="rounded-2xl overflow-hidden bg-card border border-border"
                 style={{ boxShadow: "var(--card-shadow)" }}
               >
-                <video
-                  controls
-                  preload="metadata"
-                  className="w-full aspect-video object-cover"
-                  playsInline
-                >
+                <video controls preload="metadata" className="w-full aspect-video object-cover" playsInline>
                   <source src={vid.src} type="video/mp4" />
                 </video>
                 <div className="p-4">
@@ -233,38 +245,60 @@ const Gallery = () => {
         </div>
       </section>
 
-      {/* Fullscreen Lightbox */}
+      {/* Fullscreen Lightbox with prev/next */}
       <AnimatePresence>
-        {selected && (
+        {selected && selectedIndex !== null && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 cursor-pointer"
-            onClick={() => setSelected(null)}
+            className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4"
+            onClick={() => setSelectedIndex(null)}
           >
-            <motion.img
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
-              transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              src={selected.src}
-              alt={selected.label}
-              className="max-w-full max-h-[90vh] object-contain rounded-xl"
-              onClick={(e) => e.stopPropagation()}
-            />
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="absolute bottom-8 text-white font-body text-lg font-semibold drop-shadow-lg"
-            >
-              {selected.label}
-            </motion.p>
+            {/* Prev */}
             <button
-              onClick={() => setSelected(null)}
-              className="absolute top-6 right-6 text-white/80 hover:text-white text-3xl font-bold transition-colors"
+              onClick={(e) => { e.stopPropagation(); prev(); }}
+              aria-label="Previous"
+              className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/25 text-white flex items-center justify-center transition-colors backdrop-blur"
             >
-              ✕
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+
+            <motion.div
+              key={selectedIndex}
+              initial={{ scale: 0.92, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.92, opacity: 0 }}
+              transition={{ type: "spring", damping: 26, stiffness: 280 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative max-w-[95vw] max-h-[88vh] flex flex-col items-center"
+            >
+              <img
+                src={selected.src}
+                alt={selected.label}
+                className="max-w-full max-h-[82vh] object-contain rounded-xl shadow-2xl"
+              />
+              <p className="mt-4 text-white font-semibold text-base sm:text-lg drop-shadow-lg text-center px-4" style={{ fontFamily: "Inter, Montserrat, sans-serif" }}>
+                {selected.label}
+                <span className="ml-3 text-white/60 text-sm font-normal">{selectedIndex + 1} / {gallery.length}</span>
+              </p>
+            </motion.div>
+
+            {/* Next */}
+            <button
+              onClick={(e) => { e.stopPropagation(); next(); }}
+              aria-label="Next"
+              className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/25 text-white flex items-center justify-center transition-colors backdrop-blur"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+
+            <button
+              onClick={() => setSelectedIndex(null)}
+              aria-label="Close"
+              className="absolute top-5 right-5 w-11 h-11 rounded-full bg-white/10 hover:bg-white/25 text-white flex items-center justify-center transition-colors backdrop-blur"
+            >
+              <X className="w-5 h-5" />
             </button>
           </motion.div>
         )}
