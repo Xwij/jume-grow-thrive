@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import kidsHarvestImg from "@/assets/kids-harvest.jpg";
 import soilPrepImg from "@/assets/soil-preparation.jpg";
 import mushroomBucketImg from "@/assets/mushroom-bucket.jpg";
-import kidsPlayingImg from "@/assets/kids-playing.jpg";
+
 import fieldTrainingImg from "@/assets/field-training.jpg";
 import passionFruitImg from "@/assets/passion-fruit.jpg";
 
