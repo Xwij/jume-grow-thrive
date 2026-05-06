@@ -48,16 +48,6 @@ const TestimonialsSection = () => {
           <p className="font-body text-muted-foreground text-lg mb-8">
             Hear from the farmers, students, and leaders whose lives have been transformed through Jume College programs.
           </p>
-          <div className="rounded-2xl overflow-hidden border border-border" style={{ boxShadow: "var(--card-shadow)" }}>
-            <img src={communityImg} alt="Jume College community gathering" className="w-full h-64 sm:h-80 object-cover" loading="lazy" />
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
-            {[voices1, voices2, voices3].map((src, i) => (
-              <div key={i} className="rounded-2xl overflow-hidden border border-border" style={{ boxShadow: "var(--card-shadow)" }}>
-                <img src={src} alt={`Community voices ${i + 1}`} className="w-full h-56 object-cover" loading="lazy" />
-              </div>
-            ))}
-          </div>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -75,9 +65,12 @@ const TestimonialsSection = () => {
               <p className="font-body text-foreground/90 leading-relaxed mb-6 mt-4 italic">
                 {t.quote}
               </p>
-              <div>
-                <p className="font-display font-bold text-foreground text-sm">{t.name}</p>
-                <p className="font-body text-muted-foreground text-xs">{t.role}</p>
+              <div className="flex items-center gap-3">
+                <img src={t.avatar} alt={t.name} className="w-12 h-12 rounded-full object-cover border border-border" loading="lazy" />
+                <div>
+                  <p className="font-display font-bold text-foreground text-sm">{t.name}</p>
+                  <p className="font-body text-muted-foreground text-xs">{t.role}</p>
+                </div>
               </div>
             </motion.div>
           ))}
