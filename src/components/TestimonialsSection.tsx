@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import communityImg from "@/assets/chefs-group.jpg";
 import voices1 from "@/assets/voices-1.jpeg";
 import voices2 from "@/assets/voices-2.jpeg";
 import voices3 from "@/assets/voices-3.jpeg";
@@ -7,23 +6,27 @@ import voices3 from "@/assets/voices-3.jpeg";
 const testimonials = [
   {
     quote: "Jume College changed my life. I learned how to grow food for my family and earn an income from mushroom farming. I never imagined farming could be this rewarding.",
-    name: "James Wekesa",
+    name: "Nasimiyu Wekesa",
     role: "Mushroom Enterprise Graduate",
+    avatar: voices1,
   },
   {
     quote: "The permaculture training opened my eyes to a new way of farming. My soil is healthier, my harvests are bigger, and I no longer need expensive chemicals.",
-    name: "Peter Ochieng",
+    name: "Nekesa Wanjala",
     role: "Permaculture Training Alumni",
+    avatar: voices2,
   },
   {
     quote: "As a young person, I thought farming was for old people. Jume College showed me that agriculture is innovation, science, and opportunity all in one.",
-    name: "Brian Simiyu",
+    name: "Chepkirui Cherono",
     role: "Youth Farming Initiative",
+    avatar: voices3,
   },
   {
     quote: "The community training sessions brought our village together. We now share knowledge, seeds, and hope for a better future for our children.",
-    name: "Mary Nekesa",
+    name: "Nanjala Wafula",
     role: "Community Leader",
+    avatar: voices1,
   },
 ];
 
