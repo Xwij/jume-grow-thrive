@@ -281,33 +281,6 @@ const services = [
     details:
       "Our on-campus nursery produces tens of thousands of seedlings annually — indigenous trees, fruit trees, nitrogen-fixers, medicinal plants and timber species. We supply farmers, schools, faith communities, county governments and reforestation programs. Bulk orders available at discounted rates.",
   },
-  {
-    icon: "🍄",
-    image: mushroomImg,
-    title: "Mushroom Production Support",
-    desc: "From substrate preparation to marketing, we help entrepreneurs and groups set up profitable mushroom enterprises.",
-    features: ["Spawn supply", "Technical training", "Enterprise mentoring"],
-    details:
-      "We provide end-to-end support — spawn supply, substrate training, sterilisation and inoculation, fruiting-room setup, harvesting, post-harvest handling, value addition and market linkage. Group training and one-to-one mentoring available.",
-  },
-  {
-    icon: "💧",
-    image: waterImg,
-    title: "Water Harvesting & 3Rs Systems",
-    desc: "Designing and installing rainwater harvesting, greywater reuse and 'Reduce, Reuse, Recycle' systems for homes, schools and farms.",
-    features: ["Rainwater tanks & ponds", "Greywater reuse", "Borehole planning"],
-    details:
-      "We design and install rainwater harvesting systems, greywater reuse, swales, check-dams and integrated water features. Following OTEPIC's 3Rs philosophy — Reduce, Reuse, Recycle — we turn waste water and runoff into productive resources.",
-  },
-  {
-    icon: "☀️",
-    image: solarImg,
-    title: "Solar Drying & Value Addition",
-    desc: "Solar dryers and processing units that turn surplus harvests into shelf-stable, high-value products.",
-    features: ["Indigenous vegetable drying", "Seed preservation", "Packaging & branding"],
-    details:
-      "Our solar drying program equips farmer groups with simple, affordable solar dryers preserving indigenous vegetables, fruits, herbs, mushrooms and seeds without fossil fuels. Training includes processing, packaging, branding and basic food-business management.",
-  },
 ];
 
 const Projects = () => {
