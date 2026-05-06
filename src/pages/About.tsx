@@ -54,48 +54,27 @@ const About = () => {
         </div>
       </section>
 
-      {/* 1. Organization Background */}
+      {/* Organization Background */}
       <section className="section-padding bg-background">
         <div className="container-narrow max-w-4xl">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <p className="text-sm font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-3">Section 1</p>
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-foreground mb-4">Organization Background</h2>
-            <p className="font-body text-muted-foreground leading-relaxed mb-4">
-              The JUME College – Organic Technology Extension and Promotion Initiative Centre (OTEPIC Kenya) was founded in Kitale, Trans-Nzoia County, to promote permaculture principles through research, training, teaching, extension and consultancy. Rooted in the three ethics of earth care, people care and fairness, the organization works hand-in-hand with farmers, youth and community leaders to build resilient livelihoods.
-            </p>
-            <p className="font-body text-muted-foreground leading-relaxed">
-              Over the years, JUME College has grown into a living centre of learning where local knowledge meets practical innovation — empowering communities to feed themselves, restore their land, and live in harmony with nature.
-            </p>
+            <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
+              <p>The JUME College – Organic Technology Extension and Promotion Initiative Centre (OTEPIC Kenya) was founded in Kitale, Trans-Nzoia County, to promote permaculture principles through research, training, teaching, extension and consultancy. Rooted in the three ethics of earth care, people care and fairness, the organization works hand-in-hand with farmers, youth and community leaders to build resilient livelihoods.</p>
+              <p>Over the years, JUME College has grown into a living centre of learning where local knowledge meets practical innovation — empowering communities to feed themselves, restore their land, and live in harmony with nature.</p>
+              <p>The JUME College – OTEPIC Kenya stands at a time when humanity is experiencing profound transformation in this millennium. With the end of the Cold War, there is a growing global aspiration for peace. However, the world simultaneously faces unprecedented challenges: the depletion of natural resources, rapid population growth, and widespread environmental degradation.</p>
+              <p>Humanity now faces two possible paths, shaped by the choices made in the coming years. One path leads to declining agricultural productivity caused by overpopulation, forcing many struggling rural farmers to migrate to cities, where they encounter overcrowding, poor living conditions, and urban poverty. The alternative path presents a more hopeful future, where smallholder farmers adopt environmentally responsible, market-oriented practices. This approach fosters rural prosperity and supports the development of clean, thriving urban centers grounded in holistic permaculture principles.</p>
+              <p>Through its Local Outreach (Extension) Project, The JUME College – OTEPIC Kenya is actively guiding communities toward this positive path. The institution promotes the sustainable use and recycling of natural (organic) resources to maximize agricultural productivity. It is committed to working closely with communities—delivering training, assessing impact, and advancing the application of permaculture principles to achieve sustainable ecological agriculture.</p>
+              <p>The JUME College – OTEPIC Kenya serves as a hub for research, training, education, extension services, and consultancy. It supports a diverse range of stakeholders engaged in permaculture-based farming, with a strong focus on empowering women and youth within the agricultural sector.</p>
+            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* 2. Introduction */}
-      <section className="section-padding" style={{ background: "var(--section-gradient)" }}>
-        <div className="container-narrow">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <p className="text-sm font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-3">Section 2</p>
-              <h2 className="text-2xl sm:text-3xl font-display font-bold text-foreground mb-4">Introduction</h2>
-              <p className="font-body text-muted-foreground leading-relaxed mb-4">
-                Jume College was created by OTEPIC Kenya to train farmers, youth, and community leaders in sustainable living. Our vision is to inspire communities to become self-reliant, resilient, and environmentally responsible.
-              </p>
-              <p className="font-body text-muted-foreground leading-relaxed">
-                Education here happens in the classroom and in the field. Through hands-on training, demonstration gardens, and community projects, students learn practical skills they can apply immediately to transform their households and villages.
-              </p>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <img src={meetingImg} alt="Community meeting" className="rounded-2xl w-full h-80 object-cover" style={{ boxShadow: "var(--card-shadow)" }} loading="lazy" />
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* 3. How the organization Works */}
-      <section id="org-works" className="section-padding bg-background">
+      {/* How the organization Works */}
+      <section id="org-works" className="section-padding" style={{ background: "var(--section-gradient)" }}>
         <div className="container-narrow">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-14">
-            <p className="text-sm font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-3">Section 3 · Organization Works</p>
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground">How the Organization Works</h2>
           </motion.div>
           <div className="relative">
