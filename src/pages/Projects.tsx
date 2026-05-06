@@ -267,7 +267,7 @@ const services = [
     icon: "🤝",
     image: volunteerImg,
     title: "Volunteer & Internship Programs",
-    desc: "International and local volunteers can join our campus to learn, contribute, and experience regenerative agriculture first-hand.",
+    desc: "Through international and local volunteer placements, participants join our campus to learn, contribute, and experience regenerative agriculture first-hand.",
     features: ["Work-stay programs", "Research placements", "Cultural exchange"],
     details:
       "Our volunteer and internship programs welcome people from across Kenya and around the world to live, work and learn at Jume College. Participants engage in daily farm activities and community outreach while gaining a deep understanding of permaculture and sustainable living. Programs range from two weeks to six months. Accommodation and meals are provided on campus.",
