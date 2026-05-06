@@ -36,12 +36,9 @@ const ComingSoonSection = ({ title, subtitle }: { title: string; subtitle: strin
     <div className="px-6 py-12 flex flex-col items-center justify-center text-center">
       <Clock className="w-10 h-10 text-muted-foreground/60 mb-3" />
       <p className="font-display text-xl font-bold text-foreground mb-1">Coming Soon</p>
-      <p className="text-sm text-muted-foreground max-w-sm mb-5">
-        We are preparing this collection. Please check back shortly.
+      <p className="text-sm text-muted-foreground max-w-sm">
+        We are preparing this collection.
       </p>
-      <Button disabled variant="outline" className="opacity-70 cursor-not-allowed">
-        Coming Soon
-      </Button>
     </div>
   </section>
 );
