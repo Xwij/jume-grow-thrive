@@ -34,9 +34,15 @@ const AboutSection = () => {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-foreground mb-6">
             A Better Future Begins Here
           </h2>
-          <p className="text-base sm:text-lg font-body text-muted-foreground leading-relaxed">
+          <p className="text-base sm:text-lg font-body text-muted-foreground leading-relaxed mb-4">
             Jume College is a unique learning center created by the Organic Technology Extension and Promotion of Initiative Centre (OTEPIC Kenya) to train farmers, youth, and community leaders in sustainable living and practical solutions for today's environmental and social challenges.
           </p>
+          <div className="space-y-4 text-left sm:text-left font-body text-muted-foreground text-sm sm:text-base leading-relaxed">
+            <p>The JUME College – OTEPIC Kenya stands at a time when humanity is experiencing profound transformation in this millennium. With the end of the Cold War, there is a growing global aspiration for peace. However, the world simultaneously faces unprecedented challenges: the depletion of natural resources, rapid population growth, and widespread environmental degradation.</p>
+            <p>Humanity now faces two possible paths, shaped by the choices made in the coming years. One path leads to declining agricultural productivity caused by overpopulation, forcing many struggling rural farmers to migrate to cities, where they encounter overcrowding, poor living conditions, and urban poverty. The alternative path presents a more hopeful future, where smallholder farmers adopt environmentally responsible, market-oriented practices. This approach fosters rural prosperity and supports the development of clean, thriving urban centers grounded in holistic permaculture principles.</p>
+            <p>Through its Local Outreach (Extension) Project, The JUME College – OTEPIC Kenya is actively guiding communities toward this positive path. The institution promotes the sustainable use and recycling of natural (organic) resources to maximize agricultural productivity. It is committed to working closely with communities—delivering training, assessing impact, and advancing the application of permaculture principles to achieve sustainable ecological agriculture.</p>
+            <p>The JUME College – OTEPIC Kenya serves as a hub for research, training, education, extension services, and consultancy. It supports a diverse range of stakeholders engaged in aquaculture-based farming, with a strong focus on empowering women and youth within the agricultural sector.</p>
+          </div>
         </motion.div>
 
         {/* Vision & Mission */}
