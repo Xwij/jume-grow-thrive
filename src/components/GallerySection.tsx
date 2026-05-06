@@ -13,7 +13,6 @@ const preview = [
   { src: passionFruitImg, label: "Passion Fruit", span: "" },
   { src: kidsHarvestImg, label: "Kids with Fresh Harvest", span: "md:col-span-2" },
   { src: soilPrepImg, label: "Soil Preparation", span: "" },
-  { src: kidsPlayingImg, label: "Kids at Play", span: "" },
 ];
 
 const GallerySection = () => {
