@@ -362,56 +362,6 @@ const Projects = () => {
         </div>
       </section>
 
-      {/* Training Programs — with images & Read More */}
-      <section id="programs" className="section-padding bg-muted/30">
-        <div className="container-narrow">
-          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-12">
-            <p className="text-sm font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-3">Training Programs</p>
-            <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">What We Teach</h2>
-            <p className="font-body text-muted-foreground max-w-2xl mx-auto">
-              At Jume College, education happens in the classroom and in the field. Through hands-on training, demonstration gardens, water-harvesting sites, food forests and live community projects, our students don't just learn ideas — they leave equipped with practical, repeatable skills they can apply immediately on their own land and in their own communities. Every program below combines classroom theory with months of field practice, mentorship from experienced trainers, and access to our living permaculture campus.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {programs.map((program, i) => (
-              <motion.div
-                key={program.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="bg-card rounded-2xl overflow-hidden border border-border hover:border-primary/30 transition-all duration-300 flex flex-col group"
-                style={{ boxShadow: "var(--card-shadow)" }}
-              >
-                <div className="relative h-44 overflow-hidden">
-                  <img src={program.image} alt={program.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent" />
-                </div>
-                <div className="p-6 flex flex-col flex-1">
-                  <h3 className="text-lg font-display font-bold text-foreground mb-3">{program.title}</h3>
-                  <p className="font-body text-muted-foreground text-sm leading-relaxed mb-4">{program.desc}</p>
-                  <ul className="space-y-2 mb-5">
-                    {program.topics.map((topic) => (
-                      <li key={topic} className="flex items-start gap-2 text-sm font-body text-foreground/80">
-                        <span className="text-primary mt-0.5 text-xs">●</span>
-                        {topic}
-                      </li>
-                    ))}
-                  </ul>
-                  <button
-                    onClick={() => setOpenProgram(i)}
-                    className="mt-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-primary/10 text-primary font-body font-semibold text-sm hover:bg-primary hover:text-primary-foreground transition-colors"
-                  >
-                    Read more →
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Services */}
       <section id="services" className="section-padding" style={{ background: "var(--section-gradient)" }}>
         <div className="container-narrow">
