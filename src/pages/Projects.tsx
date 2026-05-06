@@ -37,15 +37,16 @@ import chCommunityImg from "@/assets/community-kids.jpg";
 import chSoapImg from "@/assets/soap-making-women.jpg";
 import chFoodBevImg from "@/assets/hospitality-baking.jpg";
 import chTailoringImg from "@/assets/tailoring.jpg";
-import chICTImg from "@/assets/campus.jpg";
+import chICTImg from "@/assets/dept-ict.jpeg";
 import chBuildingImg from "@/assets/workers.jpg";
 import chCarpentryImg from "@/assets/training-banda.jpg";
 import chCookingImg from "@/assets/chefs-group.jpg";
 import chBakingImg from "@/assets/baking-cakes.jpg";
 import chAccommodationImg from "@/assets/hospitality-bread.jpg";
-import chCosmetologyImg from "@/assets/soap-women.jpg";
+import chCosmetologyImg from "@/assets/dept-cosmetology.png";
 import chElectricalImg from "@/assets/field-training-2.jpg";
-import chFashionImg from "@/assets/chefs-pastries.jpg";
+import chFashionImg from "@/assets/dept-fashion.png";
+import chTechEnterpriseImg from "@/assets/dept-tech-enterprise.png";
 import chSustAgImg from "@/assets/women-tilling.jpg";
 import chWeldingImg from "@/assets/digging-water-pan.jpg";
 import chPlumbingImg from "@/assets/drip-irrigation.jpg";
@@ -315,7 +316,7 @@ const departments: { name: string; subtitle?: string; tagline: string; hero: str
   {
     name: "Department of Technology & Enterprise",
     tagline: "ICT, food processing and income-generating skills.",
-    hero: chICTImg,
+    hero: chTechEnterpriseImg,
     titles: [
       "Computer & Information Technology",
       "Food Processing Technology",
