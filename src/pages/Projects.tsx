@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { BookOpen, Download, Eye, X } from "lucide-react";
@@ -358,6 +358,62 @@ const services = [
   },
 ];
 
+const CourseSlider = ({ chapters }: { chapters: { title: string; image: string; summary: string }[] }) => {
+  const [i, setI] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setI((v) => (v + 1) % chapters.length), 2000);
+    return () => clearInterval(id);
+  }, [chapters.length]);
+  const c = chapters[i];
+  return (
+    <div className="relative h-[340px] sm:h-[420px] overflow-hidden">
+      <AnimatePresence mode="wait">
+        <motion.img
+          key={c.image}
+          src={c.image}
+          alt={c.title}
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </AnimatePresence>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/20" />
+      <div className="absolute inset-0 flex flex-col items-center justify-end text-center px-6 pb-10">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={c.title}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.5 }}
+            className="max-w-3xl"
+          >
+            <p className="text-xs sm:text-sm tracking-[0.2em] uppercase text-white/80 font-semibold mb-2">
+              Jume College Modular Course
+            </p>
+            <h3 className="text-2xl sm:text-4xl font-display font-bold text-white drop-shadow-lg mb-3">
+              {c.title}
+            </h3>
+            <p className="text-white/90 font-body text-sm sm:text-base leading-relaxed line-clamp-3">
+              {c.summary}
+            </p>
+          </motion.div>
+        </AnimatePresence>
+        <div className="mt-5 flex gap-1.5">
+          {chapters.map((_, idx) => (
+            <span
+              key={idx}
+              className={`h-1.5 rounded-full transition-all ${idx === i ? "w-6 bg-white" : "w-1.5 bg-white/40"}`}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const SectionDivider = () => (
   <div className="container-narrow">
     <div className="flex items-center gap-4 py-2">
@@ -418,60 +474,33 @@ const Projects = () => {
             </div>
           </motion.div>
 
-          {/* Categories grouped to match the official prospectus layout */}
-          <div className="space-y-12">
-            {categories.map((cat, ci) => {
-              const catChapters = cat.titles
-                .map((t) => ({ idx: chapters.findIndex((c) => c.title === t), t }))
-                .filter((x) => x.idx >= 0);
-              return (
-                <motion.div
-                  key={cat.name}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-80px" }}
-                  transition={{ duration: 0.55, delay: ci * 0.06 }}
-                  className={`rounded-3xl overflow-hidden border border-border ${cat.bg}`}
+          {/* One unified block: rotating image slider header + flat course grid */}
+          <div className="rounded-3xl overflow-hidden border border-border bg-card" style={{ boxShadow: "var(--card-shadow)" }}>
+            <CourseSlider chapters={chapters} />
+            <div className="p-5 sm:p-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {chapters.map((c, idx) => (
+                <button
+                  key={c.title}
+                  onClick={() => setOpenChapter(idx)}
+                  className="text-left bg-background rounded-xl overflow-hidden border border-border/70 hover:border-red-500/50 hover:-translate-y-0.5 transition-all group flex flex-col"
                   style={{ boxShadow: "var(--card-shadow)" }}
                 >
-                  <div className={`bg-gradient-to-r ${cat.color} px-6 py-4 text-center`}>
-                    <h3 className="text-xl sm:text-2xl font-display font-bold text-white tracking-wide">
-                      {ci + 1}. {cat.name.toUpperCase()}
-                    </h3>
-                    {cat.subtitle && (
-                      <p className="text-white/85 font-body text-sm mt-0.5">{cat.subtitle}</p>
-                    )}
+                  <div className="relative h-32 overflow-hidden">
+                    <img src={c.image} alt={c.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+                    <h4 className="absolute bottom-2 left-3 right-3 text-white font-display font-bold text-sm drop-shadow-lg leading-tight">
+                      {c.title}
+                    </h4>
                   </div>
-                  <div className="p-5 sm:p-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {catChapters.map(({ idx }) => {
-                      const c = chapters[idx];
-                      return (
-                        <button
-                          key={c.title}
-                          onClick={() => setOpenChapter(idx)}
-                          className="text-left bg-card rounded-xl overflow-hidden border border-border/70 hover:border-red-500/50 hover:-translate-y-0.5 transition-all group flex flex-col"
-                          style={{ boxShadow: "var(--card-shadow)" }}
-                        >
-                          <div className="relative h-32 overflow-hidden">
-                            <img src={c.image} alt={c.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
-                            <h4 className="absolute bottom-2 left-3 right-3 text-white font-display font-bold text-sm drop-shadow-lg leading-tight">
-                              {c.title}
-                            </h4>
-                          </div>
-                          <div className="p-4 flex-1 flex flex-col">
-                            <p className="font-body text-muted-foreground text-xs leading-relaxed line-clamp-3 mb-2">{c.summary}</p>
-                            <span className="mt-auto inline-flex items-center gap-1.5 text-[11px] font-body font-semibold text-red-600">
-                              <BookOpen className="w-3 h-3" /> Read more →
-                            </span>
-                          </div>
-                        </button>
-                      );
-                    })}
+                  <div className="p-4 flex-1 flex flex-col">
+                    <p className="font-body text-muted-foreground text-xs leading-relaxed line-clamp-3 mb-2">{c.summary}</p>
+                    <span className="mt-auto inline-flex items-center gap-1.5 text-[11px] font-body font-semibold text-red-600">
+                      <BookOpen className="w-3 h-3" /> Read more →
+                    </span>
                   </div>
-                </motion.div>
-              );
-            })}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </section>
