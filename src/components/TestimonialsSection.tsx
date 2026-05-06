@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import communityImg from "@/assets/chefs-group.jpg";
+import voices1 from "@/assets/voices-1.jpeg";
+import voices2 from "@/assets/voices-2.jpeg";
+import voices3 from "@/assets/voices-3.jpeg";
 
 const testimonials = [
   {
