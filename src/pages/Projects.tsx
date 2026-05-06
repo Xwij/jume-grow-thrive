@@ -185,6 +185,54 @@ const chapters = [
     summary:
       "A standardised 72-hour curriculum focused on ecological design, sustainability, and regenerative practice. Delivered over two weeks, weekend series, or online.",
   },
+  {
+    title: "Grow Bio-Intensive Course",
+    image: chBioImg,
+    pdf: "/prospectus/GROW_BIO_INTENSIVE_COURSE.pdf",
+    summary: "Deep-bed soil preparation, intensive planting, composting and calorie-and-compost crop ratios — produce more food on less land while building soil.",
+  },
+  {
+    title: "Horticulture",
+    image: chHortiImg,
+    pdf: "/prospectus/HORTICULTURE.pdf",
+    summary: "Vegetable, fruit and ornamental crop production, nursery management, greenhouse operations, IPM and post-harvest handling.",
+  },
+  {
+    title: "Cosmetology",
+    image: chSoapImg,
+    pdf: "/prospectus/COSMETOLOGY.pdf",
+    summary: "Beauty therapy, hairdressing, skincare and salon management — practical training for self-employment and salon careers.",
+  },
+  {
+    title: "Electrical Installation",
+    image: chEngineeringImg,
+    pdf: "/prospectus/ELECTRICAL_INSTALLATION.pdf",
+    summary: "Domestic and industrial electrical wiring, circuits, safety standards and installation practice — pathway to certified electrician work.",
+  },
+  {
+    title: "Environmental Science",
+    image: chEnvImg,
+    pdf: "/prospectus/ENVIRONMENTAL_SCIENCE.pdf",
+    summary: "Ecology, climate change, conservation, environmental impact assessment and natural resource management for sustainability practitioners.",
+  },
+  {
+    title: "Fashion Designer",
+    image: chTailoringImg,
+    pdf: "/prospectus/FASHION_DESIGNER.pdf",
+    summary: "Design, pattern making, garment construction, textiles and fashion business — build a career or launch your own clothing line.",
+  },
+  {
+    title: "Food & Beverage Operations",
+    image: chHospitalityImg,
+    pdf: "/prospectus/FOOD_AND_BEVERAGE_OPERATIONS.pdf",
+    summary: "Restaurant service, bar operations, menu knowledge and customer service standards for the hospitality industry.",
+  },
+  {
+    title: "Food Processing Technology",
+    image: chSustainImg,
+    pdf: "/prospectus/FOOD_PROCESSING_TECHNOLOGY.pdf",
+    summary: "Food preservation, value addition, packaging, food safety and small-scale processing enterprise — turning harvests into shelf-stable products.",
+  },
 ];
 
 const services = [
