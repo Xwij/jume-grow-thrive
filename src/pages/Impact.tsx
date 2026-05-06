@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CountUp from "@/components/CountUp";
 
-import waterProjectImg from "@/assets/water-project.jpg";
+import waterProjectImg from "@/assets/water-sustainability-new.jpeg";
 import farmerHarvestImg from "@/assets/farmer-harvest.jpg";
 import mushroomFarmerImg from "@/assets/mushroom-farmer.jpg";
 import treePlantingImg from "@/assets/tree-planting.jpg";
