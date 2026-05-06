@@ -435,56 +435,6 @@ const Projects = () => {
         </div>
       </section>
 
-      {/* Prospectus — Jume College Modular Courses (top section) */}
-      <section id="prospectus" className="section-padding bg-background">
-        <div className="container-narrow">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10">
-            <p className="text-sm font-body tracking-[0.15em] uppercase text-red-600 font-semibold mb-3">Modular Courses</p>
-            <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">
-              Jume College Modular Courses
-            </h2>
-            <p className="font-body text-muted-foreground max-w-2xl mx-auto mb-6">
-              A modular curriculum spanning agro-ecology, environmental science, permaculture, engineering, hospitality, ICT and more — offered as 1-week, 2-week, 1-month, 3-month, 9-month or 1-year programs. Click any course below to read more, or open the library to view all recently uploaded course documents.
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-3">
-              <button
-                onClick={() => setShowProspectus(true)}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-red-600 text-white font-body font-semibold text-sm hover:bg-red-700 transition-colors shadow"
-              >
-                <Eye className="w-4 h-4" /> View All Courses
-              </button>
-            </div>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {chapters.map((c, i) => (
-              <motion.button
-                key={c.title}
-                onClick={() => setOpenChapter(i)}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: (i % 6) * 0.06 }}
-                className="text-left bg-card rounded-2xl overflow-hidden border border-border hover:border-red-500/50 transition-all group flex flex-col"
-                style={{ boxShadow: "var(--card-shadow)" }}
-              >
-                <div className="relative h-40 overflow-hidden">
-                  <img src={c.image} alt={c.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-transparent to-transparent" />
-                  <h3 className="absolute bottom-3 left-3 right-3 text-background font-display font-bold text-base drop-shadow-lg">{c.title}</h3>
-                </div>
-                <div className="p-5 flex-1 flex flex-col">
-                  <p className="font-body text-muted-foreground text-sm leading-relaxed line-clamp-3 mb-3">{c.summary}</p>
-                  <span className="mt-auto inline-flex items-center gap-1.5 text-xs font-body font-semibold text-red-600">
-                    <BookOpen className="w-3.5 h-3.5" /> Read more →
-                  </span>
-                </div>
-              </motion.button>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Featured Project: Tabasamu (last section) */}
       <section className="section-padding bg-muted/30">
         <div className="container-narrow">
