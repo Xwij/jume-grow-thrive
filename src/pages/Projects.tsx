@@ -24,20 +24,31 @@ import progAgroforestryImg from "@/assets/tree-planting-field.jpg";
 import progMushroomImg from "@/assets/mushroom-farmer.jpg";
 import progHandsImg from "@/assets/field-training-2.jpg";
 
-// Prospectus / chapter images
+// Prospectus / chapter images (each unique — no repeats)
 import chAnimalImg from "@/assets/donkey-team.jpg";
 import chEnvImg from "@/assets/water-pond.jpg";
 import chAgroEcoImg from "@/assets/community-circle.jpg";
 import chPermaImg from "@/assets/agroforestry-team.jpg";
-import chSustainImg from "@/assets/farmer-harvest.jpg";
+import chFoodProcImg from "@/assets/farmer-harvest.jpg";
 import chBioImg from "@/assets/soil-preparation.jpg";
 import chHortiImg from "@/assets/passion-farming.jpg";
 import chEngineeringImg from "@/assets/agri-engineering.jpg";
 import chCommunityImg from "@/assets/community-kids.jpg";
 import chSoapImg from "@/assets/soap-poster.jpg";
-import chHospitalityImg from "@/assets/hospitality-baking.jpg";
+import chFoodBevImg from "@/assets/hospitality-baking.jpg";
 import chTailoringImg from "@/assets/tailoring.jpg";
 import chICTImg from "@/assets/campus.jpg";
+import chBuildingImg from "@/assets/workers.jpg";
+import chCarpentryImg from "@/assets/training-banda.jpg";
+import chCookingImg from "@/assets/chefs-training.jpg";
+import chBakingImg from "@/assets/bakery-bread.jpg";
+import chAccommodationImg from "@/assets/hospitality-bakery.jpg";
+import chCosmetologyImg from "@/assets/soap-women.jpg";
+import chElectricalImg from "@/assets/field-training-2.jpg";
+import chFashionImg from "@/assets/chefs-pastries.jpg";
+import chSustAgImg from "@/assets/women-tilling.jpg";
+import chWeldingImg from "@/assets/digging-water-pan.jpg";
+import chPlumbingImg from "@/assets/drip-irrigation.jpg";
 
 const PROSPECTUS_PDF = "/prospectus/OTEPIC_Agricultural_Modular_Courses_Prospectus.pdf";
 
