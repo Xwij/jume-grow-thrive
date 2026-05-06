@@ -676,6 +676,8 @@ const Projects = () => {
         )}
       </AnimatePresence>
 
+      <SectionDivider />
+
       {/* CTA */}
       <section className="section-padding" style={{ background: "var(--section-gradient)" }}>
         <div className="container-narrow">
