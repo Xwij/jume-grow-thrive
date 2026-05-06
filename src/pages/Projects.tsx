@@ -103,8 +103,9 @@ const programs = [
   },
 ];
 
-// Prospectus chapters (each maps to its own uploaded prospectus PDF)
-const chapters = [
+// Prospectus chapters grouped into the 4 official categories
+type Chapter = { title: string; image: string; pdf: string; summary: string };
+const chapters: Chapter[] = [
   {
     title: "Animal Production",
     image: chAnimalImg,
