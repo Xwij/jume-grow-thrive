@@ -11,12 +11,14 @@ import womenTillingImg from "@/assets/women-tilling.jpg";
 import home1Img from "@/assets/home1.jpg";
 import home2Img from "@/assets/home2.jpg";
 import home3Img from "@/assets/home3.jpg";
+import fitImg from "@/assets/fit.jpeg";
 
 const slides = [
   campusImg,
   home1Img,
   home2Img,
   home3Img,
+  fitImg,
   waterPondImg,
   treePruningImg,
   bananaGroveImg,
