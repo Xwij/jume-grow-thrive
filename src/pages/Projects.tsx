@@ -366,8 +366,8 @@ const Projects = () => {
       <section id="services" className="section-padding" style={{ background: "var(--section-gradient)" }}>
         <div className="container-narrow">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-12">
-            <p className="text-sm font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-3">Our Services</p>
-            <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">How We Serve</h2>
+            <p className="text-sm font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-3">The Experience You Gain</p>
+            <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">How We Train</h2>
             <p className="font-body text-muted-foreground max-w-2xl mx-auto">
               Beyond the classroom, Jume College offers a full suite of consultancy, training, and on-the-ground project services for individuals, farmer cooperatives, schools, faith communities, NGOs, and county governments. From regenerative farm design and water-system installation to youth volunteer programs, tree-nursery supply, mushroom enterprises and solar value-addition — we walk with you from initial idea through implementation and long-term mentoring.
             </p>
