@@ -265,6 +265,51 @@ const chapters: Chapter[] = [
   },
 ];
 
+// Group chapters by the 4 official slide categories
+const categories: { name: string; subtitle?: string; color: string; bg: string; titles: string[] }[] = [
+  {
+    name: "Art, Fashion & Design",
+    color: "from-pink-600 to-rose-600",
+    bg: "bg-pink-50",
+    titles: ["Tailoring & Garment Making", "Cosmetology", "Fashion Designer"],
+  },
+  {
+    name: "Other Courses",
+    color: "from-emerald-600 to-green-700",
+    bg: "bg-emerald-50",
+    titles: [
+      "Electrical Installation",
+      "Food Processing Technology",
+      "Soap Making (Short Course)",
+      "Computer & Information Technology",
+      "Building Technology",
+      "Community Development",
+    ],
+  },
+  {
+    name: "Modular Courses",
+    subtitle: "Agricultural-Based Courses",
+    color: "from-blue-700 to-indigo-700",
+    bg: "bg-blue-50",
+    titles: [
+      "Animal Production",
+      "Agro-ecology & Agro-biodiversity",
+      "Agricultural Engineering",
+      "Grow Bio-Intensive Course",
+      "Permaculture Course",
+      "Environmental Science",
+      "Horticulture",
+      "Sustainable Agriculture Course",
+    ],
+  },
+  {
+    name: "Hospitality",
+    color: "from-orange-600 to-amber-600",
+    bg: "bg-orange-50",
+    titles: ["Food & Beverage Operations", "Cooking Skills", "Baking Technology"],
+  },
+];
+
 const services = [
   {
     icon: "🌱",
