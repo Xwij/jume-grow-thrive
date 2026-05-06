@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['"Helvetica Neue"', '"Inter"', 'Helvetica', 'Arial', '"Segoe UI"', 'sans-serif'],
-        body: ['"Helvetica Neue"', '"Inter"', 'Helvetica', 'Arial', '"Segoe UI"', 'sans-serif'],
+        display: ['"Playfair Display"', 'Georgia', 'serif'],
+        body: ['Montserrat', 'Calibri', '"Tw Cen MT"', '"Source Sans 3"', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
