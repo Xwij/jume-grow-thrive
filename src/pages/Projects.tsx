@@ -488,6 +488,14 @@ const Projects = () => {
               >
                 <Eye className="w-4 h-4" /> View All Courses
               </button>
+              <a
+                href="/newtepic.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-card border border-red-600 text-red-600 font-body font-semibold text-sm hover:bg-red-50 transition-colors shadow"
+              >
+                <Download className="w-4 h-4" /> Fee Structure
+              </a>
             </div>
           </motion.div>
 

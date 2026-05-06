@@ -6,27 +6,27 @@ import voices3 from "@/assets/voices-3.jpeg";
 const testimonials = [
   {
     quote: "Jume College changed my life. I learned how to grow food for my family and earn an income from mushroom farming. I never imagined farming could be this rewarding.",
-    name: "Nasimiyu Wekesa",
+    name: "Irine Anyango",
     role: "Mushroom Enterprise Graduate",
     avatar: voices1,
   },
   {
     quote: "The permaculture training opened my eyes to a new way of farming. My soil is healthier, my harvests are bigger, and I no longer need expensive chemicals.",
-    name: "Nekesa Wanjala",
+    name: "Shalom Kitur",
     role: "Permaculture Training Alumni",
     avatar: voices2,
   },
   {
     quote: "As a young person, I thought farming was for old people. Jume College showed me that agriculture is innovation, science, and opportunity all in one.",
-    name: "Chepkirui Cherono",
+    name: "Mercy Cherono",
     role: "Youth Farming Initiative",
     avatar: voices3,
   },
   {
     quote: "The community training sessions brought our village together. We now share knowledge, seeds, and hope for a better future for our children.",
-    name: "Nanjala Wafula",
+    name: "Jacinta Njeri",
     role: "Community Leader",
-    avatar: voices1,
+    avatar: null,
   },
 ];
 
@@ -66,7 +66,13 @@ const TestimonialsSection = () => {
                 {t.quote}
               </p>
               <div className="flex items-center gap-3">
-                <img src={t.avatar} alt={t.name} className="w-12 h-12 rounded-full object-contain bg-muted border border-border" loading="lazy" />
+                {t.avatar ? (
+                  <img src={t.avatar} alt={t.name} className="w-12 h-12 rounded-full object-contain bg-muted border border-border" loading="lazy" />
+                ) : (
+                  <div className="w-12 h-12 rounded-full bg-muted border border-border flex items-center justify-center font-display font-bold text-muted-foreground text-sm" aria-label={t.name}>
+                    {t.name.split(" ").map(n => n[0]).join("").slice(0,2)}
+                  </div>
+                )}
                 <div>
                   <p className="font-display font-bold text-foreground text-sm">{t.name}</p>
                   <p className="font-body text-muted-foreground text-xs">{t.role}</p>
