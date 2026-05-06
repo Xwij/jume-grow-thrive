@@ -53,7 +53,7 @@ import tailoringImg from "@/assets/tailoring.jpg";
 type GalleryItem = { src: string; label: string; isNew?: boolean };
 
 const gallery: GalleryItem[] = [
-  { src: otepicCollageImg, label: "OTEPIC Amani Garden — Real Food Revolution", isNew: true },
+  { src: otepicCollageImg, label: "THE JUME COLLEGE - OTEPIC KENYA Amani Garden — Real Food Revolution", isNew: true },
   { src: chefsPastriesImg, label: "Hospitality — Chefs Training", isNew: true },
   { src: hospitalityBakingImg, label: "Hospitality — Baking", isNew: true },
   { src: hospitalityBakeryImg, label: "Hospitality — Bakery Production", isNew: true },
