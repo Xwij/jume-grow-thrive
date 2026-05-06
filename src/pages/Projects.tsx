@@ -24,20 +24,31 @@ import progAgroforestryImg from "@/assets/tree-planting-field.jpg";
 import progMushroomImg from "@/assets/mushroom-farmer.jpg";
 import progHandsImg from "@/assets/field-training-2.jpg";
 
-// Prospectus / chapter images
+// Prospectus / chapter images (each unique — no repeats)
 import chAnimalImg from "@/assets/donkey-team.jpg";
 import chEnvImg from "@/assets/water-pond.jpg";
 import chAgroEcoImg from "@/assets/community-circle.jpg";
 import chPermaImg from "@/assets/agroforestry-team.jpg";
-import chSustainImg from "@/assets/farmer-harvest.jpg";
+import chFoodProcImg from "@/assets/farmer-harvest.jpg";
 import chBioImg from "@/assets/soil-preparation.jpg";
 import chHortiImg from "@/assets/passion-farming.jpg";
 import chEngineeringImg from "@/assets/agri-engineering.jpg";
 import chCommunityImg from "@/assets/community-kids.jpg";
 import chSoapImg from "@/assets/soap-poster.jpg";
-import chHospitalityImg from "@/assets/hospitality-baking.jpg";
+import chFoodBevImg from "@/assets/hospitality-baking.jpg";
 import chTailoringImg from "@/assets/tailoring.jpg";
 import chICTImg from "@/assets/campus.jpg";
+import chBuildingImg from "@/assets/workers.jpg";
+import chCarpentryImg from "@/assets/training-banda.jpg";
+import chCookingImg from "@/assets/chefs-training.jpg";
+import chBakingImg from "@/assets/bakery-bread.jpg";
+import chAccommodationImg from "@/assets/hospitality-bakery.jpg";
+import chCosmetologyImg from "@/assets/soap-women.jpg";
+import chElectricalImg from "@/assets/field-training-2.jpg";
+import chFashionImg from "@/assets/chefs-pastries.jpg";
+import chSustAgImg from "@/assets/women-tilling.jpg";
+import chWeldingImg from "@/assets/digging-water-pan.jpg";
+import chPlumbingImg from "@/assets/drip-irrigation.jpg";
 
 const PROSPECTUS_PDF = "/prospectus/OTEPIC_Agricultural_Modular_Courses_Prospectus.pdf";
 
@@ -117,14 +128,14 @@ const chapters = [
   },
   {
     title: "Building Technology",
-    image: chEnvImg,
+    image: chBuildingImg,
     pdf: "/prospectus/BUILDING_TECHNOLOGY.pdf",
     summary:
       "Masonry, technical drawing, structural mechanics, site management and sustainable building practice. Certificate and Diploma pathways with industrial attachment.",
   },
   {
     title: "Carpentry & Joinery",
-    image: chSustainImg,
+    image: chCarpentryImg,
     pdf: "/prospectus/CARPENTRY_AND_JOINERY.pdf",
     summary:
       "Hands-on training in woodwork, joinery, furniture making and finishing. Equips graduates with employable skills and the foundation to start their own workshops.",
@@ -145,21 +156,21 @@ const chapters = [
   },
   {
     title: "Cooking Skills",
-    image: chHospitalityImg,
+    image: chCookingImg,
     pdf: "/prospectus/COOKING_SKILLS.pdf",
     summary:
       "Culinary arts, food preparation, nutrition, kitchen management, and food safety & hygiene. Practical kitchen training for hotels, restaurants, and self-employment.",
   },
   {
     title: "Baking Technology",
-    image: chHospitalityImg,
+    image: chBakingImg,
     pdf: "/prospectus/BAKING_TECHNOLOGY.pdf",
     summary:
       "Bakery and pastry production, dough science, bread, cakes and confectionery, plus bakery business management. Hands-on training preparing graduates for community bakeries and self-employment.",
   },
   {
     title: "Accommodation Operations",
-    image: chHortiImg,
+    image: chAccommodationImg,
     pdf: "/prospectus/ACCOMMODATION_OPERATIONS.pdf",
     summary:
       "Front office, housekeeping, guest services, hospitality standards and accommodation management — pathways to careers in hotels, lodges and the wider tourism sector.",
@@ -181,7 +192,7 @@ const chapters = [
   {
     title: "Permaculture Course",
     image: chPermaImg,
-    pdf: "/prospectus/OTEPIC_Agricultural_Modular_Courses_Prospectus.pdf",
+    pdf: "/prospectus/PERMACULTURE_COURSE.pdf",
     summary:
       "A standardised 72-hour curriculum focused on ecological design, sustainability, and regenerative practice. Delivered over two weeks, weekend series, or online.",
   },
@@ -199,13 +210,13 @@ const chapters = [
   },
   {
     title: "Cosmetology",
-    image: chSoapImg,
+    image: chCosmetologyImg,
     pdf: "/prospectus/COSMETOLOGY.pdf",
     summary: "Beauty therapy, hairdressing, skincare and salon management — practical training for self-employment and salon careers.",
   },
   {
     title: "Electrical Installation",
-    image: chEngineeringImg,
+    image: chElectricalImg,
     pdf: "/prospectus/ELECTRICAL_INSTALLATION.pdf",
     summary: "Domestic and industrial electrical wiring, circuits, safety standards and installation practice — pathway to certified electrician work.",
   },
@@ -217,21 +228,39 @@ const chapters = [
   },
   {
     title: "Fashion Designer",
-    image: chTailoringImg,
+    image: chFashionImg,
     pdf: "/prospectus/FASHION_DESIGNER.pdf",
     summary: "Design, pattern making, garment construction, textiles and fashion business — build a career or launch your own clothing line.",
   },
   {
     title: "Food & Beverage Operations",
-    image: chHospitalityImg,
+    image: chFoodBevImg,
     pdf: "/prospectus/FOOD_AND_BEVERAGE_OPERATIONS.pdf",
     summary: "Restaurant service, bar operations, menu knowledge and customer service standards for the hospitality industry.",
   },
   {
     title: "Food Processing Technology",
-    image: chSustainImg,
+    image: chFoodProcImg,
     pdf: "/prospectus/FOOD_PROCESSING_TECHNOLOGY.pdf",
     summary: "Food preservation, value addition, packaging, food safety and small-scale processing enterprise — turning harvests into shelf-stable products.",
+  },
+  {
+    title: "Sustainable Agriculture Course",
+    image: chSustAgImg,
+    pdf: "/prospectus/SUSTAINABLE_AGRICULTURE_COURSE.pdf",
+    summary: "Soil health, organic production, water conservation, integrated pest management and farm-based enterprise — equipping farmers with practical, climate-smart and regenerative agriculture skills for long-term food security.",
+  },
+  {
+    title: "Welding & Fabrication",
+    image: chWeldingImg,
+    pdf: "/prospectus/WELDING_AND_FABRICATION.pdf",
+    summary: "Arc and gas welding, sheet-metal work, structural fabrication, workshop safety and project costing — practical skills for employment in construction, agriculture and self-run metal workshops.",
+  },
+  {
+    title: "Plumbing",
+    image: chPlumbingImg,
+    pdf: "/prospectus/PLUMBING.pdf",
+    summary: "Domestic and commercial plumbing systems, pipefitting, drainage, water supply, sanitation installation and maintenance — preparing graduates for certified plumbing work and small-business setups.",
   },
 ];
 
@@ -473,13 +502,23 @@ const Projects = () => {
             body={chapters[openChapter].summary}
             onClose={() => setOpenChapter(null)}
             footer={
-              <a
-                href={chapters[openChapter].pdf}
-                download
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-red-600 text-white font-body font-semibold text-sm hover:bg-red-700 transition-colors"
-              >
-                <Download className="w-4 h-4" /> Download Prospectus
-              </a>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href={chapters[openChapter].pdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-card border border-red-600 text-red-600 font-body font-semibold text-sm hover:bg-red-50 transition-colors"
+                >
+                  <Eye className="w-4 h-4" /> View
+                </a>
+                <a
+                  href={chapters[openChapter].pdf}
+                  download
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-red-600 text-white font-body font-semibold text-sm hover:bg-red-700 transition-colors"
+                >
+                  <Download className="w-4 h-4" /> Download Prospectus
+                </a>
+              </div>
             }
           />
         )}
