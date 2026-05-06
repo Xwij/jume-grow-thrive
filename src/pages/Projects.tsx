@@ -358,6 +358,16 @@ const services = [
   },
 ];
 
+const SectionDivider = () => (
+  <div className="container-narrow">
+    <div className="flex items-center gap-4 py-2">
+      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+      <div className="w-2 h-2 rounded-full bg-primary/40" />
+      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+    </div>
+  </div>
+);
+
 const Projects = () => {
   const [openService, setOpenService] = useState<number | null>(null);
   const [openProgram, setOpenProgram] = useState<number | null>(null);
