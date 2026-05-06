@@ -240,7 +240,7 @@ const services = [
     icon: "🌱",
     image: permacultureImg,
     title: "Permaculture Consultancy",
-    desc: "Expert farm and landscape design using permaculture principles. We help you create productive, self-sustaining systems tailored to your land and climate.",
+    desc: "Through expert farm and landscape design using permaculture principles, we help you create productive, self-sustaining systems tailored to your land and climate.",
     features: ["Site analysis & design", "Implementation support", "Follow-up mentoring"],
     details:
       "Our permaculture consultancy service provides a comprehensive, regenerative approach to land management. We begin with a thorough site analysis — evaluating soil health, water flow, sun exposure, existing vegetation, microclimates, and the social context of the land. From there, we develop a detailed design plan rooted in permaculture zones and sectors, integrating food forests, swales, keyline design, companion planting, and natural pest management. We walk with you through implementation, offering hands-on guidance, sourcing of indigenous and adapted species, and periodic reviews to ensure your system matures into a thriving, low-maintenance ecosystem.",
@@ -249,7 +249,7 @@ const services = [
     icon: "📚",
     image: trainingImg,
     title: "Training & Workshops",
-    desc: "Hands-on training programs in sustainable agriculture, water harvesting, agroforestry, and mushroom cultivation for individuals, groups, and organizations.",
+    desc: "Through hands-on training programs in sustainable agriculture, water harvesting, agroforestry, and mushroom cultivation for individuals, groups, and organizations.",
     features: ["Short courses (1–5 days)", "Certificate programs", "Custom group training"],
     details:
       "Jume College offers immersive, practical training that goes far beyond the classroom. Our workshops cover sustainable agriculture, biointensive food production, rainwater harvesting, agroforestry systems, organic composting, vermiculture, mushroom cultivation, solar drying, seed saving and value addition. Courses range from one-day introductions to multi-week certificate programs. Every training includes field demonstrations, take-home materials, and post-training mentorship.",
@@ -258,7 +258,7 @@ const services = [
     icon: "🌍",
     image: communityImg,
     title: "Community Development",
-    desc: "We partner with communities to design and implement projects that improve food security, water access, and livelihoods through ecological approaches.",
+    desc: "Through partnership with communities we design and implement projects that improve food security, water access, and livelihoods through ecological approaches.",
     features: ["Needs assessment", "Project planning", "Capacity building"],
     details:
       "Our community development approach is participatory and rooted in lived realities. We listen first — mapping local resources, challenges and aspirations — then co-design projects addressing food security, clean water, income generation, environmental restoration and peace-building. We emphasise capacity building and local ownership so communities can sustain, replicate and scale their initiatives long after we step back.",
@@ -267,7 +267,7 @@ const services = [
     icon: "🤝",
     image: volunteerImg,
     title: "Volunteer & Internship Programs",
-    desc: "International and local volunteers can join our campus to learn, contribute, and experience regenerative agriculture first-hand.",
+    desc: "Through international and local volunteer placements, participants join our campus to learn, contribute, and experience regenerative agriculture first-hand.",
     features: ["Work-stay programs", "Research placements", "Cultural exchange"],
     details:
       "Our volunteer and internship programs welcome people from across Kenya and around the world to live, work and learn at Jume College. Participants engage in daily farm activities and community outreach while gaining a deep understanding of permaculture and sustainable living. Programs range from two weeks to six months. Accommodation and meals are provided on campus.",
@@ -276,37 +276,10 @@ const services = [
     icon: "🌳",
     image: nurseryImg,
     title: "Tree Nursery & Seedlings",
-    desc: "We produce and distribute quality tree seedlings for agroforestry, reforestation, and food forest establishment.",
+    desc: "Through our on-campus nursery, we produce and distribute quality tree seedlings for agroforestry, reforestation, and food forest establishment.",
     features: ["Indigenous species", "Fruit tree varieties", "Bulk orders available"],
     details:
       "Our on-campus nursery produces tens of thousands of seedlings annually — indigenous trees, fruit trees, nitrogen-fixers, medicinal plants and timber species. We supply farmers, schools, faith communities, county governments and reforestation programs. Bulk orders available at discounted rates.",
-  },
-  {
-    icon: "🍄",
-    image: mushroomImg,
-    title: "Mushroom Production Support",
-    desc: "From substrate preparation to marketing, we help entrepreneurs and groups set up profitable mushroom enterprises.",
-    features: ["Spawn supply", "Technical training", "Enterprise mentoring"],
-    details:
-      "We provide end-to-end support — spawn supply, substrate training, sterilisation and inoculation, fruiting-room setup, harvesting, post-harvest handling, value addition and market linkage. Group training and one-to-one mentoring available.",
-  },
-  {
-    icon: "💧",
-    image: waterImg,
-    title: "Water Harvesting & 3Rs Systems",
-    desc: "Designing and installing rainwater harvesting, greywater reuse and 'Reduce, Reuse, Recycle' systems for homes, schools and farms.",
-    features: ["Rainwater tanks & ponds", "Greywater reuse", "Borehole planning"],
-    details:
-      "We design and install rainwater harvesting systems, greywater reuse, swales, check-dams and integrated water features. Following OTEPIC's 3Rs philosophy — Reduce, Reuse, Recycle — we turn waste water and runoff into productive resources.",
-  },
-  {
-    icon: "☀️",
-    image: solarImg,
-    title: "Solar Drying & Value Addition",
-    desc: "Solar dryers and processing units that turn surplus harvests into shelf-stable, high-value products.",
-    features: ["Indigenous vegetable drying", "Seed preservation", "Packaging & branding"],
-    details:
-      "Our solar drying program equips farmer groups with simple, affordable solar dryers preserving indigenous vegetables, fruits, herbs, mushrooms and seeds without fossil fuels. Training includes processing, packaging, branding and basic food-business management.",
   },
 ];
 
@@ -338,7 +311,6 @@ const Projects = () => {
       <section id="prospectus" className="section-padding bg-background">
         <div className="container-narrow">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10">
-            <p className="text-sm font-body tracking-[0.15em] uppercase text-red-600 font-semibold mb-3">Modular Courses</p>
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">
               Jume College Modular Courses
             </h2>
@@ -346,9 +318,15 @@ const Projects = () => {
               A modular curriculum spanning agro-ecology, environmental science, permaculture, engineering, hospitality, ICT and more — offered as 1-week, 2-week, 1-month, 3-month, 9-month or 1-year programs. Click any course below to read more, or open the library to view all recently uploaded course documents.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-3">
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-red-600 text-white font-body font-semibold text-sm hover:bg-red-700 transition-colors shadow"
+              >
+                Contact us to Apply Now →
+              </Link>
               <button
                 onClick={() => setShowProspectus(true)}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-red-600 text-white font-body font-semibold text-sm hover:bg-red-700 transition-colors shadow"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-card border border-red-600 text-red-600 font-body font-semibold text-sm hover:bg-red-50 transition-colors shadow"
               >
                 <Eye className="w-4 h-4" /> View All Courses
               </button>
@@ -384,62 +362,12 @@ const Projects = () => {
         </div>
       </section>
 
-      {/* Training Programs — with images & Read More */}
-      <section id="programs" className="section-padding bg-muted/30">
-        <div className="container-narrow">
-          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-12">
-            <p className="text-sm font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-3">Training Programs</p>
-            <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">What We Teach</h2>
-            <p className="font-body text-muted-foreground max-w-2xl mx-auto">
-              At Jume College, education happens in the classroom and in the field. Through hands-on training, demonstration gardens, water-harvesting sites, food forests and live community projects, our students don't just learn ideas — they leave equipped with practical, repeatable skills they can apply immediately on their own land and in their own communities. Every program below combines classroom theory with months of field practice, mentorship from experienced trainers, and access to our living permaculture campus.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {programs.map((program, i) => (
-              <motion.div
-                key={program.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="bg-card rounded-2xl overflow-hidden border border-border hover:border-primary/30 transition-all duration-300 flex flex-col group"
-                style={{ boxShadow: "var(--card-shadow)" }}
-              >
-                <div className="relative h-44 overflow-hidden">
-                  <img src={program.image} alt={program.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent" />
-                </div>
-                <div className="p-6 flex flex-col flex-1">
-                  <h3 className="text-lg font-display font-bold text-foreground mb-3">{program.title}</h3>
-                  <p className="font-body text-muted-foreground text-sm leading-relaxed mb-4">{program.desc}</p>
-                  <ul className="space-y-2 mb-5">
-                    {program.topics.map((topic) => (
-                      <li key={topic} className="flex items-start gap-2 text-sm font-body text-foreground/80">
-                        <span className="text-primary mt-0.5 text-xs">●</span>
-                        {topic}
-                      </li>
-                    ))}
-                  </ul>
-                  <button
-                    onClick={() => setOpenProgram(i)}
-                    className="mt-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-primary/10 text-primary font-body font-semibold text-sm hover:bg-primary hover:text-primary-foreground transition-colors"
-                  >
-                    Read more →
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Services */}
       <section id="services" className="section-padding" style={{ background: "var(--section-gradient)" }}>
         <div className="container-narrow">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-12">
-            <p className="text-sm font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-3">Our Services</p>
-            <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">How We Serve</h2>
+            <p className="text-sm font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-3">The Experience You Gain</p>
+            <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">How We Train</h2>
             <p className="font-body text-muted-foreground max-w-2xl mx-auto">
               Beyond the classroom, Jume College offers a full suite of consultancy, training, and on-the-ground project services for individuals, farmer cooperatives, schools, faith communities, NGOs, and county governments. From regenerative farm design and water-system installation to youth volunteer programs, tree-nursery supply, mushroom enterprises and solar value-addition — we walk with you from initial idea through implementation and long-term mentoring.
             </p>

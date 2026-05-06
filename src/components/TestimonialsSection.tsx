@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import communityImg from "@/assets/community-circle.jpg";
 
 const testimonials = [
   {
@@ -38,9 +39,12 @@ const TestimonialsSection = () => {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4">
             Voices from Our Community
           </h2>
-          <p className="font-body text-muted-foreground text-lg">
+          <p className="font-body text-muted-foreground text-lg mb-8">
             Hear from the farmers, students, and leaders whose lives have been transformed through Jume College programs.
           </p>
+          <div className="rounded-2xl overflow-hidden border border-border" style={{ boxShadow: "var(--card-shadow)" }}>
+            <img src={communityImg} alt="Jume College community gathering" className="w-full h-64 sm:h-80 object-cover" loading="lazy" />
+          </div>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">
