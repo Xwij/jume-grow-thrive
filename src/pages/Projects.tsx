@@ -249,7 +249,7 @@ const services = [
     icon: "📚",
     image: trainingImg,
     title: "Training & Workshops",
-    desc: "Hands-on training programs in sustainable agriculture, water harvesting, agroforestry, and mushroom cultivation for individuals, groups, and organizations.",
+    desc: "Through hands-on training programs in sustainable agriculture, water harvesting, agroforestry, and mushroom cultivation for individuals, groups, and organizations.",
     features: ["Short courses (1–5 days)", "Certificate programs", "Custom group training"],
     details:
       "Jume College offers immersive, practical training that goes far beyond the classroom. Our workshops cover sustainable agriculture, biointensive food production, rainwater harvesting, agroforestry systems, organic composting, vermiculture, mushroom cultivation, solar drying, seed saving and value addition. Courses range from one-day introductions to multi-week certificate programs. Every training includes field demonstrations, take-home materials, and post-training mentorship.",
