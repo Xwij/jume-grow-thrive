@@ -29,7 +29,7 @@ import chAnimalImg from "@/assets/donkey-team.jpg";
 import chEnvImg from "@/assets/water-pond.jpg";
 import chAgroEcoImg from "@/assets/community-circle.jpg";
 import chPermaImg from "@/assets/agroforestry-team.jpg";
-import chFoodProcImg from "@/assets/farmer-harvest.jpg";
+import chFoodProcImg from "@/assets/passion-fruit.jpg";
 import chBioImg from "@/assets/soil-preparation.jpg";
 import chHortiImg from "@/assets/passion-farming.jpg";
 import chEngineeringImg from "@/assets/agri-engineering.jpg";
