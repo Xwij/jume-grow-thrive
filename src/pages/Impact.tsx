@@ -19,6 +19,8 @@ import mushroomBucketImg from "@/assets/mushroom-bucket.jpg";
 import soilPrepImg from "@/assets/soil-preparation.jpg";
 import communityGardenImg from "@/assets/community-garden.jpg";
 import workersImg from "@/assets/workers.jpg";
+import solarImg from "@/assets/solar.jpeg";
+import beeImg from "@/assets/bee.jpeg";
 
 const stats: { label: string; end: number; suffix?: string }[] = [
   { label: "Farmers Reached", end: 30000, suffix: "+" },
