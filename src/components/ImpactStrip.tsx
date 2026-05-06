@@ -30,7 +30,7 @@ const ImpactStrip = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
           {stats.map((s, i) => (
             <motion.div
               key={s.label}
