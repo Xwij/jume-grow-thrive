@@ -567,6 +567,29 @@ const Projects = () => {
 
       <SectionDivider />
 
+      {/* CTA - Ready to Get Started (between Modular Courses and Experience You Gain) */}
+      <section className="section-padding" style={{ background: "var(--section-gradient)" }}>
+        <div className="container-narrow">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="grid grid-cols-2 gap-4">
+              <img src={avocadosImg} alt="Avocado harvest" className="rounded-2xl w-full h-48 object-cover" loading="lazy" />
+              <img src={bananasImg} alt="Banana plantation" className="rounded-2xl w-full h-48 object-cover" loading="lazy" />
+            </div>
+            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+              <h2 className="text-2xl sm:text-3xl font-display font-bold text-foreground mb-4">Ready to Get Started?</h2>
+              <p className="font-body text-muted-foreground leading-relaxed mb-6">
+                Whether you're a farmer looking for training, an organization seeking partnership, or a volunteer ready to make a difference — we'd love to hear from you.
+              </p>
+              <a href="/contact" className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-body font-semibold text-base hover:opacity-90 transition-opacity">
+                Contact us To Apply
+              </a>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <SectionDivider />
+
       {/* Services */}
       <section id="services" className="section-padding" style={{ background: "var(--section-gradient)" }}>
         <div className="container-narrow">
