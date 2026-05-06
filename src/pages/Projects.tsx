@@ -408,31 +408,60 @@ const Projects = () => {
             </div>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {chapters.map((c, i) => (
-              <motion.button
-                key={c.title}
-                onClick={() => setOpenChapter(i)}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: (i % 6) * 0.06 }}
-                className="text-left bg-card rounded-2xl overflow-hidden border border-border hover:border-red-500/50 transition-all group flex flex-col"
-                style={{ boxShadow: "var(--card-shadow)" }}
-              >
-                <div className="relative h-40 overflow-hidden">
-                  <img src={c.image} alt={c.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-transparent to-transparent" />
-                  <h3 className="absolute bottom-3 left-3 right-3 text-background font-display font-bold text-base drop-shadow-lg">{c.title}</h3>
-                </div>
-                <div className="p-5 flex-1 flex flex-col">
-                  <p className="font-body text-muted-foreground text-sm leading-relaxed line-clamp-3 mb-3">{c.summary}</p>
-                  <span className="mt-auto inline-flex items-center gap-1.5 text-xs font-body font-semibold text-red-600">
-                    <BookOpen className="w-3.5 h-3.5" /> Read more →
-                  </span>
-                </div>
-              </motion.button>
-            ))}
+          {/* Categories grouped to match the official prospectus layout */}
+          <div className="space-y-12">
+            {categories.map((cat, ci) => {
+              const catChapters = cat.titles
+                .map((t) => ({ idx: chapters.findIndex((c) => c.title === t), t }))
+                .filter((x) => x.idx >= 0);
+              return (
+                <motion.div
+                  key={cat.name}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-80px" }}
+                  transition={{ duration: 0.55, delay: ci * 0.06 }}
+                  className={`rounded-3xl overflow-hidden border border-border ${cat.bg}`}
+                  style={{ boxShadow: "var(--card-shadow)" }}
+                >
+                  <div className={`bg-gradient-to-r ${cat.color} px-6 py-4 text-center`}>
+                    <h3 className="text-xl sm:text-2xl font-display font-bold text-white tracking-wide">
+                      {ci + 1}. {cat.name.toUpperCase()}
+                    </h3>
+                    {cat.subtitle && (
+                      <p className="text-white/85 font-body text-sm mt-0.5">{cat.subtitle}</p>
+                    )}
+                  </div>
+                  <div className="p-5 sm:p-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {catChapters.map(({ idx }) => {
+                      const c = chapters[idx];
+                      return (
+                        <button
+                          key={c.title}
+                          onClick={() => setOpenChapter(idx)}
+                          className="text-left bg-card rounded-xl overflow-hidden border border-border/70 hover:border-red-500/50 hover:-translate-y-0.5 transition-all group flex flex-col"
+                          style={{ boxShadow: "var(--card-shadow)" }}
+                        >
+                          <div className="relative h-32 overflow-hidden">
+                            <img src={c.image} alt={c.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+                            <h4 className="absolute bottom-2 left-3 right-3 text-white font-display font-bold text-sm drop-shadow-lg leading-tight">
+                              {c.title}
+                            </h4>
+                          </div>
+                          <div className="p-4 flex-1 flex flex-col">
+                            <p className="font-body text-muted-foreground text-xs leading-relaxed line-clamp-3 mb-2">{c.summary}</p>
+                            <span className="mt-auto inline-flex items-center gap-1.5 text-[11px] font-body font-semibold text-red-600">
+                              <BookOpen className="w-3 h-3" /> Read more →
+                            </span>
+                          </div>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
