@@ -88,7 +88,7 @@ const Impact = () => {
       {/* Hero */}
       <section className="relative pt-28 pb-20 section-padding overflow-hidden">
         <div className="absolute inset-0">
-          <img src={waterProjectImg} alt="Impact" className="w-full h-full object-cover" />
+          <img src={waterProjectImg} alt="Impact" className="w-full h-full object-contain bg-muted" />
           <div className="absolute inset-0 hero-gradient-animated" />
         </div>
         <div className="container-narrow relative z-10 text-center">
@@ -137,7 +137,7 @@ const Impact = () => {
               className="rounded-2xl overflow-hidden bg-card border border-border"
               style={{ boxShadow: "var(--card-shadow)" }}
             >
-              <img src={s.img} alt={s.name} className="w-full h-56 object-cover" />
+              <img src={s.img} alt={s.name} className="w-full h-56 object-contain bg-muted" />
               <div className="p-6">
                 <p className="font-body text-foreground/80 italic mb-4">"{s.quote}"</p>
                 <p className="font-body font-semibold text-sm text-primary">{s.name}</p>
@@ -152,7 +152,7 @@ const Impact = () => {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <motion.img
             initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-            src={outdoorClassImg} alt="Outdoor class" className="rounded-2xl w-full h-80 object-cover"
+            src={outdoorClassImg} alt="Outdoor class" className="rounded-2xl w-full h-80 object-contain bg-muted"
             style={{ boxShadow: "var(--card-shadow)" }}
           />
           <div className="space-y-4 font-body text-foreground/80">
@@ -167,7 +167,7 @@ const Impact = () => {
         <div className="grid sm:grid-cols-3 gap-6 mt-10">
           {videos.map((v) => (
             <div key={v.label} className="rounded-2xl overflow-hidden bg-card border border-border" style={{ boxShadow: "var(--card-shadow)" }}>
-              <video controls preload="metadata" className="w-full aspect-video object-cover" playsInline>
+              <video controls preload="metadata" className="w-full aspect-video object-contain bg-muted" playsInline>
                 <source src={v.src} type="video/mp4" />
               </video>
               <div className="p-3"><p className="font-body text-sm font-semibold text-foreground">{v.label}</p></div>
@@ -214,7 +214,7 @@ const Impact = () => {
               className="rounded-2xl overflow-hidden bg-card border border-border"
               style={{ boxShadow: "var(--card-shadow)" }}
             >
-              <img src={p.img} alt={p.title} className="w-full h-48 object-cover" />
+              <img src={p.img} alt={p.title} className="w-full h-48 object-contain bg-muted" />
               <div className="p-5">
                 <h3 className="font-display font-bold text-lg text-foreground mb-1">{p.title}</h3>
                 <p className="font-body text-sm text-muted-foreground mb-3">{p.desc}</p>
@@ -265,7 +265,7 @@ const Impact = () => {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <motion.img
             initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
-            src={workersImg} alt="Youth pathways" className="rounded-2xl w-full h-80 object-cover"
+            src={workersImg} alt="Youth pathways" className="rounded-2xl w-full h-80 object-contain bg-muted"
             style={{ boxShadow: "var(--card-shadow)" }}
           />
           <div className="space-y-4 font-body text-foreground/80">

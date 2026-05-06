@@ -40,7 +40,7 @@ const About = () => {
 
       <section className="relative pt-28 pb-20 section-padding overflow-hidden">
         <div className="absolute inset-0">
-          <img src={campusImg} alt="Jume College Campus" className="w-full h-full object-cover" />
+          <img src={campusImg} alt="Jume College Campus" className="w-full h-full object-contain bg-muted" />
           <div className="absolute inset-0 hero-gradient-animated" />
         </div>
         <div className="container-narrow relative z-10">
@@ -140,7 +140,7 @@ const About = () => {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="aspect-square rounded-2xl overflow-hidden"
               >
-                <img src={img} alt="Life at Jume College" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+                <img src={img} alt="Life at Jume College" className="w-full h-full object-contain bg-muted hover:scale-105 transition-transform duration-500" loading="lazy" />
               </motion.div>
             ))}
           </div>

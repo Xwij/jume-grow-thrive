@@ -25,8 +25,8 @@ const CropDiversificationSection = () => {
             </p>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="grid grid-cols-2 gap-4">
-            <img src={harvestImg} alt="Children with harvest" className="rounded-2xl w-full h-40 object-cover" loading="lazy" />
-            <img src={avocadosImg} alt="Avocado trees" className="rounded-2xl w-full h-40 object-cover" loading="lazy" />
+            <img src={harvestImg} alt="Children with harvest" className="rounded-2xl w-full h-40 object-contain bg-muted" loading="lazy" />
+            <img src={avocadosImg} alt="Avocado trees" className="rounded-2xl w-full h-40 object-contain bg-muted" loading="lazy" />
           </motion.div>
         </div>
 

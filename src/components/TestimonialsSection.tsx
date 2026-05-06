@@ -66,7 +66,7 @@ const TestimonialsSection = () => {
                 {t.quote}
               </p>
               <div className="flex items-center gap-3">
-                <img src={t.avatar} alt={t.name} className="w-12 h-12 rounded-full object-cover border border-border" loading="lazy" />
+                <img src={t.avatar} alt={t.name} className="w-12 h-12 rounded-full object-contain bg-muted border border-border" loading="lazy" />
                 <div>
                   <p className="font-display font-bold text-foreground text-sm">{t.name}</p>
                   <p className="font-body text-muted-foreground text-xs">{t.role}</p>

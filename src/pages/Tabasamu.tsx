@@ -95,7 +95,7 @@ const Tabasamu = () => {
       {/* Hero — bright kid-friendly */}
       <section className="relative pt-28 pb-20 section-padding overflow-hidden z-10">
         <div className="absolute inset-0">
-          <img src={tabasamuJoy} alt="Tabasamu Children's Home" className="w-full h-full object-cover" />
+          <img src={tabasamuJoy} alt="Tabasamu Children's Home" className="w-full h-full object-contain bg-muted" />
           <div className="absolute inset-0" style={{
             background: "linear-gradient(135deg, rgba(236,72,153,0.75) 0%, rgba(168,85,247,0.7) 40%, rgba(34,197,94,0.75) 100%)",
           }} />
@@ -178,7 +178,7 @@ const Tabasamu = () => {
                   transform: `rotate(${i % 2 === 0 ? -1 : 1}deg)`,
                 }}
               >
-                <img src={s.image} alt={s.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" loading="lazy" />
+                <img src={s.image} alt={s.title} className="w-full h-full object-contain bg-muted hover:scale-105 transition-transform duration-700" loading="lazy" />
               </motion.div>
               <div className="relative">
                 <div
