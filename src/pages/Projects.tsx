@@ -502,13 +502,23 @@ const Projects = () => {
             body={chapters[openChapter].summary}
             onClose={() => setOpenChapter(null)}
             footer={
-              <a
-                href={chapters[openChapter].pdf}
-                download
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-red-600 text-white font-body font-semibold text-sm hover:bg-red-700 transition-colors"
-              >
-                <Download className="w-4 h-4" /> Download Prospectus
-              </a>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href={chapters[openChapter].pdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-card border border-red-600 text-red-600 font-body font-semibold text-sm hover:bg-red-50 transition-colors"
+                >
+                  <Eye className="w-4 h-4" /> View
+                </a>
+                <a
+                  href={chapters[openChapter].pdf}
+                  download
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-red-600 text-white font-body font-semibold text-sm hover:bg-red-700 transition-colors"
+                >
+                  <Download className="w-4 h-4" /> Download Prospectus
+                </a>
+              </div>
             }
           />
         )}
