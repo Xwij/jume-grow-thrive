@@ -24,12 +24,12 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <h4 className="font-body font-semibold text-background text-sm mb-3 uppercase tracking-wider">Programs</h4>
+            <h4 className="font-body font-semibold text-background text-sm mb-3 uppercase tracking-wider">Quick Links</h4>
             <div className="space-y-2">
-              <Link to="/projects#programs" className="block font-body text-sm hover:text-background transition-colors">Permaculture</Link>
-              <Link to="/projects#programs" className="block font-body text-sm hover:text-background transition-colors">Biointensive Farming</Link>
-              <Link to="/projects#programs" className="block font-body text-sm hover:text-background transition-colors">Water Harvesting</Link>
-              <Link to="/projects#programs" className="block font-body text-sm hover:text-background transition-colors">Agroforestry</Link>
+              <Link to="/" className="block font-body text-sm hover:text-background transition-colors">Home</Link>
+              <Link to="/about" className="block font-body text-sm hover:text-background transition-colors">About</Link>
+              <Link to="/gallery" className="block font-body text-sm hover:text-background transition-colors">Gallery</Link>
+              <Link to="/impact" className="block font-body text-sm hover:text-background transition-colors">Impact</Link>
             </div>
           </div>
           <div>
