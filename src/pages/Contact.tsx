@@ -143,29 +143,6 @@ const ContactPage = () => {
                     <p className="mt-2">His story is not just about one person's success. It is about the power of returning home, sharing knowledge, and growing a future where both people and nature thrive together.</p>
                   </div>
                 </div>
-                <div className="space-y-4 font-body text-muted-foreground leading-relaxed text-[15px]">
-                  <p>
-                    Born and raised in the Kipsongo slums of Kitale, Philip grew up surrounded by hunger,
-                    poverty and post-election violence. As a young boy he scavenged in dumpsites to help feed
-                    his family — an experience that planted in him a fierce determination to change the story
-                    for his community.
-                  </p>
-                  <p>
-                    In 2007, in the aftermath of Kenya's worst ethnic clashes, Philip founded
-                    <strong className="text-foreground"> Jume College</strong>
-                    {" "}to bring people of different tribes together through farming, peace-building and
-                    sustainable living. What began as a small youth garden has grown into a movement
-                    reaching thousands of farmers, women, youth and children across Trans Nzoia County.
-                  </p>
-                  <p>
-                    Today Philip leads <strong className="text-foreground">Jume College</strong> — a
-                    permaculture training campus — and the <strong className="text-foreground">Tabasamu Children's
-                    Home</strong>, where orphaned and vulnerable children grow up with dignity, education and
-                    a thriving food garden of their own. His vision is simple and radical: that every family
-                    in Kenya should have access to clean water, healthy soil, nutritious food and the skills
-                    to live in harmony with the land.
-                  </p>
-                </div>
               </div>
             </div>
           </motion.div>
