@@ -276,7 +276,7 @@ const services = [
     icon: "🌳",
     image: nurseryImg,
     title: "Tree Nursery & Seedlings",
-    desc: "We produce and distribute quality tree seedlings for agroforestry, reforestation, and food forest establishment.",
+    desc: "Through our on-campus nursery, we produce and distribute quality tree seedlings for agroforestry, reforestation, and food forest establishment.",
     features: ["Indigenous species", "Fruit tree varieties", "Bulk orders available"],
     details:
       "Our on-campus nursery produces tens of thousands of seedlings annually — indigenous trees, fruit trees, nitrogen-fixers, medicinal plants and timber species. We supply farmers, schools, faith communities, county governments and reforestation programs. Bulk orders available at discounted rates.",
