@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import communityImg from "@/assets/chefs-group.jpg";
+import voices1 from "@/assets/voices-1.jpeg";
+import voices2 from "@/assets/voices-2.jpeg";
+import voices3 from "@/assets/voices-3.jpeg";
 
 const testimonials = [
   {
@@ -44,6 +47,13 @@ const TestimonialsSection = () => {
           </p>
           <div className="rounded-2xl overflow-hidden border border-border" style={{ boxShadow: "var(--card-shadow)" }}>
             <img src={communityImg} alt="Jume College community gathering" className="w-full h-64 sm:h-80 object-cover" loading="lazy" />
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
+            {[voices1, voices2, voices3].map((src, i) => (
+              <div key={i} className="rounded-2xl overflow-hidden border border-border" style={{ boxShadow: "var(--card-shadow)" }}>
+                <img src={src} alt={`Community voices ${i + 1}`} className="w-full h-56 object-cover" loading="lazy" />
+              </div>
+            ))}
           </div>
         </motion.div>
 
