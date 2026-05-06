@@ -8,9 +8,15 @@ import bananaGroveImg from "@/assets/banana-grove.jpg";
 import seedlingsNurseryImg from "@/assets/seedlings-nursery.jpg";
 import treePlantingFieldImg from "@/assets/tree-planting-field.jpg";
 import womenTillingImg from "@/assets/women-tilling.jpg";
+import home1Img from "@/assets/home1.jpg";
+import home2Img from "@/assets/home2.jpg";
+import home3Img from "@/assets/home3.jpg";
 
 const slides = [
   campusImg,
+  home1Img,
+  home2Img,
+  home3Img,
   waterPondImg,
   treePruningImg,
   bananaGroveImg,
