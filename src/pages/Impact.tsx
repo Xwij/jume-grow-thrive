@@ -19,6 +19,8 @@ import mushroomBucketImg from "@/assets/mushroom-bucket.jpg";
 import soilPrepImg from "@/assets/soil-preparation.jpg";
 import communityGardenImg from "@/assets/community-garden.jpg";
 import workersImg from "@/assets/workers.jpg";
+import solarImg from "@/assets/solar.jpeg";
+import beeImg from "@/assets/bee.jpeg";
 
 const stats: { label: string; end: number; suffix?: string }[] = [
   { label: "Farmers Reached", end: 30000, suffix: "+" },
@@ -155,7 +157,7 @@ const Impact = () => {
           <div className="space-y-4 font-body text-foreground/80">
             <p>Jume is a practical training hub — not just a project. Every lesson lives in the soil, the seed, and the harvest.</p>
             <ul className="space-y-2">
-              <li>🌿 Demonstration garden data from OTEPIC Reliance work</li>
+              <li>🌿 Demonstration garden data from THE JUME COLLEGE - OTEPIC KENYA Reliance work</li>
               <li>📘 Step-by-step guides: composting, water harvesting, mulching</li>
               <li>🎥 Short training videos for farmers, students & volunteers</li>
             </ul>
@@ -175,21 +177,24 @@ const Impact = () => {
 
       {/* 4. Water & Sustainability */}
       <Section kicker="04 — Signature Hub" title="Water & Sustainability Innovation" alt>
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div className="space-y-3 font-body text-foreground/80 order-2 md:order-1">
-            <p className="text-lg">A model for dryland resilience — built from local knowledge and global ideas.</p>
-            <ul className="space-y-2">
-              <li>💧 Rainwater harvesting systems across campus</li>
-              <li>♻️ Greywater reuse from kitchens and farms</li>
-              <li>🚰 Future borehole plans (Tabasamu link)</li>
-              <li>🌱 Permaculture integration in every plot</li>
-            </ul>
-          </div>
-          <motion.img
-            initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-            src={waterProjectImg} alt="Water project" className="rounded-2xl w-full h-80 object-cover order-1 md:order-2"
-            style={{ boxShadow: "var(--card-shadow)" }}
-          />
+        <div className="grid sm:grid-cols-2 gap-6 mb-8">
+          <figure className="rounded-2xl overflow-hidden bg-card border border-border" style={{ boxShadow: "var(--card-shadow)" }}>
+            <img src={waterProjectImg} alt="Before — site at start" className="w-full h-72 object-contain bg-muted" />
+            <figcaption className="p-3 font-body text-sm font-semibold text-foreground text-center">Before</figcaption>
+          </figure>
+          <figure className="rounded-2xl overflow-hidden bg-card border border-border" style={{ boxShadow: "var(--card-shadow)" }}>
+            <img src={communityGardenImg} alt="After — restored garden" className="w-full h-72 object-contain bg-muted" />
+            <figcaption className="p-3 font-body text-sm font-semibold text-foreground text-center">After</figcaption>
+          </figure>
+        </div>
+        <div className="space-y-3 font-body text-foreground/80 max-w-3xl mx-auto text-center">
+          <p className="text-lg">A model for dryland resilience — built from local knowledge and global ideas.</p>
+          <ul className="space-y-2 inline-block text-left">
+            <li>💧 Rainwater harvesting systems across campus</li>
+            <li>♻️ Greywater reuse from kitchens and farms</li>
+            <li>🚰 Future borehole plans (Tabasamu link)</li>
+            <li>🌱 Permaculture integration in every plot</li>
+          </ul>
         </div>
       </Section>
 
@@ -197,9 +202,9 @@ const Impact = () => {
       <Section kicker="05 — Enterprise" title="Where Impact Meets Income">
         <div className="grid md:grid-cols-3 gap-6">
           {[
-            { img: mushroomBucketImg, title: "OTEPIC Mushrooms", desc: "Oyster mushrooms grown in buckets — fresh and dried." },
-            { img: passionFarmingImg, title: "Solar-Dried Produce", desc: "Indigenous vegetables, fruits, and seeds preserved by sun." },
-            { img: communityGardenImg, title: "Future Beekeeping 🍯", desc: "Honey, wax & pollination services in development." },
+            { img: mushroomBucketImg, title: "THE JUME COLLEGE - OTEPIC KENYA Mushrooms", desc: "Oyster mushrooms grown in buckets — fresh and dried." },
+            { img: solarImg, title: "Solar-Dried Produce", desc: "Indigenous vegetables, fruits, and seeds preserved by sun." },
+            { img: beeImg, title: "Future Beekeeping 🍯", desc: "Honey, wax & pollination services in development." },
           ].map((p, i) => (
             <motion.div
               key={p.title}

@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import communityImg from "@/assets/chefs-group.jpg";
 import voices1 from "@/assets/voices-1.jpeg";
 import voices2 from "@/assets/voices-2.jpeg";
 import voices3 from "@/assets/voices-3.jpeg";
@@ -7,23 +6,27 @@ import voices3 from "@/assets/voices-3.jpeg";
 const testimonials = [
   {
     quote: "Jume College changed my life. I learned how to grow food for my family and earn an income from mushroom farming. I never imagined farming could be this rewarding.",
-    name: "James Wekesa",
+    name: "Nasimiyu Wekesa",
     role: "Mushroom Enterprise Graduate",
+    avatar: voices1,
   },
   {
     quote: "The permaculture training opened my eyes to a new way of farming. My soil is healthier, my harvests are bigger, and I no longer need expensive chemicals.",
-    name: "Peter Ochieng",
+    name: "Nekesa Wanjala",
     role: "Permaculture Training Alumni",
+    avatar: voices2,
   },
   {
     quote: "As a young person, I thought farming was for old people. Jume College showed me that agriculture is innovation, science, and opportunity all in one.",
-    name: "Brian Simiyu",
+    name: "Chepkirui Cherono",
     role: "Youth Farming Initiative",
+    avatar: voices3,
   },
   {
     quote: "The community training sessions brought our village together. We now share knowledge, seeds, and hope for a better future for our children.",
-    name: "Mary Nekesa",
+    name: "Nanjala Wafula",
     role: "Community Leader",
+    avatar: voices1,
   },
 ];
 
@@ -45,16 +48,6 @@ const TestimonialsSection = () => {
           <p className="font-body text-muted-foreground text-lg mb-8">
             Hear from the farmers, students, and leaders whose lives have been transformed through Jume College programs.
           </p>
-          <div className="rounded-2xl overflow-hidden border border-border" style={{ boxShadow: "var(--card-shadow)" }}>
-            <img src={communityImg} alt="Jume College community gathering" className="w-full h-64 sm:h-80 object-cover" loading="lazy" />
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
-            {[voices1, voices2, voices3].map((src, i) => (
-              <div key={i} className="rounded-2xl overflow-hidden border border-border" style={{ boxShadow: "var(--card-shadow)" }}>
-                <img src={src} alt={`Community voices ${i + 1}`} className="w-full h-56 object-cover" loading="lazy" />
-              </div>
-            ))}
-          </div>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -72,9 +65,12 @@ const TestimonialsSection = () => {
               <p className="font-body text-foreground/90 leading-relaxed mb-6 mt-4 italic">
                 {t.quote}
               </p>
-              <div>
-                <p className="font-display font-bold text-foreground text-sm">{t.name}</p>
-                <p className="font-body text-muted-foreground text-xs">{t.role}</p>
+              <div className="flex items-center gap-3">
+                <img src={t.avatar} alt={t.name} className="w-12 h-12 rounded-full object-cover border border-border" loading="lazy" />
+                <div>
+                  <p className="font-display font-bold text-foreground text-sm">{t.name}</p>
+                  <p className="font-body text-muted-foreground text-xs">{t.role}</p>
+                </div>
               </div>
             </motion.div>
           ))}

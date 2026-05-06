@@ -114,7 +114,7 @@ const About = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <p className="text-sm font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-3">Activities</p>
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-foreground mb-6">
-              General Organizational Activities Over the Three-Year Period
+              General Organizational Activities
             </h2>
             <ol className="space-y-4 font-body text-muted-foreground text-sm sm:text-base leading-relaxed list-decimal pl-6">
               {generalActivities.map((a, i) => (

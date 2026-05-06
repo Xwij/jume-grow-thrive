@@ -41,7 +41,7 @@ const Donate = () => {
         <div className="container-narrow relative z-10 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <p className="text-sm font-body tracking-[0.2em] uppercase text-white/95 font-bold mb-3">💛 Support Our Mission</p>
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold text-white mb-6 drop-shadow-lg">Donate to OTEPIC</h1>
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold text-white mb-6 drop-shadow-lg">Donate to THE JUME COLLEGE - OTEPIC KENYA</h1>
             <p className="font-body text-white text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
               Every contribution helps children at Tabasamu Children's Home and farmers across Trans Nzoia build a sustainable, hopeful future.
             </p>
@@ -163,7 +163,7 @@ const Donate = () => {
               <h3 className="text-2xl font-display font-bold text-foreground mb-3">{openInfo.title}</h3>
               <p className="font-body text-foreground/75 leading-relaxed mb-6">{openInfo.desc}</p>
               <p className="font-body text-foreground/70 leading-relaxed text-sm mb-6">
-                Your donation directly funds this program at OTEPIC and Tabasamu Children's Home. Every gift, no matter the size, creates lasting change for the children, farmers and communities we serve in Trans Nzoia, Kenya.
+                Your donation directly funds this program at THE JUME COLLEGE - OTEPIC KENYA and Tabasamu Children's Home. Every gift, no matter the size, creates lasting change for the children, farmers and communities we serve in Trans Nzoia, Kenya.
               </p>
               <a href={paypalUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-[#0070ba] text-white font-body font-semibold text-sm hover:bg-[#005a96] transition-colors">
                 Login to PayPal to Donate →
