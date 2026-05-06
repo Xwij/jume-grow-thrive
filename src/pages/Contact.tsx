@@ -91,7 +91,7 @@ const ContactPage = () => {
                   <span className="text-2xl">📍</span>
                   <div>
                     <h3 className="font-body font-semibold text-foreground text-sm">Location</h3>
-                    <p className="font-body text-muted-foreground text-sm">Bidii Farm, Trans Nzoia County, Kenya</p>
+                    <p className="font-body text-muted-foreground text-sm">Upendo Farm, Trans Nzoia County, Kenya</p>
                     <p className="font-body text-muted-foreground text-xs mt-1">Plus Code: 32C7+72M Kitale</p>
                   </div>
                 </div>
@@ -121,7 +121,7 @@ const ContactPage = () => {
               <div className="mt-10">
                 <div className="aspect-[4/3] rounded-xl overflow-hidden border border-border" style={{ boxShadow: "var(--card-shadow)" }}>
                   <iframe
-                    title="Bidii Farm location map"
+                    title="Upendo Farm location map"
                     src="https://www.google.com/maps?q=32C7%2B72M%20Bidii%20Farm%2C%20Kitale&output=embed"
                     width="100%"
                     height="100%"

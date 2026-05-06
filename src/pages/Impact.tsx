@@ -9,6 +9,9 @@ import farmerHarvestImg from "@/assets/farmer-harvest.jpg";
 import mushroomFarmerImg from "@/assets/mushroom-farmer.jpg";
 import treePlantingImg from "@/assets/tree-planting.jpg";
 import kidsHarvestImg from "@/assets/kids-harvest.jpg";
+import womenTillingImg from "@/assets/women-tilling.jpg";
+import communityKidsImg from "@/assets/community-kids.jpg";
+import passionFruitImg from "@/assets/passion-fruit.jpg";
 import communityMeetingImg from "@/assets/community-meeting.jpg";
 import passionFarmingImg from "@/assets/passion-farming.jpg";
 import outdoorClassImg from "@/assets/outdoor-class.jpg";
@@ -28,17 +31,17 @@ const stats: { label: string; end: number; suffix?: string }[] = [
 
 const stories = [
   {
-    img: farmerHarvestImg,
+    img: passionFruitImg,
     name: "John — Solar Dryer Innovator",
     quote: "With the solar dryer, my vegetables no longer rot. I now sell dried produce all year round and earn three times more.",
   },
   {
-    img: kidsHarvestImg,
+    img: communityKidsImg,
     name: "Amani from Tabasamu",
     quote: "I learned how to grow my own food at Jume College. Now I help my mother in our small kitchen garden.",
   },
   {
-    img: mushroomFarmerImg,
+    img: womenTillingImg,
     name: "Mary — Mushroom Entrepreneur",
     quote: "Mushroom farming changed my life. I started with one bucket and now supply hotels in town.",
   },
