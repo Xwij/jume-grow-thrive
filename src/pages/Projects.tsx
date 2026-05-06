@@ -466,6 +466,8 @@ const Projects = () => {
         </div>
       </section>
 
+      <SectionDivider />
+
       {/* Services */}
       <section id="services" className="section-padding" style={{ background: "var(--section-gradient)" }}>
         <div className="container-narrow">
