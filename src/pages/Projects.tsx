@@ -128,14 +128,14 @@ const chapters = [
   },
   {
     title: "Building Technology",
-    image: chEnvImg,
+    image: chBuildingImg,
     pdf: "/prospectus/BUILDING_TECHNOLOGY.pdf",
     summary:
       "Masonry, technical drawing, structural mechanics, site management and sustainable building practice. Certificate and Diploma pathways with industrial attachment.",
   },
   {
     title: "Carpentry & Joinery",
-    image: chSustainImg,
+    image: chCarpentryImg,
     pdf: "/prospectus/CARPENTRY_AND_JOINERY.pdf",
     summary:
       "Hands-on training in woodwork, joinery, furniture making and finishing. Equips graduates with employable skills and the foundation to start their own workshops.",
@@ -156,21 +156,21 @@ const chapters = [
   },
   {
     title: "Cooking Skills",
-    image: chHospitalityImg,
+    image: chCookingImg,
     pdf: "/prospectus/COOKING_SKILLS.pdf",
     summary:
       "Culinary arts, food preparation, nutrition, kitchen management, and food safety & hygiene. Practical kitchen training for hotels, restaurants, and self-employment.",
   },
   {
     title: "Baking Technology",
-    image: chHospitalityImg,
+    image: chBakingImg,
     pdf: "/prospectus/BAKING_TECHNOLOGY.pdf",
     summary:
       "Bakery and pastry production, dough science, bread, cakes and confectionery, plus bakery business management. Hands-on training preparing graduates for community bakeries and self-employment.",
   },
   {
     title: "Accommodation Operations",
-    image: chHortiImg,
+    image: chAccommodationImg,
     pdf: "/prospectus/ACCOMMODATION_OPERATIONS.pdf",
     summary:
       "Front office, housekeeping, guest services, hospitality standards and accommodation management — pathways to careers in hotels, lodges and the wider tourism sector.",
@@ -192,7 +192,7 @@ const chapters = [
   {
     title: "Permaculture Course",
     image: chPermaImg,
-    pdf: "/prospectus/OTEPIC_Agricultural_Modular_Courses_Prospectus.pdf",
+    pdf: "/prospectus/PERMACULTURE_COURSE.pdf",
     summary:
       "A standardised 72-hour curriculum focused on ecological design, sustainability, and regenerative practice. Delivered over two weeks, weekend series, or online.",
   },
@@ -210,13 +210,13 @@ const chapters = [
   },
   {
     title: "Cosmetology",
-    image: chSoapImg,
+    image: chCosmetologyImg,
     pdf: "/prospectus/COSMETOLOGY.pdf",
     summary: "Beauty therapy, hairdressing, skincare and salon management — practical training for self-employment and salon careers.",
   },
   {
     title: "Electrical Installation",
-    image: chEngineeringImg,
+    image: chElectricalImg,
     pdf: "/prospectus/ELECTRICAL_INSTALLATION.pdf",
     summary: "Domestic and industrial electrical wiring, circuits, safety standards and installation practice — pathway to certified electrician work.",
   },
@@ -228,21 +228,39 @@ const chapters = [
   },
   {
     title: "Fashion Designer",
-    image: chTailoringImg,
+    image: chFashionImg,
     pdf: "/prospectus/FASHION_DESIGNER.pdf",
     summary: "Design, pattern making, garment construction, textiles and fashion business — build a career or launch your own clothing line.",
   },
   {
     title: "Food & Beverage Operations",
-    image: chHospitalityImg,
+    image: chFoodBevImg,
     pdf: "/prospectus/FOOD_AND_BEVERAGE_OPERATIONS.pdf",
     summary: "Restaurant service, bar operations, menu knowledge and customer service standards for the hospitality industry.",
   },
   {
     title: "Food Processing Technology",
-    image: chSustainImg,
+    image: chFoodProcImg,
     pdf: "/prospectus/FOOD_PROCESSING_TECHNOLOGY.pdf",
     summary: "Food preservation, value addition, packaging, food safety and small-scale processing enterprise — turning harvests into shelf-stable products.",
+  },
+  {
+    title: "Sustainable Agriculture Course",
+    image: chSustAgImg,
+    pdf: "/prospectus/SUSTAINABLE_AGRICULTURE_COURSE.pdf",
+    summary: "Soil health, organic production, water conservation, integrated pest management and farm-based enterprise — equipping farmers with practical, climate-smart and regenerative agriculture skills for long-term food security.",
+  },
+  {
+    title: "Welding & Fabrication",
+    image: chWeldingImg,
+    pdf: "/prospectus/WELDING_AND_FABRICATION.pdf",
+    summary: "Arc and gas welding, sheet-metal work, structural fabrication, workshop safety and project costing — practical skills for employment in construction, agriculture and self-run metal workshops.",
+  },
+  {
+    title: "Plumbing",
+    image: chPlumbingImg,
+    pdf: "/prospectus/PLUMBING.pdf",
+    summary: "Domestic and commercial plumbing systems, pipefitting, drainage, water supply, sanitation installation and maintenance — preparing graduates for certified plumbing work and small-business setups.",
   },
 ];
 
