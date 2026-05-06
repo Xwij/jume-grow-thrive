@@ -489,33 +489,76 @@ const Projects = () => {
             </div>
           </motion.div>
 
-          {/* One unified block: rotating image slider header + flat course grid */}
-          <div className="rounded-3xl overflow-hidden border border-border bg-card" style={{ boxShadow: "var(--card-shadow)" }}>
-            <CourseSlider chapters={chapters} />
-            <div className="p-5 sm:p-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {chapters.map((c, idx) => (
-                <button
-                  key={c.title}
-                  onClick={() => setOpenChapter(idx)}
-                  className="text-left bg-background rounded-xl overflow-hidden border border-border/70 hover:border-red-500/50 hover:-translate-y-0.5 transition-all group flex flex-col"
-                  style={{ boxShadow: "var(--card-shadow)" }}
-                >
-                  <div className="relative h-32 overflow-hidden">
-                    <img src={c.image} alt={c.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
-                    <h4 className="absolute bottom-2 left-3 right-3 text-white font-display font-bold text-sm drop-shadow-lg leading-tight">
-                      {c.title}
-                    </h4>
-                  </div>
-                  <div className="p-4 flex-1 flex flex-col">
-                    <p className="font-body text-muted-foreground text-xs leading-relaxed line-clamp-3 mb-2">{c.summary}</p>
-                    <span className="mt-auto inline-flex items-center gap-1.5 text-[11px] font-body font-semibold text-red-600">
-                      <BookOpen className="w-3 h-3" /> Read more →
-                    </span>
-                  </div>
-                </button>
-              ))}
-            </div>
+          {/* Departments — each with hero image and its course grid */}
+          <div className="space-y-16">
+            {departments.map((dept, dIdx) => {
+              const deptChapters = dept.titles
+                .map((t) => chapters.find((c) => c.title === t))
+                .filter(Boolean) as Chapter[];
+              return (
+                <div key={dept.name}>
+                  {dIdx > 0 && (
+                    <div className="flex items-center gap-4 py-2 mb-10">
+                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+                      <div className="w-2 h-2 rounded-full bg-primary/40" />
+                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+                    </div>
+                  )}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    className="rounded-3xl overflow-hidden border border-border bg-card"
+                    style={{ boxShadow: "var(--card-shadow)" }}
+                  >
+                    <div className="relative h-[260px] sm:h-[340px] overflow-hidden">
+                      <img src={dept.hero} alt={dept.name} className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/20" />
+                      <div className="absolute inset-0 flex flex-col items-center justify-end text-center px-6 pb-8">
+                        {dept.subtitle && (
+                          <p className="text-xs sm:text-sm tracking-[0.2em] uppercase text-white/80 font-semibold mb-2">
+                            {dept.subtitle}
+                          </p>
+                        )}
+                        <h3 className="text-2xl sm:text-4xl font-display font-bold text-white drop-shadow-lg mb-2">
+                          {dept.name}
+                        </h3>
+                        <p className="text-white/90 font-body text-sm sm:text-base max-w-2xl">{dept.tagline}</p>
+                      </div>
+                    </div>
+
+                    <div className="p-5 sm:p-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {deptChapters.map((c) => {
+                        const idx = chapters.findIndex((x) => x.title === c.title);
+                        return (
+                          <button
+                            key={c.title}
+                            onClick={() => setOpenChapter(idx)}
+                            className="text-left bg-background rounded-xl overflow-hidden border border-border/70 hover:border-red-500/50 hover:-translate-y-0.5 transition-all group flex flex-col"
+                            style={{ boxShadow: "var(--card-shadow)" }}
+                          >
+                            <div className="relative h-32 overflow-hidden">
+                              <img src={c.image} alt={c.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+                              <h4 className="absolute bottom-2 left-3 right-3 text-white font-display font-bold text-sm drop-shadow-lg leading-tight">
+                                {c.title}
+                              </h4>
+                            </div>
+                            <div className="p-4 flex-1 flex flex-col">
+                              <p className="font-body text-muted-foreground text-xs leading-relaxed line-clamp-3 mb-2">{c.summary}</p>
+                              <span className="mt-auto inline-flex items-center gap-1.5 text-[11px] font-body font-semibold text-red-600">
+                                <BookOpen className="w-3 h-3" /> Read more →
+                              </span>
+                            </div>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </motion.div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
