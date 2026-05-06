@@ -529,6 +529,8 @@ const Projects = () => {
         </div>
       </section>
 
+      <SectionDivider />
+
       {/* Featured Project: Tabasamu (last section) */}
       <section className="section-padding bg-muted/30">
         <div className="container-narrow">
