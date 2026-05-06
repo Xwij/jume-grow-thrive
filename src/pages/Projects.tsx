@@ -258,7 +258,7 @@ const services = [
     icon: "🌍",
     image: communityImg,
     title: "Community Development",
-    desc: "We partner with communities to design and implement projects that improve food security, water access, and livelihoods through ecological approaches.",
+    desc: "Through partnership with communities we design and implement projects that improve food security, water access, and livelihoods through ecological approaches.",
     features: ["Needs assessment", "Project planning", "Capacity building"],
     details:
       "Our community development approach is participatory and rooted in lived realities. We listen first — mapping local resources, challenges and aspirations — then co-design projects addressing food security, clean water, income generation, environmental restoration and peace-building. We emphasise capacity building and local ownership so communities can sustain, replicate and scale their initiatives long after we step back.",
