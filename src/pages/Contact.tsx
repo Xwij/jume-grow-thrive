@@ -50,30 +50,98 @@ const ContactPage = () => {
               </div>
               <div className="md:col-span-3 p-8 md:p-10">
                 <p className="text-xs font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-2">Meet the Director</p>
-                <h2 className="text-2xl sm:text-3xl font-display font-bold text-foreground mb-3">Philip Munyasia</h2>
-                <p className="text-sm font-body text-primary font-semibold mb-5">Founder & Director — Jume College Kenya</p>
-                <div className="space-y-4 font-body text-muted-foreground leading-relaxed text-[15px]">
-                  <p>
-                    Born and raised in the Kipsongo slums of Kitale, Philip grew up surrounded by hunger,
-                    poverty and post-election violence. As a young boy he scavenged in dumpsites to help feed
-                    his family — an experience that planted in him a fierce determination to change the story
-                    for his community.
-                  </p>
-                  <p>
-                    In 2007, in the aftermath of Kenya's worst ethnic clashes, Philip founded
-                    <strong className="text-foreground"> Jume College</strong>
-                    {" "}to bring people of different tribes together through farming, peace-building and
-                    sustainable living. What began as a small youth garden has grown into a movement
-                    reaching thousands of farmers, women, youth and children across Trans Nzoia County.
-                  </p>
-                  <p>
-                    Today Philip leads <strong className="text-foreground">Jume College</strong> — a
-                    permaculture training campus — and the <strong className="text-foreground">Tabasamu Children's
-                    Home</strong>, where orphaned and vulnerable children grow up with dignity, education and
-                    a thriving food garden of their own. His vision is simple and radical: that every family
-                    in Kenya should have access to clean water, healthy soil, nutritious food and the skills
-                    to live in harmony with the land.
-                  </p>
+                <h2 className="text-2xl sm:text-3xl font-display font-bold text-foreground mb-2">Philip Munyasia</h2>
+                <p className="text-sm font-body text-primary font-semibold mb-5">A Life Rooted in Regeneration, Learning, and Community</p>
+                <div className="space-y-5 font-body text-muted-foreground leading-relaxed text-[15px]">
+                  <div>
+                    <h3 className="font-display font-bold text-foreground text-base mb-1.5">Early Life: Growing Through Challenge</h3>
+                    <p>
+                      Philip Munyasia was born and raised in rural Kenya, where daily life was closely tied to the land.
+                      Growing up, he experienced firsthand the realities many communities face — unpredictable harvests,
+                      water scarcity, and limited access to resources. Despite these challenges, his childhood was also
+                      shaped by strong community values, resilience, and a deep connection to nature.
+                    </p>
+                    <p className="mt-2">From an early age, Philip understood that change would require both knowledge and action. Education became his pathway.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="font-display font-bold text-foreground text-base mb-1.5">Education and Determination</h3>
+                    <p>
+                      Philip pursued his primary and secondary education with determination, often overcoming financial
+                      and social barriers. His curiosity extended beyond the classroom — he was interested in
+                      understanding why communities struggled with food systems and how nature could be restored rather
+                      than exploited. This mindset laid the foundation for a lifelong journey of learning.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="font-display font-bold text-foreground text-base mb-1.5">A Global Learning Journey</h3>
+                    <p>
+                      Philip's commitment opened doors to international opportunities that expanded his vision and
+                      deepened his purpose. He received a scholarship to study in the United States, where he trained
+                      with <strong className="text-foreground">Ecology Action in California</strong>. There, he gained
+                      hands-on experience in biointensive agriculture — learning how small-scale, regenerative systems
+                      could produce abundant food while restoring soil health and conserving water.
+                    </p>
+                    <p className="mt-2">His journey continued across continents:</p>
+                    <ul className="list-disc pl-5 mt-2 space-y-1.5">
+                      <li>In <strong className="text-foreground">Portugal</strong>, he studied peace education at the Institute of Global Peace, exploring how sustainable development and peacebuilding are deeply connected.</li>
+                      <li>In <strong className="text-foreground">Austria</strong>, he trained in permaculture, learning ecological design principles that integrate land, people, and sustainable systems.</li>
+                      <li>In <strong className="text-foreground">Switzerland</strong>, he studied peace journalism, focusing on storytelling as a tool for social change and community empowerment.</li>
+                    </ul>
+                    <p className="mt-2">These experiences shaped a unique perspective — one that blends agriculture, ecology, peacebuilding, and education into a holistic approach to development.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="font-display font-bold text-foreground text-base mb-1.5">Always Returning Home</h3>
+                    <p>
+                      Despite traveling and learning globally, Philip remained deeply connected to Kenya. After each
+                      experience, he returned home — sharing knowledge, training communities, and testing practical
+                      solutions on the ground. He believed that real impact comes not from staying abroad, but from
+                      applying global knowledge to local challenges.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="font-display font-bold text-foreground text-base mb-1.5">Establishing a Regenerative Vision</h3>
+                    <p>
+                      With years of learning and hands-on experience, Philip founded <strong className="text-foreground">OTEPIC</strong>
+                      {" "}(Organic Technology Extension and Promotion of Initiative Centre). His goal was to create a
+                      living model of regenerative development — where communities can restore ecosystems while
+                      improving their livelihoods.
+                    </p>
+                    <p className="mt-2">Through OTEPIC, he introduced:</p>
+                    <ul className="list-disc pl-5 mt-2 space-y-1">
+                      <li>Biointensive and regenerative farming systems</li>
+                      <li>Water conservation and harvesting techniques</li>
+                      <li>Permaculture design for sustainable living</li>
+                      <li>Community-based training and education programs</li>
+                    </ul>
+                    <p className="mt-2">What started as a small initiative has grown into a center for learning, innovation, and transformation.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="font-display font-bold text-foreground text-base mb-1.5">Empowering People, Transforming Communities</h3>
+                    <p>Philip's work has impacted many lives. He has empowered youth, women, and farmers by equipping them with practical skills and knowledge to build sustainable futures.</p>
+                    <p className="mt-2">Through his leadership:</p>
+                    <ul className="list-disc pl-5 mt-2 space-y-1">
+                      <li>Farmers have improved food production and soil health</li>
+                      <li>Young people have found purpose and employment in agriculture</li>
+                      <li>Communities have become more resilient to climate change</li>
+                      <li>Vulnerable groups, including children's homes, have moved toward self-sufficiency</li>
+                    </ul>
+                    <p className="mt-2">His approach is simple yet powerful: teach people how to work with nature, and they will transform their own lives.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="font-display font-bold text-foreground text-base mb-1.5">A Living Mission</h3>
+                    <p>
+                      Today, Philip Munyasia continues to inspire change through action. His journey — from a rural
+                      childhood to global learning and back to community transformation — reflects a deep commitment to
+                      regeneration, peace, and empowerment.
+                    </p>
+                    <p className="mt-2">His story is not just about one person's success. It is about the power of returning home, sharing knowledge, and growing a future where both people and nature thrive together.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -91,7 +159,7 @@ const ContactPage = () => {
                   <span className="text-2xl">📍</span>
                   <div>
                     <h3 className="font-body font-semibold text-foreground text-sm">Location</h3>
-                    <p className="font-body text-muted-foreground text-sm">Bidii Farm, Trans Nzoia County, Kenya</p>
+                    <p className="font-body text-muted-foreground text-sm">Upendo Farm, Trans Nzoia County, Kenya</p>
                     <p className="font-body text-muted-foreground text-xs mt-1">Plus Code: 32C7+72M Kitale</p>
                   </div>
                 </div>
@@ -121,7 +189,7 @@ const ContactPage = () => {
               <div className="mt-10">
                 <div className="aspect-[4/3] rounded-xl overflow-hidden border border-border" style={{ boxShadow: "var(--card-shadow)" }}>
                   <iframe
-                    title="Bidii Farm location map"
+                    title="Upendo Farm location map"
                     src="https://www.google.com/maps?q=32C7%2B72M%20Bidii%20Farm%2C%20Kitale&output=embed"
                     width="100%"
                     height="100%"
