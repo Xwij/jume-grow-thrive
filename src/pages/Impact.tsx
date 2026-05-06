@@ -175,21 +175,24 @@ const Impact = () => {
 
       {/* 4. Water & Sustainability */}
       <Section kicker="04 — Signature Hub" title="Water & Sustainability Innovation" alt>
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div className="space-y-3 font-body text-foreground/80 order-2 md:order-1">
-            <p className="text-lg">A model for dryland resilience — built from local knowledge and global ideas.</p>
-            <ul className="space-y-2">
-              <li>💧 Rainwater harvesting systems across campus</li>
-              <li>♻️ Greywater reuse from kitchens and farms</li>
-              <li>🚰 Future borehole plans (Tabasamu link)</li>
-              <li>🌱 Permaculture integration in every plot</li>
-            </ul>
-          </div>
-          <motion.img
-            initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-            src={waterProjectImg} alt="Water project" className="rounded-2xl w-full h-80 object-cover order-1 md:order-2"
-            style={{ boxShadow: "var(--card-shadow)" }}
-          />
+        <div className="grid sm:grid-cols-2 gap-6 mb-8">
+          <figure className="rounded-2xl overflow-hidden bg-card border border-border" style={{ boxShadow: "var(--card-shadow)" }}>
+            <img src={waterProjectImg} alt="Before — site at start" className="w-full h-72 object-contain bg-muted" />
+            <figcaption className="p-3 font-body text-sm font-semibold text-foreground text-center">Before</figcaption>
+          </figure>
+          <figure className="rounded-2xl overflow-hidden bg-card border border-border" style={{ boxShadow: "var(--card-shadow)" }}>
+            <img src={communityGardenImg} alt="After — restored garden" className="w-full h-72 object-contain bg-muted" />
+            <figcaption className="p-3 font-body text-sm font-semibold text-foreground text-center">After</figcaption>
+          </figure>
+        </div>
+        <div className="space-y-3 font-body text-foreground/80 max-w-3xl mx-auto text-center">
+          <p className="text-lg">A model for dryland resilience — built from local knowledge and global ideas.</p>
+          <ul className="space-y-2 inline-block text-left">
+            <li>💧 Rainwater harvesting systems across campus</li>
+            <li>♻️ Greywater reuse from kitchens and farms</li>
+            <li>🚰 Future borehole plans (Tabasamu link)</li>
+            <li>🌱 Permaculture integration in every plot</li>
+          </ul>
         </div>
       </Section>
 
