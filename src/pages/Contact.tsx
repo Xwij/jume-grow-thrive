@@ -52,19 +52,49 @@ const ContactPage = () => {
                 <p className="text-xs font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-2">Meet the Director</p>
                 <h2 className="text-2xl sm:text-3xl font-display font-bold text-foreground mb-2">Philip Munyasia</h2>
                 <p className="text-sm font-body text-primary font-semibold mb-5">A Life Rooted in Regeneration, Learning, and Community</p>
-                <div className="space-y-3 font-body text-muted-foreground leading-relaxed text-[15px]">
-                  <p>
-                    Born and raised in rural Kenya, Philip grew up close to the land — and to its struggles with water scarcity, unpredictable harvests and limited resources. Education became his pathway out, and back.
-                  </p>
-                  <p>
-                    He trained with <strong className="text-foreground">Ecology Action (USA)</strong> in biointensive agriculture, studied peace education in <strong className="text-foreground">Portugal</strong>, permaculture in <strong className="text-foreground">Austria</strong>, and peace journalism in <strong className="text-foreground">Switzerland</strong> — always returning home to apply what he learned.
-                  </p>
-                  <p>
-                    He founded <strong className="text-foreground">OTEPIC</strong> as a living model of regenerative development — combining biointensive farming, water harvesting, permaculture and community education to empower youth, women and farmers.
-                  </p>
-                  <p>
-                    His story is about returning home, sharing knowledge, and growing a future where people and nature thrive together.
-                  </p>
+                <div className="space-y-4 font-body text-muted-foreground leading-relaxed text-[15px]">
+                  <div>
+                    <h3 className="font-display font-semibold text-foreground mb-1">Early Life: Growing Through Challenge</h3>
+                    <p>
+                      Philip Munyasia was born and raised in rural Kenya, where daily life was closely tied to the land. Growing up, he experienced firsthand the realities many communities face — unpredictable harvests, water scarcity, and limited access to resources. Despite these challenges, his childhood was shaped by strong community values, resilience, and a deep connection to nature. From an early age, Philip understood that change would require both knowledge and action — and education became his pathway.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="font-display font-semibold text-foreground mb-1">Education and Determination</h3>
+                    <p>
+                      Philip pursued his primary and secondary education with determination, often overcoming financial and social barriers. His curiosity extended beyond the classroom — he wanted to understand why communities struggled with food systems and how nature could be restored rather than exploited. This mindset laid the foundation for a lifelong journey of learning.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="font-display font-semibold text-foreground mb-1">A Global Learning Journey</h3>
+                    <p>
+                      Philip's commitment opened doors to international opportunities. He received a scholarship to study in the United States, training with <strong className="text-foreground">Ecology Action</strong> in California, where he gained hands-on experience in biointensive agriculture. His journey continued: peace education at the Institute of Global Peace in <strong className="text-foreground">Portugal</strong>, permaculture training in <strong className="text-foreground">Austria</strong>, and peace journalism in <strong className="text-foreground">Switzerland</strong> — blending agriculture, ecology, peacebuilding and education into a holistic approach to development.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="font-display font-semibold text-foreground mb-1">Always Returning Home</h3>
+                    <p>
+                      After every experience abroad, Philip returned home — sharing knowledge, training communities, and testing practical solutions on the ground. He believed real impact comes not from staying abroad, but from applying global knowledge to local challenges.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="font-display font-semibold text-foreground mb-1">Establishing a Regenerative Vision</h3>
+                    <p>
+                      With years of learning and hands-on experience, Philip founded <strong className="text-foreground">OTEPIC</strong> (Organic Technology Extension and Promotion of Initiative Centre) — a living model of regenerative development. Through OTEPIC he introduced biointensive and regenerative farming, water conservation and harvesting, permaculture design, and community-based training programs. What began as a small initiative has grown into a center for learning, innovation and transformation.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="font-display font-semibold text-foreground mb-1">Empowering People, Transforming Communities</h3>
+                    <p>
+                      Philip's work has empowered youth, women and farmers with practical skills. Farmers have improved food production and soil health; young people have found purpose in agriculture; communities have grown more resilient to climate change; and vulnerable groups, including children's homes, have moved toward self-sufficiency.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="font-display font-semibold text-foreground mb-1">A Living Mission</h3>
+                    <p>
+                      Today Philip continues to inspire change through action. His journey — from a rural childhood to global learning and back to community transformation — reflects a deep commitment to regeneration, peace, and empowerment. His story is about the power of returning home, sharing knowledge, and growing a future where both people and nature thrive together.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
