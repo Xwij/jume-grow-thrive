@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
-import campusImg from "@/assets/campus.jpg";
 import trainingImg from "@/assets/training-field.jpg";
 import communityGardenImg from "@/assets/community-garden.jpg";
-import communityKidsImg from "@/assets/community-kids.jpg";
 
 const values = [
   { icon: "🌱", title: "Sustainable Agriculture", desc: "Grow healthy food using regenerative farming methods" },
@@ -13,10 +11,8 @@ const values = [
 ];
 
 const galleryImages = [
-  { src: campusImg, label: "Campus & Grounds" },
   { src: trainingImg, label: "Training in Action" },
   { src: communityGardenImg, label: "Community Garden" },
-  { src: communityKidsImg, label: "Students & Community" },
 ];
 
 const AboutSection = () => {
