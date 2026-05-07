@@ -445,6 +445,7 @@ const Projects = () => {
   const [openService, setOpenService] = useState<number | null>(null);
   const [openProgram, setOpenProgram] = useState<number | null>(null);
   const [openChapter, setOpenChapter] = useState<number | null>(null);
+  const [previewPdf, setPreviewPdf] = useState<{ title: string; pdf: string } | null>(null);
   const [showProspectus, setShowProspectus] = useState(false);
 
   return (
