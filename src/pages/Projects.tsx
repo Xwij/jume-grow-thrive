@@ -713,13 +713,24 @@ const Projects = () => {
             onClose={() => setOpenChapter(null)}
             footer={
               <div className="flex flex-wrap gap-3">
+                <button
+                  onClick={() =>
+                    setPreviewPdf({
+                      title: chapters[openChapter].title,
+                      pdf: chapters[openChapter].pdf,
+                    })
+                  }
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-card border border-red-600 text-red-600 font-body font-semibold text-sm hover:bg-red-50 transition-colors"
+                >
+                  <Eye className="w-4 h-4" /> Preview
+                </button>
                 <a
                   href={chapters[openChapter].pdf}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-card border border-red-600 text-red-600 font-body font-semibold text-sm hover:bg-red-50 transition-colors"
                 >
-                  <Eye className="w-4 h-4" /> View
+                  <Eye className="w-4 h-4" /> Open in new tab
                 </a>
                 <a
                   href={chapters[openChapter].pdf}
