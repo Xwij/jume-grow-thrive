@@ -39,12 +39,12 @@ import chFoodBevImg from "@/assets/food-and-beverage.jpeg";
 import chTailoringImg from "@/assets/tailor.jpeg";
 import chICTImg from "@/assets/dept-ict.jpeg";
 import chBuildingImg from "@/assets/building-construction.jpeg";
-import chCarpentryImg from "@/assets/carpentrie.jpeg";
+import chCarpentryImg from "@/assets/carpentry-joinery.jpeg";
 import chCookingImg from "@/assets/cooking-skillss.jpeg";
 import chBakingImg from "@/assets/baking-cakes.jpg";
 import chAccommodationImg from "@/assets/accom1.jpeg";
 import chCosmetologyImg from "@/assets/dept-cosmetology.png";
-import chElectricalImg from "@/assets/field-training-2.jpg";
+import chElectricalImg from "@/assets/electric.jpeg";
 import chFashionImg from "@/assets/dept-fashion-2.jpeg";
 import chTechEnterpriseImg from "@/assets/dept-tech-enterprise.png";
 import chSustAgImg from "@/assets/sustainable-agri.jpeg";
@@ -109,7 +109,7 @@ const programs = [
 type Chapter = { title: string; image: string; pdf: string; summary: string };
 const chapters: Chapter[] = [
   {
-    title: "Animal Production",
+    title: "Animal Humane Education",
     image: chAnimalImg,
     pdf: "/prospectus/ANIMAL_PRODUCTION.pdf",
     summary:
@@ -275,7 +275,7 @@ const departments: { name: string; subtitle?: string; tagline: string; hero: str
     tagline: "Regenerative farming, ecology and land stewardship.",
     hero: chSustAgImg,
     titles: [
-      "Animal Production",
+      "Animal Humane Education",
       "Agro-ecology & Agro-biodiversity",
       "Agricultural Engineering",
       "Grow Bio-Intensive Course",

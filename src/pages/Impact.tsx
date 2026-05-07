@@ -56,10 +56,10 @@ const phases = [
 ];
 
 const funding = [
-  { amount: "$5,000", impact: "3 water tanks installed for the demonstration farm" },
-  { amount: "$1,200", impact: "10 farmers fully trained on solar dryers" },
-  { amount: "$800", impact: "200 fruit & shade trees planted with community" },
-  { amount: "$2,500", impact: "Mushroom production unit set up for 5 women" },
+  { impact: "Installing water tanks for the demonstration farms" },
+  { impact: "Planting trees for fruits and shades" },
+  { impact: "Training farmers on solar dryers" },
+  { impact: "Setting up mushroom production units for production and training" },
 ];
 
 const videos = [
@@ -231,14 +231,13 @@ const Impact = () => {
         <div className="grid sm:grid-cols-2 gap-4">
           {funding.map((f, i) => (
             <motion.div
-              key={f.amount}
+              key={f.impact}
               initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
               className="rounded-xl bg-card border border-border p-5 flex items-center gap-5"
               style={{ boxShadow: "var(--card-shadow)" }}
             >
-              <div className="text-2xl font-display font-bold text-secondary shrink-0">{f.amount}</div>
-              <div className="font-body text-sm text-foreground/80">→ {f.impact}</div>
+              <div className="font-body text-base text-foreground/80">{f.impact}</div>
             </motion.div>
           ))}
         </div>
