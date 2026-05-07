@@ -158,7 +158,7 @@ const Impact = () => {
           <div className="space-y-4 font-body text-foreground/80">
             <p>Jume is a practical training hub — not just a project. Every lesson lives in the soil, the seed, and the harvest.</p>
             <ul className="space-y-2">
-              <li>🌿 Demonstration garden data from THE JUME COLLEGE - OTEPIC KENYA Reliance work</li>
+              <li>🌿 Demonstration garden data from JUME College - OTEPIC Kenya Reliance work</li>
               <li>📘 Step-by-step guides: composting, water harvesting, mulching</li>
               <li>🎥 Short training videos for farmers, students & volunteers</li>
             </ul>
@@ -203,7 +203,7 @@ const Impact = () => {
       <Section kicker="05 — Enterprise" title="Where Impact Meets Income">
         <div className="grid md:grid-cols-3 gap-6">
           {[
-            { img: mushroomBucketImg, title: "THE JUME COLLEGE - OTEPIC KENYA Mushrooms", desc: "Oyster mushrooms grown in buckets — fresh and dried." },
+            { img: mushroomBucketImg, title: "JUME College - OTEPIC Kenya Mushrooms", desc: "Oyster mushrooms grown in buckets — fresh and dried." },
             { img: solarImg, title: "Solar-Dried Produce", desc: "Indigenous vegetables, fruits, and seeds preserved by sun." },
             { img: beeImg, title: "Future Beekeeping 🍯", desc: "Honey, wax & pollination services in development." },
           ].map((p, i) => (

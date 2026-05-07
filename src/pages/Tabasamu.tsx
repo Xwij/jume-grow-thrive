@@ -30,7 +30,7 @@ const sections = [
   },
   {
     title: "Sustainability in Action",
-    body: "Through THE JUME COLLEGE - OTEPIC KENYA's 3Rs approach—Reduce, Reuse, Recycle—the children are learning practical ways to care for the environment. From composting to water conservation, these lessons are shaping a more sustainable future.",
+    body: "Through JUME College - OTEPIC Kenya's 3Rs approach—Reduce, Reuse, Recycle—the children are learning practical ways to care for the environment. From composting to water conservation, these lessons are shaping a more sustainable future.",
     image: tabasamuCircle,
     color: "#84cc16",
   },
@@ -123,7 +123,7 @@ const Tabasamu = () => {
         <div className="container-narrow relative z-10 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <p className="text-sm font-body tracking-[0.2em] uppercase text-white/95 font-bold mb-3">
-              THE JUME COLLEGE - OTEPIC KENYA Newsletter
+              JUME College - OTEPIC Kenya Newsletter
             </p>
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold text-white mb-4 drop-shadow-lg">
               Tabasamu Children's Home
