@@ -106,7 +106,7 @@ const Donate = () => {
               <div>
                 <h3 className="font-bold text-foreground mb-1">💳 Donate via PayPal</h3>
                 <p>
-                  Give securely from anywhere in the world using a credit card or PayPal account. Send your contribution to our PayPal email:{" "}
+                  PayPal email:{" "}
                   <a href={`mailto:${PAYPAL_EMAIL}`} className="text-primary font-semibold underline">{PAYPAL_EMAIL}</a>
                 </p>
               </div>
