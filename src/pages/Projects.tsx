@@ -41,7 +41,7 @@ import chICTImg from "@/assets/dept-ict.jpeg";
 import chBuildingImg from "@/assets/building-construction.jpeg";
 import chCarpentryImg from "@/assets/carpentry-joinery.jpeg";
 import chCookingImg from "@/assets/cooking-skillss.jpeg";
-import chBakingImg from "@/assets/baking-cakes.jpg";
+import chBakingImg from "@/assets/cakes.jpeg";
 import chAccommodationImg from "@/assets/accom1.jpeg";
 import chCosmetologyImg from "@/assets/dept-cosmetology.png";
 import chElectricalImg from "@/assets/electric.jpeg";
