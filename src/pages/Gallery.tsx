@@ -36,25 +36,19 @@ import trainingBandaImg from "@/assets/training-banda.jpg";
 import donkeyFieldImg from "@/assets/donkey-field.jpg";
 import donkeyTeamImg from "@/assets/donkey-team.jpg";
 import bandaCircleImg from "@/assets/banda-circle.jpg";
+import otepicCollageImg from "@/assets/otepic-amani-collage.jpg";
+import agriEngineeringImg from "@/assets/agri-engineering.jpg";
+import soapWomenImg from "@/assets/soap-women.jpg";
 import tailoringImg from "@/assets/tailoring.jpg";
-
-import { campusImg } from "@/assets";
 
 type GalleryItem = { src: string; label: string; isNew?: boolean };
 
 const gallery: GalleryItem[] = [
   { src: otepicCollageImg, label: "JUME College - OTEPIC Kenya Amani Garden — Real Food Revolution", isNew: true },
-  { src: hospitalityBakingImg, label: "Hospitality — Baking", isNew: true },
-  { src: hospitalityBakeryImg, label: "Hospitality — Bakery Production", isNew: true },
   { src: soapWomenImg, label: "Soap Making — Women's Enterprise", isNew: true },
-  { src: soapPosterImg, label: "Soap Making Skill Training", isNew: true },
   { src: agriEngineeringImg, label: "Agricultural Engineering — Drip Irrigation", isNew: true },
   { src: communityCircleImg, label: "Community Circle Gathering", isNew: true },
-  { src: bakeryBreadImg, label: "Community Bakery", isNew: true },
   { src: trainingBandaImg, label: "Banda Workshop", isNew: true },
-  { src: bakingMuffinsImg, label: "Fresh Bakes", isNew: true },
-  { src: soapMakingImg, label: "Soap-Making Enterprise", isNew: true },
-  { src: dripIrrigationImg, label: "Drip Irrigation Bed", isNew: true },
   { src: donkeyTeamImg, label: "Working Together", isNew: true },
   { src: donkeyFieldImg, label: "Field Companions", isNew: true },
   { src: bandaCircleImg, label: "Circle Discussion", isNew: true },
