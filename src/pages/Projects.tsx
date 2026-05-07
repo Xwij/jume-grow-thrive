@@ -795,16 +795,14 @@ const Projects = () => {
                         <p className="font-display font-bold text-foreground text-sm truncate">{c.title}</p>
                         <p className="text-xs text-muted-foreground">Recently uploaded · PDF</p>
                       </div>
-                      <a
-                        href={c.pdf}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <button
+                        onClick={() => setPreviewPdf({ title: c.title, pdf: c.pdf })}
                         className="w-9 h-9 rounded-full bg-red-600/10 hover:bg-red-600/20 text-red-600 flex items-center justify-center transition-colors"
-                        aria-label={`View ${c.title}`}
-                        title="View"
+                        aria-label={`Preview ${c.title}`}
+                        title="Preview"
                       >
                         <Eye className="w-4 h-4" />
-                      </a>
+                      </button>
                       <a
                         href={c.pdf}
                         download
