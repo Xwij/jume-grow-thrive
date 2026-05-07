@@ -28,7 +28,7 @@ const stats: { label: string; end: number; suffix?: string }[] = [
   { label: "Adoption Rate", end: 52, suffix: "%" },
   { label: "Synthetic Input Reduction", end: 60, suffix: "%" },
   { label: "Income Increase", end: 30, suffix: "%" },
-  { label: "Provide clean drinking water to people", end: 3000, suffix: "+" },
+  { label: "People Provided with Clean Drinking Water", end: 3000, suffix: "+" },
 ];
 
 const stories = [
