@@ -58,7 +58,35 @@ const Newsletters = () => {
           </p>
         </header>
 
-        <ComingSoonSection title="Reports" subtitle="Annual and project reports" />
+        <section className="rounded-2xl border bg-card shadow-sm overflow-hidden mb-8">
+          <div className="flex items-center gap-3 px-6 py-4 border-b bg-muted/40">
+            <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+              <FileText className="w-5 h-5 text-primary" />
+            </div>
+            <div>
+              <h2 className="text-lg font-semibold">Reports</h2>
+              <p className="text-xs text-muted-foreground">Annual and project reports</p>
+            </div>
+          </div>
+          <ul className="divide-y">
+            <li className="grid grid-cols-1 md:grid-cols-12 gap-3 px-6 py-4 items-center hover:bg-muted/30 transition-colors">
+              <div className="md:col-span-9 flex items-center gap-3">
+                <div className="w-10 h-12 rounded bg-red-50 border border-red-200 flex items-center justify-center text-red-600 text-[10px] font-bold">PDF</div>
+                <a href="/reports/The_Jume_College_Otepic_Kenya_Report.pdf" target="_blank" rel="noopener" className="text-left font-medium text-primary hover:underline">
+                  The JUME College - OTEPIC Kenya Report
+                </a>
+              </div>
+              <div className="md:col-span-3 flex md:justify-end gap-2">
+                <a href="/reports/The_Jume_College_Otepic_Kenya_Report.pdf" target="_blank" rel="noopener">
+                  <Button size="sm" variant="outline"><Eye className="w-4 h-4" /></Button>
+                </a>
+                <a href="/reports/The_Jume_College_Otepic_Kenya_Report.pdf" download>
+                  <Button size="sm"><Download className="w-4 h-4 mr-1" /> <span className="hidden sm:inline">Download</span></Button>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </section>
         <ComingSoonSection title="Newsletters" subtitle="Periodic community updates" />
 
         {/* Training Materials — main */}
