@@ -111,7 +111,7 @@ const chapters: Chapter[] = [
   {
     title: "Animal Humane Education",
     image: chAnimalImg,
-    pdf: "/prospectus/ANIMAL_PRODUCTION.pdf",
+    pdf: "/prospectus/ANIMAL_HUMANE_EDUCATION.pdf",
     summary:
       "Importance of livestock in food security, animal nutrition & feeding, breeding & genetics, livestock management, animal health, dairy/poultry/beef/pig production, plus agribusiness & technology. Practical sessions cover handling, vaccination, feed formulation and farm business management.",
   },
@@ -772,11 +772,8 @@ const Projects = () => {
                 </p>
                 <div className="grid sm:grid-cols-2 gap-4">
                   {chapters.map((c) => (
-                    <a
+                    <div
                       key={c.title}
-                      href={c.pdf}
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className="group flex items-center gap-4 bg-white/95 hover:bg-white rounded-xl p-4 transition-colors shadow"
                     >
                       <div className="w-12 h-12 rounded-lg bg-red-600/10 text-red-600 flex items-center justify-center flex-shrink-0">
@@ -786,8 +783,26 @@ const Projects = () => {
                         <p className="font-display font-bold text-foreground text-sm truncate">{c.title}</p>
                         <p className="text-xs text-muted-foreground">Recently uploaded · PDF</p>
                       </div>
-                      <Eye className="w-4 h-4 text-red-600 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </a>
+                      <a
+                        href={c.pdf}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-9 h-9 rounded-full bg-red-600/10 hover:bg-red-600/20 text-red-600 flex items-center justify-center transition-colors"
+                        aria-label={`View ${c.title}`}
+                        title="View"
+                      >
+                        <Eye className="w-4 h-4" />
+                      </a>
+                      <a
+                        href={c.pdf}
+                        download
+                        className="w-9 h-9 rounded-full bg-red-600 hover:bg-red-700 text-white flex items-center justify-center transition-colors"
+                        aria-label={`Download ${c.title}`}
+                        title="Download"
+                      >
+                        <Download className="w-4 h-4" />
+                      </a>
+                    </div>
                   ))}
                 </div>
               </div>
