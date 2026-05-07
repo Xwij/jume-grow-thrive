@@ -61,6 +61,13 @@ const funding = [
   { impact: "Planting trees for fruits and shades" },
   { impact: "Training farmers on solar dryers" },
   { impact: "Setting up mushroom production units for production and training" },
+  { impact: "Buying farm tools and equipment" },
+  { impact: "Buying seeds" },
+  { impact: "Supporting Tabasamu Orphanage" },
+  { impact: "Paying salaries" },
+  { impact: "Making training materials" },
+  { impact: "Covering administrative costs" },
+  { impact: "Supporting life coping skills training" },
 ];
 
 const videos = [
