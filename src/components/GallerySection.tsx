@@ -28,7 +28,7 @@ const GallerySection = () => {
         >
           <p className="text-sm font-body tracking-[0.15em] uppercase text-secondary font-semibold mb-3">Gallery</p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4">
-            Life at Jume College
+            Life at JUME College - OTEPIC Kenya
           </h2>
           <p className="font-body text-muted-foreground text-lg">
             A glimpse into our campus, training sessions, and the vibrant community behind our work.
