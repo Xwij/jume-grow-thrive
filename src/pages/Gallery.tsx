@@ -36,19 +36,9 @@ import trainingBandaImg from "@/assets/training-banda.jpg";
 import donkeyFieldImg from "@/assets/donkey-field.jpg";
 import donkeyTeamImg from "@/assets/donkey-team.jpg";
 import bandaCircleImg from "@/assets/banda-circle.jpg";
-import soapMakingImg from "@/assets/soap-making.jpg";
-import dripIrrigationImg from "@/assets/drip-irrigation.jpg";
-import bakingMuffinsImg from "@/assets/baking-muffins.jpg";
-import chefsTrainingImg from "@/assets/chefs-training.jpg";
-import bakeryBreadImg from "@/assets/bakery-bread.jpg";
-import otepicCollageImg from "@/assets/otepic-amani-collage.jpg";
-import chefsPastriesImg from "@/assets/chefs-pastries.jpg";
-import soapPosterImg from "@/assets/soap-poster.jpg";
-import agriEngineeringImg from "@/assets/agri-engineering.jpg";
-import hospitalityBakingImg from "@/assets/hospitality-baking.jpg";
-import hospitalityBakeryImg from "@/assets/hospitality-bakery.jpg";
-import soapWomenImg from "@/assets/soap-women.jpg";
 import tailoringImg from "@/assets/tailoring.jpg";
+
+import { campusImg } from "@/assets";
 
 type GalleryItem = { src: string; label: string; isNew?: boolean };
 
