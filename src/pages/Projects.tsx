@@ -188,7 +188,7 @@ const chapters: Chapter[] = [
   {
     title: "Tailoring & Garment Making",
     image: chTailoringImg,
-    pdf: "/prospectus/OTEPIC_Agricultural_Modular_Courses_Prospectus.pdf",
+    pdf: "/prospectus/TAILORING_COURSE.pdf",
     summary:
       "Modular vocational training (Grades III, II and I) — from basic stitching to advanced garment construction, pattern cutting, costing and small-business management.",
   },
