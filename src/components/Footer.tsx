@@ -11,7 +11,7 @@ const Footer = () => {
               <img src={logo} alt="The Jume College – OTEPIC Kenya" className="h-12 w-auto object-contain" />
             </div>
             <p className="font-body text-sm leading-relaxed">
-              Where knowledge grows and communities thrive. A project of THE JUME COLLEGE - OTEPIC KENYA.
+              Where knowledge grows and communities thrive. A project of JUME College - OTEPIC Kenya.
             </p>
           </div>
           <div>

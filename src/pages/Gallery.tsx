@@ -53,16 +53,13 @@ import tailoringImg from "@/assets/tailoring.jpg";
 type GalleryItem = { src: string; label: string; isNew?: boolean };
 
 const gallery: GalleryItem[] = [
-  { src: otepicCollageImg, label: "THE JUME COLLEGE - OTEPIC KENYA Amani Garden — Real Food Revolution", isNew: true },
-  { src: chefsPastriesImg, label: "Hospitality — Chefs Training", isNew: true },
+  { src: otepicCollageImg, label: "JUME College - OTEPIC Kenya Amani Garden — Real Food Revolution", isNew: true },
   { src: hospitalityBakingImg, label: "Hospitality — Baking", isNew: true },
   { src: hospitalityBakeryImg, label: "Hospitality — Bakery Production", isNew: true },
-  { src: tailoringImg, label: "Tailoring & Garment Making", isNew: true },
   { src: soapWomenImg, label: "Soap Making — Women's Enterprise", isNew: true },
   { src: soapPosterImg, label: "Soap Making Skill Training", isNew: true },
   { src: agriEngineeringImg, label: "Agricultural Engineering — Drip Irrigation", isNew: true },
   { src: communityCircleImg, label: "Community Circle Gathering", isNew: true },
-  { src: chefsTrainingImg, label: "Culinary Training", isNew: true },
   { src: bakeryBreadImg, label: "Community Bakery", isNew: true },
   { src: trainingBandaImg, label: "Banda Workshop", isNew: true },
   { src: bakingMuffinsImg, label: "Fresh Bakes", isNew: true },
