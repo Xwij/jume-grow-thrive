@@ -19,8 +19,9 @@ import hero14 from "@/assets/hero-14.jpg";
 import hero15 from "@/assets/hero-15.jpg";
 import hero16 from "@/assets/hero-16.jpg";
 import hero17 from "@/assets/hero-17.jpg";
+import heroMainm from "@/assets/hero-mainm.jpg";
 
-const baseSlides = [hero0, hero1, hero2, hero3, hero4, hero5, hero6, hero7, hero8, hero9, hero10, hero11, hero12, hero13, hero14, hero15, hero16, hero17];
+const baseSlides = [hero0, hero1, hero2, hero3, hero4, hero5, hero6, hero7, hero8, hero9, hero10, hero11, hero12, hero13, hero14, hero15, hero16, hero17, heroMainm];
 
 const HeroSection = () => {
   const slides = useMemo(() => baseSlides, []);
