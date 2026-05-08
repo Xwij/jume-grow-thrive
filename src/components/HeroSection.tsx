@@ -1,39 +1,33 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import campusImg from "@/assets/campus.jpg";
-import waterPondImg from "@/assets/water-pond.jpg";
-import treePruningImg from "@/assets/tree-pruning.jpg";
-import bananaGroveImg from "@/assets/banana-grove.jpg";
-import seedlingsNurseryImg from "@/assets/seedlings-nursery.jpg";
-import treePlantingFieldImg from "@/assets/tree-planting-field.jpg";
-import womenTillingImg from "@/assets/women-tilling.jpg";
-import home1Img from "@/assets/home1.jpg";
-import home2Img from "@/assets/home2.jpg";
-import home3Img from "@/assets/home3.jpg";
-import fitImg from "@/assets/fit.jpeg";
+import hero1 from "@/assets/hero-1.jpg";
+import hero2 from "@/assets/hero-2.jpg";
+import hero3 from "@/assets/hero-3.jpg";
+import hero4 from "@/assets/hero-4.jpg";
+import hero5 from "@/assets/hero-5.jpg";
+import hero6 from "@/assets/hero-6.jpg";
+import hero7 from "@/assets/hero-7.jpg";
 
-const slides = [
-  campusImg,
-  home1Img,
-  home2Img,
-  home3Img,
-  fitImg,
-  waterPondImg,
-  treePruningImg,
-  bananaGroveImg,
-  seedlingsNurseryImg,
-  treePlantingFieldImg,
-  womenTillingImg,
-];
+const baseSlides = [hero1, hero2, hero3, hero4, hero5, hero6, hero7];
+
+const shuffle = <T,>(arr: T[]): T[] => {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+};
 
 const HeroSection = () => {
+  const slides = useMemo(() => shuffle(baseSlides), []);
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
     const id = setInterval(() => setIndex((i) => (i + 1) % slides.length), 2000);
     return () => clearInterval(id);
-  }, []);
+  }, [slides.length]);
 
   const prev = () => setIndex((i) => (i - 1 + slides.length) % slides.length);
   const next = () => setIndex((i) => (i + 1) % slides.length);
