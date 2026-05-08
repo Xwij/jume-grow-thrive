@@ -11,22 +11,11 @@ import hero7 from "@/assets/hero-7.jpg";
 import hero8 from "@/assets/hero-8.jpg";
 import hero9 from "@/assets/hero-9.jpg";
 import hero10 from "@/assets/hero-10.jpg";
-import hero11 from "@/assets/hero-11.jpg";
-import hero12 from "@/assets/hero-12.jpg";
 
-const baseSlides = [hero1, hero2, hero3, hero4, hero5, hero6, hero7, hero8, hero9, hero10, hero11, hero12];
-
-const shuffle = <T,>(arr: T[]): T[] => {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-};
+const baseSlides = [hero1, hero2, hero3, hero4, hero5, hero6, hero7, hero8, hero9, hero10];
 
 const HeroSection = () => {
-  const slides = useMemo(() => shuffle(baseSlides), []);
+  const slides = useMemo(() => baseSlides, []);
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
