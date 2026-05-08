@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import hero0 from "@/assets/hero-0.jpg";
 import hero1 from "@/assets/hero-1.jpg";
 import hero2 from "@/assets/hero-2.jpg";
 import hero3 from "@/assets/hero-3.jpg";
@@ -19,14 +20,14 @@ import hero15 from "@/assets/hero-15.jpg";
 import hero16 from "@/assets/hero-16.jpg";
 import hero17 from "@/assets/hero-17.jpg";
 
-const baseSlides = [hero1, hero2, hero3, hero4, hero5, hero6, hero7, hero8, hero9, hero10, hero11, hero12, hero13, hero14, hero15, hero16, hero17];
+const baseSlides = [hero0, hero1, hero2, hero3, hero4, hero5, hero6, hero7, hero8, hero9, hero10, hero11, hero12, hero13, hero14, hero15, hero16, hero17];
 
 const HeroSection = () => {
   const slides = useMemo(() => baseSlides, []);
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    const id = setInterval(() => setIndex((i) => (i + 1) % slides.length), 2000);
+    const id = setInterval(() => setIndex((i) => (i + 1) % slides.length), 2500);
     return () => clearInterval(id);
   }, [slides.length]);
 
